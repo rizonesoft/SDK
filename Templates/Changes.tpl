@@ -10,7 +10,8 @@ Version [:VERSION:]
 - Created the Selfie project for building and distributing the Rizonesoft SDK.
 - Moved Resources, Logging, Caching and Bin to the SDK folder.
 - Change the solution file extension to .sni to differentiate it from 
-  Microsoft Visual Studio solution files. 
+  Microsoft Visual Studio solution files.
+- Added Selfie Signing
 
 
 --------------------------------------------------
