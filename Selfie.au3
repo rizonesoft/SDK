@@ -54,7 +54,7 @@
 	;===============================================================================================================
 	#AutoIt3Wrapper_Res_Comment=Selfie									 ;~ Comment field
 	#AutoIt3Wrapper_Res_Description=Create Rizonesoft SDK Distribution ;~ Description field
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.53
+	#AutoIt3Wrapper_Res_Fileversion=1.0.0.55
 	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					 ;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					 ;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
 	#AutoIt3Wrapper_Res_HiDpi=Y                      					 ;~ (Y/N) Compile for high DPI. Default=N
@@ -480,24 +480,13 @@ Func _SignExecutables()
 
 				_EditLoggingWrite("Certificate Information loaded from [" & $sCertInfoPath & "]")
 
+				Local $sDescription = IniRead($REBAR_PATH_INI, "Signing", "Description", "Rizonesoft SDK")
+				Local $sWebsite = IniRead($REBAR_PATH_INI, "Signing", "Website", "http://wwww.rizonesoft.com")
+				Local $sPassword = IniRead($sCertInfoPath, "Certificate", "Password", "*************")
+
 				If FileExists($sCertPath) Then
 
 					_EditLoggingWrite("Certificate loaded: [" & $sCertPath & "]")
-
-					Local $sDescription = IniRead($REBAR_PATH_INI, "Signing", "Description", "Rizonesoft SDK")
-					Local $sWebsite = IniRead($REBAR_PATH_INI, "Signing", "Website", "http://wwww.rizonesoft.com")
-					Local $sPassword = IniRead($sCertInfoPath, "Certificate", "Password", "*************")
-
-					_EditLoggingWrite("Description: " & $sDescription)
-					_EditLoggingWrite("Website: " & $sWebsite)
-
-					Local $sPassMsk = ""
-					Local $iPassLen = StringLen($sPassword)
-					For $i = 1 To $iPassLen
-						$sPassMsk &= "*"
-					Next
-
-					_EditLoggingWrite("Password: " & $sPassMsk)
 
 					Local $aFilesSign = IniReadSection($REBAR_PATH_INI, "UPX")
 
@@ -506,38 +495,8 @@ Func _SignExecutables()
 
 						For $x = 1 To $aFilesSign[0][0]
 
-							Local $signPID = ProcessExists("kSignCMD.exe")
-							If $signPID Then
-								_EditLoggingWrite("kSignCMD.exe (" & $signPID & ") Running!")
-								_EditLoggingWrite("Closing kSignCMD.exe...")
-								ProcessClose("kSignCMD.exe")
-							EndIf
-
 							Local $sFileToSign = @ScriptDir & "\" & $aFilesSign[$x][1]
-
-							_EditLoggingWrite("Signing: " & $sFileToSign)
-
-							Local $iPID = Run($CMD_KSIGN & " /d " & Chr(34) & $sDescription & Chr(34) & " /du " & Chr(34) & $sWebsite & Chr(34) & _
-									" /f " & Chr(34) & $sCertPath & Chr(34) & " /p " & $sPassword & Chr(32) & $sFileToSign, "", @SW_HIDE)
-
-							If $iPID Then
-
-								Local $pHandle = _ProcessExitCode($iPID)
-								ProcessWaitClose($iPID, 20000)
-								Local $iExitCode = _ProcessExitCode($iPID, $pHandle)
-								_ProcessCloseHandle($pHandle)
-
-								_EditLoggingWrite("EXITCODE: " & $iExitCode)
-
-								If Not $iExitCode Then
-									_EditLoggingWrite("Executable signed successfully.")
-								Else
-									_EditLoggingWrite("ERROR: Something went wrong! Please check your certificate password.")
-								EndIf
-
-							Else
-								_EditLoggingWrite("ERROR: Failed to sign the executable.")
-							EndIf
+							_SignExecutable($sCertPath, $sFileToSign, $sDescription, $sWebsite, $sPassword)
 
 						Next
 
@@ -570,6 +529,51 @@ Func _SignExecutables()
 	EndIf
 
 EndFunc   ;==>_SignExecutables
+
+
+Func _SignExecutable($sCertPath, $sFileToSign, $sDescription, $sWebsite, $sPassword)
+
+	Local $signPID = ProcessExists("kSignCMD.exe")
+	If $signPID Then
+		_EditLoggingWrite("kSignCMD.exe (" & $signPID & ") Running!")
+		_EditLoggingWrite("Closing kSignCMD.exe...")
+		ProcessClose("kSignCMD.exe")
+	EndIf
+
+	Local $sPassMsk = ""
+	Local $iPassLen = StringLen($sPassword)
+	For $i = 1 To $iPassLen
+		$sPassMsk &= "*"
+	Next
+
+	_EditLoggingWrite("Description: " & $sDescription)
+	_EditLoggingWrite("Website: " & $sWebsite)
+	_EditLoggingWrite("Password: " & $sPassMsk)
+	_EditLoggingWrite("Signing: " & $sFileToSign)
+
+	Local $iPID = Run($CMD_KSIGN & " /d " & Chr(34) & $sDescription & Chr(34) & " /du " & Chr(34) & $sWebsite & Chr(34) & _
+		" /f " & Chr(34) & $sCertPath & Chr(34) & " /p " & $sPassword & Chr(32) & $sFileToSign, "", @SW_HIDE)
+
+	If $iPID Then
+
+		Local $pHandle = _ProcessExitCode($iPID)
+		ProcessWaitClose($iPID, 20000)
+		Local $iExitCode = _ProcessExitCode($iPID, $pHandle)
+		_ProcessCloseHandle($pHandle)
+
+		_EditLoggingWrite("EXITCODE: " & $iExitCode)
+
+		If Not $iExitCode Then
+			_EditLoggingWrite("Executable signed successfully.")
+		Else
+			_EditLoggingWrite("ERROR: Something went wrong! Please check your certificate password.")
+		EndIf
+
+	Else
+		_EditLoggingWrite("ERROR: Failed to sign the executable.")
+	EndIf
+
+EndFunc
 
 
 Func _CleanDirectoryName($sFileName)
@@ -624,35 +628,6 @@ Func _LoadEnvironment()
 		$DIR_AUTOIT3_WRAPPER = $DIR_SCITE & "AutoIt3Wrapper\"
 		$CMD_AUTOIT3_WRAPPER = $DIR_AUTOIT3_WRAPPER & "AutoIt3Wrapper.au3"
 	EndIf
-
-
-
-;~ 	Local $sSelfieIniPath = $REBAR_PATH_INI
-;~ 	Local $sDSetScript = IniRead($sSelfieIniPath, "SDK", "Script", "")
-;~ 	Local $sAu3ScriptIn = @ScriptDir & "\" & $sDSetScript
-;~ 	Local $sDistroName = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Comment")
-;~ 	Local $sDistroDescription = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Description")
-;~ 	Local $sDistroShortName = _GetFilenameFromPath($sAu3ScriptIn)
-;~ 	Local $sDistroIcon = @ScriptDir & "\" & _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Icon")
-;~ 	Local $sDistroVersion = _AutoIt3Script_GetVersion($sAu3ScriptIn, 0)
-;~ 	Local $iDistroBuild = _AutoIt3Script_GetVersion($sAu3ScriptIn, 4)
-;~ 	Local $iDistroMaintenance = _AutoIt3Script_GetVersion($sAu3ScriptIn, 3)
-;~ 	Local $sDistroBuildPath = @ScriptDir & "\Distribution\" & $iDistroBuild
-;~ 	Local $sDistroPathPortableName = $sDistroShortName & "-" & $iDistroBuild
-;~ 	Local $sDistroPathPortable = $sDistroBuildPath & "\" & $sDistroPathPortableName
-;~ 	Local $sDistroPathSource = $sDistroBuildPath & "\" & $sDistroPathPortableName & "-Source"
-;~ 	Local $sUseX64 = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_UseX64")
-;~ 	Local $sCompileBoth = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Compile_both")
-;~ 	Local $sOutFile = "", $sOutFile64 = "", $sOutFilePath = "", $sOutFilePath_X64 = ""
-
-;~ 	If $sUseX64 = "Y" Then
-;~ 		$sOutFile64 = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_OutFile_X64")
-;~ 		If $sCompileBoth = "Y" Then
-;~ 			$sOutFile = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_OutFile")
-;~ 		EndIf
-;~ 	Else
-;~ 		$sOutFile = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_OutFile")
-;~ 	EndIf
 
 EndFunc   ;==>_LoadEnvironment
 
@@ -732,13 +707,79 @@ Func _CopyToGit()
     EndIf
 
 	Local $aGitSourceFiles = IniReadSection($REBAR_PATH_INI, "Source-Files")
+	Local $sSourceGitPath = "", $sDestGitPath = ""
+
 	If Not @error Then
         For $z = 1 To $aGitSourceFiles[0][0]
-			_DistributeFile(@ScriptDir & "\" & _CleanDirectoryName($aGitSourceFiles[$z][0]), @ScriptDir & "\GitHub\SDK\" & _CleanDirectoryName($aGitSourceFiles[$z][1]))
+			$sDestGitPath = @ScriptDir & "\GitHub\SDK\" & _CleanDirectoryName($aGitSourceFiles[$z][1])
+			_DistributeFile(@ScriptDir & "\" & _CleanDirectoryName($aGitSourceFiles[$z][0]), $sDestGitPath)
+			If StringInStr($sDestGitPath, "Selfie.exe") Then
+				_SignSelfie($sDestGitPath)
+			EndIf
         Next
     EndIf
 
 	IniWrite(@ScriptDir & "\GitHub\SDK\Signing\Certum.ini", "Certificate", "Password", "")
+
+
+EndFunc
+
+
+Func _SignSelfie($sFileToSign)
+
+	If FileExists($CMD_KSIGN) Then
+
+		_EditLoggingWrite("Checking connection to the Comodo Timestamp Server.")
+		Local $iPing = Ping("timestamp.comodoca.com", 5000)
+		Local $iPingError = @error
+
+		If $iPing Then
+
+			_EditLoggingWrite("Response Received: " & $iPing & " milliseconds.")
+
+			Local $sCertInfoIni = IniRead($REBAR_PATH_INI, "Signing", "CertificateSet", "Signing\Certum.ini")
+			Local $sCertInfoPath = @ScriptDir & "\" & _CleanDirectoryName($sCertInfoIni)
+			Local $sCertWorkPath = _GetParentPath($sCertInfoPath)
+			Local $sCertBaseName = IniRead($sCertInfoPath, "Certificate", "CertificateName", "Certum.p12")
+			Local $sCertPath = $sCertWorkPath & $sCertBaseName
+
+			If FileExists($sCertInfoPath) Then
+
+				Local $sPassword = IniRead($sCertInfoPath, "Certificate", "Password", "*************")
+				_EditLoggingWrite("Certificate Information loaded from [" & $sCertInfoPath & "]")
+
+				Local $sDescription = IniRead($REBAR_PATH_INI, "Signing", "SelfieDescription", "Rizonesoft SDK Selfie")
+				Local $sWebsite = IniRead($REBAR_PATH_INI, "Signing", "Website", "http://wwww.rizonesoft.com")
+
+				If FileExists($sCertPath) Then
+
+					_SignExecutable($sCertPath, $sFileToSign, $sDescription, $sWebsite, $sPassword)
+
+				Else
+
+					_EditLoggingWrite("ERROR: Could not load code digning Certificate!")
+					_EditLoggingWrite("ERROR: Looked for Certificate at [" & $sCertPath & "].")
+
+				EndIf
+
+			Else
+
+				_EditLoggingWrite("ERROR: Could not load Certificate Information!")
+				_EditLoggingWrite("ERROR: Looked for Certificate Information file at [" & $sCertInfoPath & "].")
+
+			EndIf
+
+		Else
+
+			_EditLoggingWrite("Please note that a connection to the Comodo Timestamp Server is required for signing.")
+			_EditLoggingWrite("ERROR: " & _ReturnConnectionError($iPingError))
+
+		EndIf
+
+	Else
+		; kSign is not installed
+		_EditLoggingWrite("ERROR: kSign is required for signing!")
+	EndIf
 
 EndFunc
 
