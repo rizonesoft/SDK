@@ -54,7 +54,7 @@
 	;===============================================================================================================
 	#AutoIt3Wrapper_Res_Comment=ReBar Framework							 ;~ Comment field
 	#AutoIt3Wrapper_Res_Description=AutoIt Application Framework      	 ;~ Description field
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.727
+	#AutoIt3Wrapper_Res_Fileversion=1.0.0.739
 	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					 ;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					 ;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
 	#AutoIt3Wrapper_Res_HiDpi=Y                      					 ;~ (Y/N) Compile for high DPI. Default=N
@@ -95,7 +95,7 @@
 	; Add files to the resources - can be compressed
 	; #AutoIt3Wrapper_Res_Remove=
 	; Remove resources
-	#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\ReBarD.ico
+	#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\ReBarH.ico
 	;===============================================================================================================
 	; Tidy Settings
 	;===============================================================================================================
@@ -197,6 +197,13 @@ Opt("WinWaitDelay", 250) ;~ 250 milliseconds
 
 #include "..\..\Includes\ReBar_Startup.au3"
 
+;===============================================================================================================
+; Declarations
+;===============================================================================================================
+Global $GUI_ICON_HOVER = 0
+Global $ICON_HOVER = @ScriptFullPath
+;===============================================================================================================
+
 
 _SplashStart("Initializing " & $REBAR_PROG_NAME, $REBAR_SPLASH_ENABLE)
 _SplashUpdate("Setting Working Directories", 1, $REBAR_SPLASH_ENABLE)
@@ -219,7 +226,8 @@ Func _StartCoreGUI()
 	GUIRegisterMsg($WM_GETMINMAXINFO, "WM_GETMINMAXINFO")
 	GUISetFont($REBAR_FONT_SIZE, 400, -1, $REBAR_FONT_NAME, $REBAR_GUI_CORE, $CLEARTYPE_QUALITY)
 	If Not @Compiled Then
-		GUISetIcon($REBAR_RUN_PROG_ICON_HOVER, 0, $REBAR_GUI_CORE)
+		GUISetIcon($REBAR_ICON, 0, $REBAR_GUI_CORE)
+		$ICON_HOVER = @ScriptDir & "\Themes\Icons\ReBarH.ico"
 	EndIf
 
 	$mnuFile = _GUICtrlCreateODTopMenu("&File", $REBAR_GUI_CORE)
@@ -241,7 +249,7 @@ Func _StartCoreGUI()
 	GUICtrlSetOnEvent($miHlpHome, "_OpenHomePageLink")
 	GUICtrlSetOnEvent($miHlpSupport, "_OpenSupportLink")
 
-	$REBAR_GUI_ICON = GUICtrlCreateIcon($REBAR_ICON, 201, $REBAR_ICON_LEFT, $REBAR_ICON_TOP, $REBAR_ICON_SIZE, $REBAR_ICON_SIZE)
+	$REBAR_GUI_ICON = GUICtrlCreateIcon($REBAR_ICON, 99, 10, 10, 64, 64)
 	GUICtrlSetTip($REBAR_GUI_ICON, "Version " & FileGetVersion(@ScriptFullPath) & @CRLF & _
 			"Build with AutoIt version " & @AutoItVersion & @CRLF & _
 			"Copyright © " & @YEAR & " " & $REBAR_COMP_NAME, _
@@ -262,6 +270,23 @@ Func _StartCoreGUI()
 	WEnd
 
 EndFunc   ;==>_StartCoreGUI
+
+
+Func _OnMainIconHover()
+
+	Local $iCursor = GUIGetCursorInfo()
+
+	If Not @error Then
+		If $iCursor[4] = $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 1 Then
+			$REBAR_GUI_ICON_HOVER = 0
+			GUICtrlSetImage($REBAR_GUI_ICON, $ICON_HOVER, 201)
+		ElseIf $iCursor[4] <> $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 0 Then
+			$REBAR_GUI_ICON_HOVER = 1
+			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON, 99)
+		EndIf
+	EndIf
+
+EndFunc   ;==>_OnMainIconHover
 
 
 #include "..\..\Includes\ReBar_End.au3"

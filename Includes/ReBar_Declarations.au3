@@ -26,8 +26,7 @@ Global $REBAR_TITLE_SHOWBUILD = 1
 Global $REBAR_RUN_COMP_NAME = "Rizonesoft"
 Global $REBAR_RUN_PROG_NAME = "ReBar Framework"
 Global $REBAR_RUN_PROG_SHORTNAME = "ReBar"
-Global $REBAR_RUN_PROG_ICON = @ScriptDir & "\Themes\Icons\ReBarD.ico"
-Global $REBAR_RUN_PROG_ICON_HOVER = @ScriptDir & "\Themes\Icons\ReBar.ico"
+Global $REBAR_RUN_PROG_ICON = @ScriptDir & "\Themes\Icons\ReBar.ico"
 Global $REBAR_RUN_VERSION = 0
 
 ;===============================================================================================================
@@ -67,10 +66,6 @@ Global $REBAR_GUI_ICON
 Global $REBAR_SINGLETON = True														;~ Only one instance of the program may be running.
 Global $REBAR_GUI_ICON_HOVER = 1
 Global $REBAR_ICON = @ScriptFullPath
-Global $REBAR_ICON_HOVER = @ScriptFullPath
-Global $REBAR_ICON_SIZE = 64
-Global $REBAR_ICON_LEFT = 10
-Global $REBAR_ICON_TOP = 10
 Global $REBAR_FORM_WIDTH = 750
 Global $REBAR_FORM_HEIGHT = 530
 Global $REBAR_FONT_NAME = "Verdana"													;~ Main GUI Font
@@ -83,14 +78,13 @@ Global $REBAR_GUI_MINHEIGHT = 300
 ; Splash Options
 ;===============================================================================================================
 Global $REBAR_SPLASH_ENABLE = True													;~ Enable/Disable splash page on program load.
-Global $REBAR_SPLASH_ANI = @ScriptDir & "\Themes\Processing\Stroke32.ani"
+Global $REBAR_SPLASH_ANI = @ScriptDir & "\Themes\Processing\32\Stroke.ani"
 
 ;===============================================================================================================
 ; Resource Options
 ;===============================================================================================================
 Global $REBAR_RES_FUGUE = @ScriptDir & "\Fugue.dll"
 Global $REBAR_RES_DOORS = @ScriptDir & "\DoorsShell.dll"
-Global $REBAR_RES_PROCANI = @ScriptDir & "\Themes\Processing\Wait64.ani"
 
 ;===============================================================================================================
 ; About Dialog Options
@@ -99,14 +93,14 @@ Global $REBAR_RES_PROCANI = @ScriptDir & "\Themes\Processing\Wait64.ani"
 
 Global $REBAR_ABOUT_GUI																;~ About Dialog
 Global $REBAR_ABOUT_MENU															;~ About Dialog Menu Item
-Global $REBAR_ABOUT_HOME = "https://www.rizonesoft.com"
+Global $REBAR_ABOUT_HOME = "http://www.rizonesoft.com"
 Global $REBAR_ABOUT_CREDITS =	"Derick Payne (Rizonesoft), Brian J Christy (Beege), " & _
 								"G Sandler (MrCreatoR), Holger Kotsch, KaFu, LarsJ, nickston, ProgAndy, Yashied"
 Global $REBAR_ABOUT_DONATE = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7UGGCSDUZJPFE"
-Global $REBAR_ABOUT_COUNTRY = "https://www.rizonesoft.com"
+Global $REBAR_ABOUT_COUNTRY = "http://www.rizonesoft.com"
 Global $REBAR_ABOUT_FACEBOOK = "https://www.facebook.com/rizonesoft"
 Global $REBAR_ABOUT_TWITTER = "https://twitter.com/rizonesoft"
 Global $REBAR_ABOUT_GOOGLE = "https://plus.google.com/+Rizonesoftsa/posts"
 Global $REBAR_ABOUT_LINKEDIN = "https://www.linkedin.com/in/rizonesoft"
-Global $REBAR_ABOUT_RSS = "https://www.rizonesoft.com/feed/"
-Global $REBAR_ABOUT_SUPPORT = "https://www.rizonesoft.com/support/"
+Global $REBAR_ABOUT_RSS = "http://www.rizonesoft.com/feed/"
+Global $REBAR_ABOUT_SUPPORT = "http://www.rizonesoft.com"

@@ -32,27 +32,6 @@
 If Not IsDeclared("iEventError") Then Global $iEventError
 If Not IsDeclared("oErrorHandler") Then Global $oErrorHandler
 
-; #FUNCTION# ====================================================================================================================
-; Author ........: Derick Payne (Rizonesoft)
-; Modified.......:
-; ===============================================================================================================================
-Func _OnMainIconHover()
-
-	Local $iCursor = GUIGetCursorInfo()
-
-	If Not @error Then
-		If $iCursor[4] = $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 1 Then
-			$REBAR_GUI_ICON_HOVER = 0
-			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON_HOVER, 99)
-		ElseIf $iCursor[4] <> $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 0 Then
-			$REBAR_GUI_ICON_HOVER = 1
-			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON, 201)
-		EndIf
-	EndIf
-
-EndFunc
-
-
 Func _ShutdownProgram()
 	Exit($REBAR_EXITCODE)
 EndFunc   ;==>_CloseProgram

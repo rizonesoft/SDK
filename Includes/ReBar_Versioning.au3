@@ -39,6 +39,38 @@
 #EndRegion Functions list
 
 
+; #FUNCTION# ====================================================================================================================
+; Author(s) .....: Derick Payne (Rizonesoft)
+; Modified ......:
+; ===============================================================================================================================
+Func _GetProgramVersion($iFlag = 1)
+
+	Local $sReturn = ""
+
+	If @Compiled Then
+
+		Local $sFullVersion = FileGetVersion(@ScriptFullPath)
+
+		If $iFlag == 0 Then
+			$sReturn = $sFullVersion
+		EndIf
+
+		Local $sPltReturn = StringSplit($sFullVersion, ".")
+		If $iFlag <= $sPltReturn[0] Then
+			$sReturn = $sPltReturn[$iFlag]
+		Else
+			Return SetError(1, 2, 0)
+		EndIf
+
+	Else
+		$sReturn = _AutoIt3Script_GetVersion(@ScriptFullPath, $iFlag)
+	EndIf
+
+	Return $sReturn
+
+EndFunc   ;==>_GetProgramVersion
+
+
 Func _GUIGetTitle($sGUIName)
 
 	Local $sReturn = ""
@@ -91,35 +123,3 @@ Func _GUIGetTitle($sGUIName)
 	Return $sReturn
 
 EndFunc   ;==>_GUIGetTitle
-
-
-; #FUNCTION# ====================================================================================================================
-; Author(s) .....: Derick Payne (Rizonesoft)
-; Modified ......:
-; ===============================================================================================================================
-Func _GetProgramVersion($iFlag = 1)
-
-	Local $sReturn = ""
-
-	If @Compiled Then
-
-		Local $sFullVersion = FileGetVersion(@ScriptFullPath)
-
-		If $iFlag == 0 Then
-			$sReturn = $sFullVersion
-		EndIf
-
-		Local $sPltReturn = StringSplit($sFullVersion, ".")
-		If $iFlag <= $sPltReturn[0] Then
-			$sReturn = $sPltReturn[$iFlag]
-		Else
-			Return SetError(1, 2, 0)
-		EndIf
-
-	Else
-		$sReturn = _AutoIt3Script_GetVersion(@ScriptFullPath, $iFlag)
-	EndIf
-
-	Return $sReturn
-
-EndFunc   ;==>_GetProgramVersion

@@ -1,0 +1,68 @@
+[SDK]
+Compatibilty = Rizonesoft.SDK.2
+Script = ReBar.au3
+
+[Signing]
+CertificateSet = Signing\Certum.ini
+Description = ReBar Framework
+Website = https://www.rizonesoft.com
+
+[Documents]
+Product = ReBar Framework
+Short_Description = AutoIt Application Framework
+Company = Rizonesoft
+CompanyURL = https://www.rizonesoft.com
+SupportURL = https://www.rizonesoft.com/support/questions/
+ContactURL = https://www.rizonesoft.com/company/contact/
+UpdatesURL = https://www.rizonesoft.com/forums/forum/news-and-announcements/latest-releases/
+
+[DocumentFiles]
+Changes.tpl = Changes.txt
+License.tpl = License.txt
+Readme.tpl = Readme.txt
+
+[Files]
+File01 = ReBar.exe
+File02 = ReBar_X64.exe
+File03 = Fugue.dll
+File04 = DoorsShell.dll
+File05 = ReBar.ini
+File06 = Themes\Processing\Process16.ani
+File07 = Themes\Processing\Stroke32.ani
+File08 = UDF\ReBar_Options.au3
+
+[Dirs]
+Dirs01 = Logging
+
+[Sources]
+File03 = Fugue.dll
+File04 = DoorsShell.dll
+File05 = ReBar.ini
+File06 = Themes\Processing\Process16.ani
+File07 = Themes\Processing\Stroke32.ani
+
+[SourceDirs]
+Dirs01 = Logging
+
+[Environment]
+ScriptPath=D:\RizonesoftSDK\Concrete\ReBar
+ScriptFullPath=D:\RizonesoftSDK\Concrete\ReBar\ReBar.au3
+ScriptBaseName=
+ProgramName=ReBar Framework
+ProgramShortName=ReBar
+ProgramVersion=1.0.0.738
+ProgramVersionBuild=738
+ProgramVersionMaintenance=0
+ProgramDescription=AutoIt Application Framework
+DistributionPath=D:\RizonesoftSDK\Concrete\ReBar\Distribution\738
+DistributionPortableName=ReBar-738
+DistributionPortablePath=D:\RizonesoftSDK\Concrete\ReBar\Distribution\738\ReBar-738
+DistributionPathSource=D:\RizonesoftSDK\Concrete\ReBar\Distribution\738\ReBar-738-Source
+OutputFile=ReBar.exe
+OutputFilePath=D:\RizonesoftSDK\Concrete\ReBar\ReBar.exe
+OutputFile64Bit=ReBar_X64.exe
+OutputFile64BitPath=D:\RizonesoftSDK\Concrete\ReBar\ReBar_X64.exe
+InstallOutputPath=D:\RizonesoftSDK\Concrete\ReBar\Distribution\735\ReBar-735-Setup.exe
+Program_VersionBuild=701
+
+
