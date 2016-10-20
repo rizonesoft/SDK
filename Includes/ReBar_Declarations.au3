@@ -1,106 +1,118 @@
 #include-once
 
-#include <FileConstants.au3>
 
-Global $REBAR_PROG_NAME = FileGetVersion(@ScriptFullPath, $FV_PRODUCTNAME)
-Global $REBAR_PROG_SHORTNAME = _GetFilenameFromPath(@ScriptFullPath)
-Global $REBAR_COMP_NAME = FileGetVersion(@ScriptFullPath, $FV_COMPANYNAME)
-Global $REBAR_EXITCODE = 0
-Global $REBAR_DEBUG = 1
-Global $REBAR_VERSION = 1															;~ ReBar Framework version.
-Global $REBAR_USEGDIPUS = False
-Global $REBAR_ISADMINST = ""
+#include <FileConstants.au3>
+#include "ReBar_AutoIt3Script.au3"
+
+
+Global $g_ReBarProgName = FileGetVersion(@ScriptFullPath, $FV_PRODUCTNAME)
+Global $g_ReBarShortName = _AutoIt3Script_GetFilename(@ScriptFullPath)
+Global $g_ReBarCompName = FileGetVersion(@ScriptFullPath, $FV_COMPANYNAME)
+Global $g_ReBarExitCode = 0
+Global $g_ReBarDebug = 1
 
 ;===============================================================================================================
 ; Title Options
 ;===============================================================================================================
-Global $REBAR_TITLE_SHOWADMIN = 1
-Global $REBAR_TITLE_SHOWAUTOIT = 1
-Global $REBAR_TITLE_SHOWARCH = 1
-Global $REBAR_TITLE_SHOWVERSION = 1
-Global $REBAR_TITLE_SHOWBUILD = 1
+Global $g_ReBarTitleShowAdmin = 1
+Global $g_ReBarTitleShowAutoIt = 1
+Global $g_ReBarTitleShowArch = 1
+Global $g_ReBarTitleShowVersion = 1
+Global $g_ReBarTitleShowBuild = 1
 
 ;===============================================================================================================
 ; Runtime Options (When not Compiled)
 ;===============================================================================================================
-Global $REBAR_RUN_COMP_NAME = "Rizonesoft"
-Global $REBAR_RUN_PROG_NAME = "ReBar Framework"
-Global $REBAR_RUN_PROG_SHORTNAME = "ReBar"
-Global $REBAR_RUN_PROG_ICON = @ScriptDir & "\Themes\Icons\ReBar.ico"
-Global $REBAR_RUN_VERSION = 0
+Global $g_ReBarRunCompName = "Rizonesoft"
+Global $g_ReBarRunProgName = "ReBar Framework"
+Global $g_ReBarRunIcon = @ScriptDir & "\Themes\Icons\ReBar.ico"
+Global $g_ReBarRunIconHover = @ScriptDir & "\Themes\Icons\ReBarH.ico"
+Global $g_ReBarRunVersion = 0
 
 ;===============================================================================================================
 ; Path Options
 ;===============================================================================================================
-Global $REBAR_DIR_WORKING = @ScriptDir
-Global $REBAR_INI_FILENAME = $REBAR_PROG_SHORTNAME & ".ini"
-Global $REBAR_PATH_INI = $REBAR_DIR_WORKING & "\" & $REBAR_INI_FILENAME
-Global $REBAR_PATH_APPDATA_PARENT = @AppDataDir & "\" & $REBAR_COMP_NAME
-Global $REPAR_PATH_APPDATA = $REBAR_PATH_APPDATA_PARENT & "\" & $REBAR_PROG_SHORTNAME
-Global $REPAR_PATH_APPDATA_INI = $REPAR_PATH_APPDATA & "\" & $REBAR_INI_FILENAME
+Global $g_ReBarWorkingDir = @ScriptDir
+Global $g_ReBarIniFileName = $g_ReBarShortName & ".ini"
+Global $g_ReBarPathIni = $g_ReBarWorkingDir & "\" & $g_ReBarIniFileName
+Global $g_ReBarAppDataParent = @AppDataDir & "\" & $g_ReBarCompName
+Global $g_ReBarAppDataPath = $g_ReBarAppDataParent & "\" & $g_ReBarShortName
 
 ;===============================================================================================================
 ; Caching Options
 ;===============================================================================================================
-Global $REBAR_CACHE_BASE = $REBAR_DIR_WORKING & "\Cache"
-Global $REBAR_CACHE_PATH = $REBAR_CACHE_BASE & "\" & $REBAR_PROG_SHORTNAME
+Global $g_ReBarCacheEnabled = 1
+Global $g_ReBarCacheBase = $g_ReBarWorkingDir & "\Cache"
+Global $g_ReBarCachePath = $g_ReBarCacheBase & "\" & $g_ReBarShortName
+
+;===============================================================================================================
+; Update Options
+;===============================================================================================================
+Global $g_ReBarUpdateURL
+Global $g_ReBarUpdateGUI
+Global $g_ReBarUpdateURLBase = "http://www.rizonesoft.com/update/"
+Global $g_ReBarUpdateRemote = $g_ReBarUpdateURLBase & $g_ReBarShortName & ".ru"
+Global $g_ReBarUpdateLocal = $g_ReBarCachePath & "\" & $g_ReBarShortName & ".ru"
 
 ;===============================================================================================================
 ; Logging Options
 ;===============================================================================================================
-Global Const $REBAR_LOG_NAME = $REBAR_COMP_NAME & " " & $REBAR_PROG_NAME & " Logging System"
-Global Const $REBAR_LOG_VERSION = "1.2"
+Global Const $g_ReBarLogName = $g_ReBarCompName & " " & $g_ReBarProgName & " Logging System"
+Global Const $g_ReBarLogVersion = "1.2"
 
-Global $REBAR_LOG_FILERWE = 0
-Global $REBAR_LOG_ENABLED = 1														;~ Enable/Disable ReBar logging subsystem.
-Global $REBAR_LOG_STORAGE = 5242880 ; Bytes
-Global $REBAR_LOG_FILENAME = $REBAR_PROG_SHORTNAME & ".log"
-Global $REBAR_LOG_BASE = $REBAR_DIR_WORKING & "\Logging"
-Global $REBAR_LOG_PATH = $REBAR_LOG_BASE & "\" & $REBAR_LOG_FILENAME
+Global $g_ReBarLogFileWrite = 0
+Global $g_ReBarLogEnabled = 1														;~ Enable/Disable ReBar logging subsystem.
+Global $g_ReBarLogStorage = 5242880 ; Bytes
+Global $g_ReBarLogFilename = $g_ReBarShortName & ".log"
+Global $g_ReBarLogBase = $g_ReBarWorkingDir & "\Logging"
+Global $g_ReBarLogPath = $g_ReBarLogBase & "\" & $g_ReBarLogFilename
 
 ;===============================================================================================================
 ; Interface Options
 ;===============================================================================================================
-Global $REBAR_GUI_CORE
-Global $REBAR_GUI_ICON
-Global $REBAR_SINGLETON = True														;~ Only one instance of the program may be running.
-Global $REBAR_GUI_ICON_HOVER = 1
-Global $REBAR_ICON = @ScriptFullPath
-Global $REBAR_FORM_WIDTH = 750
-Global $REBAR_FORM_HEIGHT = 530
-Global $REBAR_FONT_NAME = "Verdana"													;~ Main GUI Font
-Global $REBAR_FONT_SIZE = 8.5														;~ Main GUI Font Size
-Global $REBAR_MSG_TIMEOUT = 60														;~ Time in seconds a message should be shown before closing.
-Global $REBAR_GUI_MINWIDTH = 300
-Global $REBAR_GUI_MINHEIGHT = 300
+Global $g_ReBarCoreGui
+Global $g_ReBarGuiTitle = "ReBar Framework 0"
+Global $g_ReBarSingleton = True														;~ Only one instance of the program may be running.
+Global $g_ReBarGuiIcon
+Global $g_ReBarIcon = @ScriptFullPath
+Global $g_ReBarIconHover = @ScriptFullPath
+Global $g_ReBarIcoHovering = 0
+Global $g_ReBarFormWidth = 750
+Global $g_ReBarFormHeight = 530
+Global $g_ReBarFontName = "Verdana"													;~ Main GUI Font
+Global $g_ReBarFontSize = 8.5														;~ Main GUI Font Size
+Global $g_ReBarMsgTimeout = 60														;~ Time in seconds a message should be shown before closing.
+Global $g_ReBarGuiMinWidth = 300
+Global $g_ReBarGuiMinHeight = 300
 
 ;===============================================================================================================
 ; Splash Options
 ;===============================================================================================================
-Global $REBAR_SPLASH_ENABLE = True													;~ Enable/Disable splash page on program load.
-Global $REBAR_SPLASH_ANI = @ScriptDir & "\Themes\Processing\32\Stroke.ani"
+Global $g_ReBarSplashEnable = True													;~ Enable/Disable splash page on program load.
+Global $g_ReBarSplashAni = @ScriptDir & "\Themes\Processing\32\Stroke.ani"
 
 ;===============================================================================================================
 ; Resource Options
 ;===============================================================================================================
-Global $REBAR_RES_FUGUE = @ScriptDir & "\Fugue.dll"
-Global $REBAR_RES_DOORS = @ScriptDir & "\DoorsShell.dll"
+Global $g_ReBarResFugue = @ScriptDir & "\Fugue.dll"
+Global $g_ReBarResDoors = @ScriptDir & "\DoorsShell.dll"
 
 ;===============================================================================================================
 ; About Dialog Options
 ;===============================================================================================================
 ;Global Const $REBAR_ABOUT_LINK = "https://www.rizonesoft.com"
 
-Global $REBAR_ABOUT_GUI																;~ About Dialog
-Global $REBAR_ABOUT_MENU															;~ About Dialog Menu Item
-Global $REBAR_ABOUT_HOME = "http://www.rizonesoft.com"
-Global $REBAR_ABOUT_CREDITS =	"Derick Payne (Rizonesoft), Brian J Christy (Beege), " & _
+Global $g_ReBarAboutGui																;~ About Dialog
+Global $g_ReBarAboutMenu															;~ About Dialog Menu Item
+Global $g_ReBarAboutButton
+Global $g_ReBarAboutHome = "http://www.rizonesoft.com"
+Global $g_ReBarAboutCredits =	"Derick Payne (Rizonesoft), Brian J Christy (Beege), " & _
 								"G Sandler (MrCreatoR), Holger Kotsch, KaFu, LarsJ, nickston, ProgAndy, Yashied"
-Global $REBAR_ABOUT_DONATE = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7UGGCSDUZJPFE"
-Global $REBAR_ABOUT_COUNTRY = "http://www.rizonesoft.com"
-Global $REBAR_ABOUT_FACEBOOK = "https://www.facebook.com/rizonesoft"
-Global $REBAR_ABOUT_TWITTER = "https://twitter.com/rizonesoft"
-Global $REBAR_ABOUT_GOOGLE = "https://plus.google.com/+Rizonesoftsa/posts"
-Global $REBAR_ABOUT_LINKEDIN = "https://www.linkedin.com/in/rizonesoft"
-Global $REBAR_ABOUT_RSS = "http://www.rizonesoft.com/feed/"
-Global $REBAR_ABOUT_SUPPORT = "http://www.rizonesoft.com"
+Global $g_ReBarAboutDonate = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7UGGCSDUZJPFE"
+Global $g_ReBarAboutCountry = "http://www.rizonesoft.com"
+Global $g_ReBarAboutFacebook = "https://www.facebook.com/rizonesoft"
+Global $g_ReBarAboutTwitter = "https://twitter.com/rizonesoft"
+Global $g_ReBarAboutGoogle = "https://plus.google.com/+Rizonesoftsa/posts"
+Global $g_ReBarAboutLinkedIn = "https://www.linkedin.com/in/rizonesoft"
+Global $g_ReBarAboutRSS = "http://www.rizonesoft.com/feed/"
+Global $g_ReBarAboutSupport = "http://www.rizonesoft.com"

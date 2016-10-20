@@ -10,7 +10,7 @@
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=Y										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	; #AutoIt3Wrapper_UseX64=Y										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
 	#AutoIt3Wrapper_Run_Debug_Mode=Y								 ;~ (Y/N) Run Script with console debugging. Default=N
 	#AutoIt3Wrapper_Run_SciTE_Minimized=Y 							 ;~ (Y/N) Minimize SciTE while script is running. Default=N
 	#AutoIt3Wrapper_Run_SciTE_OutputPane_Minimized=N				 ;~ (Y/N) Minimize SciTE output pane at run time. Default=N
@@ -33,7 +33,7 @@
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=Y										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	;#AutoIt3Wrapper_UseX64=Y										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
 	#AutoIt3Wrapper_Version=B                        				;~ (B/P) Use Beta or Production for AutoIt3 and Aut2Eex. Default is P
 	#AutoIt3Wrapper_Run_Debug_Mode=N								;~ (Y/N) Run Script with console debugging. Default=N
 	;#AutoIt3Wrapper_Autoit3Dir=									;~ Optionally override the AutoIt3 install directory to use.
@@ -45,26 +45,26 @@
 	#AutoIt3Wrapper_Icon=SDK\Themes\Icons\Distro.ico				;~ Filename of the Ico file to use for the compiled exe
 	#AutoIt3Wrapper_OutFile_Type=exe								;~ exe=Standalone executable (Default); a3x=Tokenised AutoIt3 code file
 	#AutoIt3Wrapper_OutFile=Distro.exe								;~ Target exe/a3x filename.
-	#AutoIt3Wrapper_OutFile_X64=Distro_X64.exe						;~ Target exe filename for X64 compile.
+	;#AutoIt3Wrapper_OutFile_X64=Distro_X64.exe						;~ Target exe filename for X64 compile.
 	#AutoIt3Wrapper_Compression=4									;~ Compression parameter 0-4  0=Low 2=normal 4=High. Default=2
 	#AutoIt3Wrapper_UseUpx=N										;~ (Y/N) Compress output program.  Default=Y
 	;#AutoIt3Wrapper_UPX_Parameters=								;~ Override the default settings for UPX.
 	#AutoIt3Wrapper_Change2CUI=N									;~ (Y/N) Change output program to CUI in stead of GUI. Default=N
-	#AutoIt3Wrapper_Compile_both=Y									;~ (Y/N) Compile both X86 and X64 in one run. Default=N
+	;#AutoIt3Wrapper_Compile_both=Y									;~ (Y/N) Compile both X86 and X64 in one run. Default=N
 	;===============================================================================================================
 	; Target Program Resource info
 	;===============================================================================================================
-	#AutoIt3Wrapper_Res_Comment=Distro Building Environment				 ;~ Comment field
-	#AutoIt3Wrapper_Res_Description=Distro Building Environment			 ;~ Description field
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.1401
-	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					 ;~ (Y/N/P) AutoIncrement FileVersion. Default=N
-	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					 ;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
-	#AutoIt3Wrapper_Res_HiDpi=Y                      					 ;~ (Y/N) Compile for high DPI. Default=N
-	#AutoIt3Wrapper_Res_ProductVersion=0             					 ;~ Product Version
-	#AutoIt3Wrapper_Res_Language=2057									 ;~ Resource Language code . Default 2057=English (United Kingdom)
-	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				 ;~ Copyright field
-	#AutoIt3Wrapper_res_requestedExecutionLevel=highestAvailable		 ;~ PasInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
-	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				 ;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
+	#AutoIt3Wrapper_Res_Comment=Distro Building Environment				;~ Comment field
+	#AutoIt3Wrapper_Res_Description=Distro Building Environment			;~ Description field
+	#AutoIt3Wrapper_Res_Fileversion=1.0.0.1533
+	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
+	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
+	#AutoIt3Wrapper_Res_HiDpi=Y                      					;~ (Y/N) Compile for high DPI. Default=N
+	#AutoIt3Wrapper_Res_ProductVersion=0             					;~ Product Version
+	#AutoIt3Wrapper_Res_Language=2057									;~ Resource Language code . Default 2057=English (United Kingdom)
+	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				;~ Copyright field
+	#AutoIt3Wrapper_res_requestedExecutionLevel=asInvoker				;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
+	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81,Win10		;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
 	;#AutoIt3Wrapper_Res_SaveSource=N									;~ (Y/N) Save a copy of the Script_source in the EXE resources. Default=N
 	; If _Res_SaveSource=Y the content of Script_source depends on the _Run_Au3Stripper and #Au3Stripper_parameters directives:
 	;    If _Run_Au3Stripper=Y then
@@ -215,30 +215,24 @@ Global Const $SPACE_PRELINE = 22
 Global Const $COUNT_PREREQ_COL = 2
 Global Const $COUNT_PREREQ_ROW = 5
 Global Const $COUNT_PREREQ_LINE = 6
+
 Global Const $DIR_SIGNING = @ScriptDir & "\Signing\"
 
-Global $LIST_DISTROS, $IMG_DISTROS, $COUNT_DISTROS = 0
-Global $ICO_GENDOCS, $LST_STATUS, $IMG_STATUS
-Global $MENU_CREATESLN, $GUI_CREATESLN
-Global $GUI_ICON_HOVER = 0
-Global $ICON_HOVER = @ScriptFullPath
-
-Global $ICON_BUILD[$COUNT_BUILD], $CHK_BUILD[$COUNT_BUILD], $BTNHLP_BUILD[$COUNT_BUILD], $BTNGO_BUILD[$COUNT_BUILD]
-Global $PRGTOP_BUILD[$COUNT_BUILD], $LINE_BUILD[$COUNT_BUILD], $PROGRESS_BUILD[$COUNT_BUILD]
-Global $BTNHLP_BUILD_H[$COUNT_BUILD], $BTNGO_BUILD_H[$COUNT_BUILD]
-
-Global $ICON_DISTRIBUTE[$COUNT_DISTRIBUTE], $CHK_DISTRIBUTE[$COUNT_DISTRIBUTE]
-Global $BTNHLP_DISTRIBUTE[$COUNT_DISTRIBUTE], $BTNGO_DISTRIBUTE[$COUNT_DISTRIBUTE]
-Global $PRGTOP_DISTRIBUTE[$COUNT_DISTRIBUTE], $LINE_DISTRIBUTE[$COUNT_DISTRIBUTE]
-Global $PROGRESS_DISTRIBUTE[$COUNT_DISTRIBUTE], $BTNHLP_DISTRIBUTE_H[$COUNT_DISTRIBUTE]
-Global $BTNGO_DISTRIBUTE_H[$COUNT_DISTRIBUTE]
-
-Global $LINE_PREREQ[$COUNT_PREREQ_COL][$COUNT_PREREQ_LINE], $ICO_PRESTATUS[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW]
-Global $LBL_PRENAME[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW], $LBL_PRESTATUS[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW]
-Global $LBL_PREURL[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW], $BTN_PROCESS_ALL
-
-Global $TAB_LOGGING
-Global $INST_SIZE = 0
+Global $g_ListDistros, $g_ImgDistros, $g_CountDistros = 0
+Global $g_ListStatus, $g_ImgStatus
+Global $g_MenuCreateSln, $g_GuiCreateSln
+Global $g_IconBuild[$COUNT_BUILD], $g_ChkBuild[$COUNT_BUILD], $g_BtnHlpBuild[$COUNT_BUILD], $g_BtnGoBuild[$COUNT_BUILD]
+Global $g_PrTopBuild[$COUNT_BUILD], $g_LineBuild[$COUNT_BUILD], $g_ProgressBuild[$COUNT_BUILD]
+Global $g_BtnHlpBuildH[$COUNT_BUILD], $g_BtnGoBuildH[$COUNT_BUILD]
+Global $g_IconDistribute[$COUNT_DISTRIBUTE], $g_ChkDistribute[$COUNT_DISTRIBUTE]
+Global $g_BtnHlpDistribute[$COUNT_DISTRIBUTE], $g_BtnGoDistribute[$COUNT_DISTRIBUTE]
+Global $g_PrgTopDistribute[$COUNT_DISTRIBUTE], $g_LineDistribute[$COUNT_DISTRIBUTE]
+Global $g_ProgressDistribute[$COUNT_DISTRIBUTE], $g_BtnHlpDistributeH[$COUNT_DISTRIBUTE]
+Global $g_BtnGoDistributeH[$COUNT_DISTRIBUTE]
+Global $g_LinePreReq[$COUNT_PREREQ_COL][$COUNT_PREREQ_LINE], $g_IconPreStatus[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW]
+Global $g_LblPreName[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW], $g_LblPreStatus[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW]
+Global $g_LblPreURL[$COUNT_PREREQ_COL][$COUNT_PREREQ_ROW]
+Global $g_BtnProcessAll, $g_TabLogging, $g_InstallSize = 0
 
 Global $AU3_INSTALLED, $AU3_DIR, $AU3_CMD
 Global $AUB_INSTALLED, $AUB_DIR, $AUB_CMD
@@ -264,15 +258,15 @@ Global $NSD_NAME, $NSD_PROG_NAME, $NSD_PROG_DESC, $NSD_BTNCREATE
 ;===============================================================================================================
 
 
-_SplashStart("Initializing " & $REBAR_PROG_NAME, $REBAR_SPLASH_ENABLE)
-_SplashUpdate("Setting Working Directories", 1, $REBAR_SPLASH_ENABLE)
+_SplashStart("Initializing " & $g_ReBarProgName)
+_SplashUpdate("Setting Working Directories", 1)
 _SetWorkingDirectories()
-_SplashUpdate("Initializing Logging Subsystem", 2, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Initializing Logging Subsystem", 2)
 _LoggingInitialize()
-_SplashUpdate("Checking Integrity", 3, $REBAR_SPLASH_ENABLE)
-_CheckResources($REBAR_RES_FUGUE)
-_CheckResources($REBAR_RES_DOORS)
-_SplashUpdate("Building Interface", 5, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Checking Integrity", 3)
+_CheckResources($g_ReBarResFugue)
+_CheckResources($g_ReBarResDoors)
+_SplashUpdate("Building Interface", 5)
 _StartCoreGUI()
 
 
@@ -283,63 +277,64 @@ Func _StartCoreGUI()
 	Local $mnuHelp, $miHlpHome, $miHlpSupport
 	Local $btnGenDocs
 
-	$REBAR_GUI_CORE = GUICreate($REBAR_ISADMINST & _GUIGetTitle($REBAR_PROG_NAME), $REBAR_FORM_WIDTH, $REBAR_FORM_HEIGHT, -1, -1, -1)
+	$g_ReBarCoreGui = GUICreate($g_ReBarGuiTitle, $g_ReBarFormWidth, $g_ReBarFormHeight, -1, -1, -1)
 	GUIRegisterMsg($WM_GETMINMAXINFO, "WM_GETMINMAXINFO")
-	GUISetFont($REBAR_FONT_SIZE, 400, -1, $REBAR_FONT_NAME, $REBAR_GUI_CORE, $CLEARTYPE_QUALITY)
+	GUISetFont($g_ReBarFontSize, 400, -1, $g_ReBarFontName, $g_ReBarCoreGui, $CLEARTYPE_QUALITY)
 	If Not @Compiled Then
-		GUISetIcon($REBAR_ICON, 0, $REBAR_GUI_CORE)
-		$ICON_HOVER = @ScriptDir & "\Themes\Icons\DistroH.ico"
+		GUISetIcon($g_ReBarIcon, 0, $g_ReBarCoreGui)
 	EndIf
 
-	$mnuFile = _GUICtrlCreateODTopMenu("&File", $REBAR_GUI_CORE)
-	$mnuCreate = _GUICtrlCreateODTopMenu("&Create", $REBAR_GUI_CORE)
-	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $REBAR_GUI_CORE)
+	$mnuFile = _GUICtrlCreateODTopMenu("&File", $g_ReBarCoreGui)
+	$mnuCreate = _GUICtrlCreateODTopMenu("&Create", $g_ReBarCoreGui)
+	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $g_ReBarCoreGui)
 
 	_GUICtrlCreateODMenuItem("", $mnuFile)
-	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $REBAR_RES_FUGUE, 102)
+	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $g_ReBarResFugue, 102)
 	_GUICtrlCreateODMenuItem("", $mnuFile)
-	$MENU_CREATESLN = _GUICtrlCreateODMenuItem("&Create new Solution...", $mnuCreate, $REBAR_RES_FUGUE, 140)
-	$REBAR_ABOUT_MENU = _GUICtrlCreateODMenuItem("&About " & $REBAR_PROG_NAME, $mnuHelp, $REBAR_RES_FUGUE, 103)
-	$miHlpHome = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Home", $mnuHelp, $REBAR_RES_FUGUE, 106)
+	$g_MenuCreateSln = _GUICtrlCreateODMenuItem("&Create new Solution...", $mnuCreate, $g_ReBarResFugue, 140)
+	$g_ReBarAboutMenu = _GUICtrlCreateODMenuItem("&About " & $g_ReBarProgName, $mnuHelp, $g_ReBarResFugue, 103)
+	$miHlpHome = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Home", $mnuHelp, $g_ReBarResFugue, 106)
 	_GUICtrlCreateODMenuItem("", $mnuHelp)
-	$miHlpSupport = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Support", $mnuHelp, $REBAR_RES_FUGUE, 101)
+	$miHlpSupport = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Support", $mnuHelp, $g_ReBarResFugue, 101)
 
 	_SetMenuSelectBkColor(0xF7E0C9)
 	_SetMenuSelectRectColor(0xE4A262)
 
 	GUICtrlSetOnEvent($miFileClose, "_ShutdownProgram")
-	GUICtrlSetOnEvent($MENU_CREATESLN, "_CreateNewSolutionDialog")
-	GUICtrlSetOnEvent($REBAR_ABOUT_MENU, "_ShowAboutDialog")
+	GUICtrlSetOnEvent($g_MenuCreateSln, "_CreateNewSolutionDialog")
+	GUICtrlSetOnEvent($g_ReBarAboutMenu, "_ShowAboutDialog")
 	GUICtrlSetOnEvent($miHlpHome, "_OpenHomePageLink")
 	GUICtrlSetOnEvent($miHlpSupport, "_OpenSupportLink")
 
-	$REBAR_GUI_ICON = GUICtrlCreateIcon($REBAR_ICON, 99, 10, 10, 64, 64)
-	GUICtrlSetTip($REBAR_GUI_ICON, "Version " & $REBAR_RUN_VERSION & @CRLF & _
+	$g_ReBarGuiIcon = GUICtrlCreateIcon($g_ReBarIcon, 99, 10, 10, 64, 64)
+	GUICtrlSetTip($g_ReBarGuiIcon, "Version " & $g_ReBarRunVersion & @CRLF & _
 			"Build with AutoIt version " & @AutoItVersion & @CRLF & _
-			"Copyright © " & @YEAR & " " & $REBAR_COMP_NAME, _
-			"About " & $REBAR_PROG_NAME, $TIP_INFOICON, $TIP_BALLOON)
-	GUICtrlSetCursor($REBAR_GUI_ICON, 0)
+			"Copyright © " & @YEAR & " " & $g_ReBarCompName, _
+			"About " & $g_ReBarProgName, $TIP_INFOICON, $TIP_BALLOON)
+	GUICtrlSetCursor($g_ReBarGuiIcon, 0)
+	GUICtrlSetOnEvent($g_ReBarGuiIcon, "_ShowAboutDialog")
+
 	GUICtrlCreateLabel("Rizonesoft SDK (Distro) 1", 85, 15, 300, 100)
 	GUICtrlSetFont(-1, 11)
 
-	$LIST_DISTROS = GUICtrlCreateListView("", 10, 90, 450, 200)
-	_GUICtrlListView_SetExtendedListViewStyle($LIST_DISTROS, BitOR($LVS_EX_GRIDLINES, $LVS_EX_FULLROWSELECT, _
+	$g_ListDistros = GUICtrlCreateListView("", 10, 90, 450, 200)
+	_GUICtrlListView_SetExtendedListViewStyle($g_ListDistros, BitOR($LVS_EX_GRIDLINES, $LVS_EX_FULLROWSELECT, _
 			$LVS_EX_SUBITEMIMAGES, $LVS_EX_CHECKBOXES, _
 			$LVS_EX_DOUBLEBUFFER, $WS_EX_CLIENTEDGE, _
 			$LVS_EX_FLATSB, $LVS_EX_INFOTIP))
-	_WinAPI_SetWindowTheme(GUICtrlGetHandle($LIST_DISTROS), "Explorer")
+	_WinAPI_SetWindowTheme(GUICtrlGetHandle($g_ListDistros), "Explorer")
 
-	_GUICtrlListView_AddColumn($LIST_DISTROS, " Distros ", 450)
-	_GUICtrlListView_AddColumn($LIST_DISTROS, " Script Path ", 100)
-	_GUICtrlListView_AddColumn($LIST_DISTROS, " Distro Configuration ", 100)
+	_GUICtrlListView_AddColumn($g_ListDistros, " Distros ", 450)
+	_GUICtrlListView_AddColumn($g_ListDistros, " Script Path ", 100)
+	_GUICtrlListView_AddColumn($g_ListDistros, " Distro Configuration ", 100)
 
-	$IMG_DISTROS = _GUIImageList_Create(16, 16, 5, 3, 0, 250)
-	_GUICtrlListView_SetImageList($LIST_DISTROS, $IMG_DISTROS, 1)
+	$g_ImgDistros = _GUIImageList_Create(16, 16, 5, 3, 0, 250)
+	_GUICtrlListView_SetImageList($g_ListDistros, $g_ImgDistros, 1)
 
-	$BTN_PROCESS_ALL = GUICtrlCreateButton("Process", 270, 295, 190, 40)
-	GUICtrlSetFont($BTN_PROCESS_ALL, 11, 400)
+	$g_BtnProcessAll = GUICtrlCreateButton("Process", 270, 295, 190, 40)
+	GUICtrlSetFont($g_BtnProcessAll, 11, 400)
 
-	GUICtrlSetOnEvent($BTN_PROCESS_ALL, "_RunBuildOption")
+	GUICtrlSetOnEvent($g_BtnProcessAll, "_RunBuildOption")
 
 	GUICtrlCreateTab(10, 345, 760, 160)
 
@@ -354,19 +349,23 @@ Func _StartCoreGUI()
 
 	For $iCol = 0 To $COUNT_PREREQ_COL - 1
 		For $iLine = 0 To $COUNT_PREREQ_LINE - 1
-			$LINE_PREREQ[$iCol][$iLine] = GUICtrlCreateLabel("", 20 + ($iCol * 360), 380 + ($iLine * $SPACE_PRELINE), 346, 1)
-			GUICtrlSetBkColor($LINE_PREREQ[$iCol][$iLine], 0xD9D9D9)
+			$g_LinePreReq[$iCol][$iLine] = GUICtrlCreateLabel("", 20 + ($iCol * 360), 380 + ($iLine * $SPACE_PRELINE), 346, 1)
+			GUICtrlSetBkColor($g_LinePreReq[$iCol][$iLine], 0xD9D9D9)
 		Next
 		For $iRow = 0 To $COUNT_PREREQ_ROW - 1
-			$ICO_PRESTATUS[$iCol][$iRow] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 122, 25 + ($iCol * 360), 383 + ($iRow * $SPACE_PRELINE), 16, 16)
-			$LBL_PRENAME[$iCol][$iRow] = GUICtrlCreateLabel("Prerequisites", 50 + ($iCol * 360), 384 + ($iRow * $SPACE_PRELINE), 200, 16)
-			$LBL_PRESTATUS[$iCol][$iRow] = GUICtrlCreateLabel("Not Installed", 250 + ($iCol * 360), 384 + ($iRow * $SPACE_PRELINE), 80, 16)
-			GUICtrlSetFont($LBL_PRESTATUS[$iCol][$iRow], 8.5, -1, 4) ;Underlined
-			GUICtrlSetColor($LBL_PRESTATUS[$iCol][$iRow], 0x0000FF)
-			GUICtrlSetCursor($LBL_PRESTATUS[$iCol][$iRow], 0)
-			$LBL_PREURL[$iCol][$iRow] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 126, 340 + ($iCol * 360), 383 + ($iRow * $SPACE_PRELINE), 16, 16)
+			$g_IconPreStatus[$iCol][$iRow] = GUICtrlCreateIcon($g_ReBarResFugue, 122, 25 + ($iCol * 360), 383 + ($iRow * $SPACE_PRELINE), 16, 16)
+			$g_LblPreName[$iCol][$iRow] = GUICtrlCreateLabel("Prerequisites", 50 + ($iCol * 360), 384 + ($iRow * $SPACE_PRELINE), 200, 16)
+			$g_LblPreStatus[$iCol][$iRow] = GUICtrlCreateLabel("Not Installed", 250 + ($iCol * 360), 384 + ($iRow * $SPACE_PRELINE), 80, 16)
+			GUICtrlSetFont($g_LblPreStatus[$iCol][$iRow], 8.5, -1, 4) ;Underlined
+			GUICtrlSetColor($g_LblPreStatus[$iCol][$iRow], 0x0000FF)
+			GUICtrlSetCursor($g_LblPreStatus[$iCol][$iRow], 0)
+			$g_LblPreURL[$iCol][$iRow] = GUICtrlCreateIcon($g_ReBarResFugue, 126, 340 + ($iCol * 360), 383 + ($iRow * $SPACE_PRELINE), 16, 16)
 		Next
 	Next
+
+	_HidePrerequisite(1, 2)
+	_HidePrerequisite(1, 3)
+	_HidePrerequisite(1, 4)
 
 	GUICtrlCreateLabel("", 380, 380, 1, 111)
 	GUICtrlSetBkColor(-1, 0xD9D9D9)
@@ -375,33 +374,35 @@ Func _StartCoreGUI()
 	GUICtrlCreateLabel("", 725, 380, 1, 111)
 	GUICtrlSetBkColor(-1, 0xD9D9D9)
 
-	$ICO_PREREFRESH = GUICtrlCreateIcon($REBAR_RES_FUGUE, 128, 738, 383, 16, 16)
+	$ICO_PREREFRESH = GUICtrlCreateIcon($g_ReBarResFugue, 128, 738, 383, 16, 16)
 	GUICtrlSetCursor($ICO_PREREFRESH, 0)
 	GUICtrlSetTip($ICO_PREREFRESH, "Rescan your Computer for installed Prerequisites.", " Prerequisites", $TIP_INFOICON, $TIP_BALLOON)
 
-	$TAB_LOGGING = GUICtrlCreateTabItem(" Logging ")
+	$g_TabLogging = GUICtrlCreateTabItem(" Logging ")
 
-	$LST_STATUS = GUICtrlCreateListView("", 20, 380, 720, 111, BitOR($LVS_REPORT, $LVS_NOCOLUMNHEADER))
-	_GUICtrlListView_SetExtendedListViewStyle($LST_STATUS, BitOR($LVS_EX_FULLROWSELECT, $LVS_EX_DOUBLEBUFFER, _
+	$g_ListStatus = GUICtrlCreateListView("", 20, 380, 720, 111, BitOR($LVS_REPORT, $LVS_NOCOLUMNHEADER))
+	_GUICtrlListView_SetExtendedListViewStyle($g_ListStatus, BitOR($LVS_EX_FULLROWSELECT, $LVS_EX_DOUBLEBUFFER, _
 			$LVS_EX_SUBITEMIMAGES, $LVS_EX_INFOTIP, _
 			$WS_EX_CLIENTEDGE))
-	_GUICtrlListView_AddColumn($LST_STATUS, "", 680)
-	_WinAPI_SetWindowTheme(GUICtrlGetHandle($LST_STATUS), "Explorer")
+	_GUICtrlListView_AddColumn($g_ListStatus, "", 680)
+	_WinAPI_SetWindowTheme(GUICtrlGetHandle($g_ListStatus), "Explorer")
 
-	$IMG_STATUS = _GUIImageList_Create(16, 16, 5, 1, 8, 8)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -103)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -130)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -122)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -134)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -133)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -135)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -136)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -138)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -999)
-	_GUICtrlListView_SetImageList($LST_STATUS, $IMG_STATUS, 1)
+	$g_ImgStatus = _GUIImageList_Create(16, 16, 5, 1, 8, 8)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -103)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -130)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -122)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -134)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -133)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -135)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -136)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -138)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -159)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -160)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -999)
+	_GUICtrlListView_SetImageList($g_ListStatus, $g_ImgStatus, 1)
 
-	GUICtrlSetFont($LST_STATUS, 9, -1, -1, "Courier New")
-	GUICtrlSetColor($LST_STATUS, 0x222222)
+	GUICtrlSetFont($g_ListStatus, 9, -1, -1, "Courier New")
+	GUICtrlSetColor($g_ListStatus, 0x222222)
 
 	GUICtrlCreateTabItem("") ; end tabitem definition
 
@@ -409,28 +410,28 @@ Func _StartCoreGUI()
 	GUICtrlSetFont(-1, 10, 700, 2)
 
 	For $iBuild = 0 To $COUNT_BUILD - 1
-		$ICON_BUILD[$iBuild] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 109 + $iBuild, 480, 38 + ($iBuild * $LINESPACING), 16, 16)
-		$CHK_BUILD[$iBuild] = GUICtrlCreateCheckbox(" Building...", 503, 38 + ($iBuild * $LINESPACING), 215, 16)
-		$BTNHLP_BUILD[$iBuild] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 104, 718, 38 + ($iBuild * $LINESPACING), 16, 16)
-		GUICtrlSetCursor($BTNHLP_BUILD[$iBuild], 0)
-		$BTNGO_BUILD[$iBuild] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 108, 738, 38 + ($iBuild * $LINESPACING), 16, 16)
-		GUICtrlSetCursor($BTNGO_BUILD[$iBuild], 0)
-		$PRGTOP_BUILD[$iBuild] = 55 + ($iBuild * $LINESPACING)
-		$LINE_BUILD[$iBuild] = GUICtrlCreateLabel("", 503, $PRGTOP_BUILD[$iBuild], 215, 1)
-		GUICtrlSetBkColor($LINE_BUILD[$iBuild], 0xD9D9D9)
-		$PROGRESS_BUILD[$iBuild] = GUICtrlCreateLabel("", 503, $PRGTOP_BUILD[$iBuild], 1, 1)
-		GUICtrlSetBkColor($PROGRESS_BUILD[$iBuild], 0x3399FF)
-		GUICtrlSetState($PROGRESS_BUILD[$iBuild], $GUI_HIDE)
-;~ GUICtrlSetState($CHK_BUILD[$iBuild], $GUI_CHECKED)
+		$g_IconBuild[$iBuild] = GUICtrlCreateIcon($g_ReBarResFugue, 109 + $iBuild, 480, 38 + ($iBuild * $LINESPACING), 16, 16)
+		$g_ChkBuild[$iBuild] = GUICtrlCreateCheckbox(" Building...", 503, 38 + ($iBuild * $LINESPACING), 215, 16)
+		$g_BtnHlpBuild[$iBuild] = GUICtrlCreateIcon($g_ReBarResFugue, 104, 718, 38 + ($iBuild * $LINESPACING), 16, 16)
+		GUICtrlSetCursor($g_BtnHlpBuild[$iBuild], 0)
+		$g_BtnGoBuild[$iBuild] = GUICtrlCreateIcon($g_ReBarResFugue, 108, 738, 38 + ($iBuild * $LINESPACING), 16, 16)
+		GUICtrlSetCursor($g_BtnGoBuild[$iBuild], 0)
+		$g_PrTopBuild[$iBuild] = 55 + ($iBuild * $LINESPACING)
+		$g_LineBuild[$iBuild] = GUICtrlCreateLabel("", 503, $g_PrTopBuild[$iBuild], 215, 1)
+		GUICtrlSetBkColor($g_LineBuild[$iBuild], 0xD9D9D9)
+		$g_ProgressBuild[$iBuild] = GUICtrlCreateLabel("", 503, $g_PrTopBuild[$iBuild], 1, 1)
+		GUICtrlSetBkColor($g_ProgressBuild[$iBuild], 0x3399FF)
+		GUICtrlSetState($g_ProgressBuild[$iBuild], $GUI_HIDE)
+;~ GUICtrlSetState($g_ChkBuild[$iBuild], $GUI_CHECKED)
 
-		GUICtrlSetOnEvent($BTNGO_BUILD[$iBuild], "_RunBuildOption")
+		GUICtrlSetOnEvent($g_BtnGoBuild[$iBuild], "_RunBuildOption")
 
 	Next
 
-	GUICtrlSetData($CHK_BUILD[0], " Build Distros")
-	GUICtrlSetData($CHK_BUILD[1], " Compress Program Executables")
-	GUICtrlSetData($CHK_BUILD[2], " Sign Program Executables")
-	GUICtrlSetData($CHK_BUILD[3], " Generate Documentation")
+	GUICtrlSetData($g_ChkBuild[0], " Build Distros")
+	GUICtrlSetData($g_ChkBuild[1], " Compress Program Executables")
+	GUICtrlSetData($g_ChkBuild[2], " Sign Program Executables")
+	GUICtrlSetData($g_ChkBuild[3], " Generate Documentation")
 
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 
@@ -438,57 +439,66 @@ Func _StartCoreGUI()
 	GUICtrlSetFont(-1, 10, 700, 2)
 
 	For $iDis = 0 To $COUNT_DISTRIBUTE - 1
-		$ICON_DISTRIBUTE[$iDis] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 114 + $iDis, 480, 168 + ($iDis * $LINESPACING), 16, 16)
-		$CHK_DISTRIBUTE[$iDis] = GUICtrlCreateCheckbox(" Building...", 503, 168 + ($iDis * $LINESPACING), 215, 16)
-		$BTNHLP_DISTRIBUTE[$iDis] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 104, 718, 168 + ($iDis * $LINESPACING), 16, 16)
-		GUICtrlSetCursor($BTNHLP_DISTRIBUTE[$iDis], 0)
-		$BTNGO_DISTRIBUTE[$iDis] = GUICtrlCreateIcon($REBAR_RES_FUGUE, 108, 738, 168 + ($iDis * $LINESPACING), 16, 16)
-		GUICtrlSetCursor($BTNGO_DISTRIBUTE[$iDis], 0)
-		$PRGTOP_DISTRIBUTE[$iDis] = 185 + ($iDis * $LINESPACING)
-		$LINE_DISTRIBUTE[$iDis] = GUICtrlCreateLabel("", 503, $PRGTOP_DISTRIBUTE[$iDis], 215, 1)
-		GUICtrlSetBkColor($LINE_DISTRIBUTE[$iDis], 0xD9D9D9)
-		$PROGRESS_DISTRIBUTE[$iDis] = GUICtrlCreateLabel("", 503, $PRGTOP_DISTRIBUTE[$iDis], 0, 1)
-		GUICtrlSetBkColor($PROGRESS_DISTRIBUTE[$iDis], 0x68CEFA)
-		GUICtrlSetState($PROGRESS_DISTRIBUTE[$iDis], $GUI_HIDE)
-		;GUICtrlSetState($CHK_DISTRIBUTE[$iDis], $GUI_CHECKED)
+		$g_IconDistribute[$iDis] = GUICtrlCreateIcon($g_ReBarResFugue, 114 + $iDis, 480, 168 + ($iDis * $LINESPACING), 16, 16)
+		$g_ChkDistribute[$iDis] = GUICtrlCreateCheckbox(" Building...", 503, 168 + ($iDis * $LINESPACING), 215, 16)
+		$g_BtnHlpDistribute[$iDis] = GUICtrlCreateIcon($g_ReBarResFugue, 104, 718, 168 + ($iDis * $LINESPACING), 16, 16)
+		GUICtrlSetCursor($g_BtnHlpDistribute[$iDis], 0)
+		$g_BtnGoDistribute[$iDis] = GUICtrlCreateIcon($g_ReBarResFugue, 108, 738, 168 + ($iDis * $LINESPACING), 16, 16)
+		GUICtrlSetCursor($g_BtnGoDistribute[$iDis], 0)
+		$g_PrgTopDistribute[$iDis] = 185 + ($iDis * $LINESPACING)
+		$g_LineDistribute[$iDis] = GUICtrlCreateLabel("", 503, $g_PrgTopDistribute[$iDis], 215, 1)
+		GUICtrlSetBkColor($g_LineDistribute[$iDis], 0xD9D9D9)
+		$g_ProgressDistribute[$iDis] = GUICtrlCreateLabel("", 503, $g_PrgTopDistribute[$iDis], 0, 1)
+		GUICtrlSetBkColor($g_ProgressDistribute[$iDis], 0x68CEFA)
+		GUICtrlSetState($g_ProgressDistribute[$iDis], $GUI_HIDE)
+		;GUICtrlSetState($g_ChkDistribute[$iDis], $GUI_CHECKED)
 
-		GUICtrlSetOnEvent($BTNGO_DISTRIBUTE[$iDis], "_RunBuildOption")
+		GUICtrlSetOnEvent($g_BtnGoDistribute[$iDis], "_RunBuildOption")
 	Next
 
-	GUICtrlSetData($CHK_DISTRIBUTE[0], " Create Distribution")
-	GUICtrlSetData($CHK_DISTRIBUTE[1], " Create Portable Package")
-	GUICtrlSetData($CHK_DISTRIBUTE[2], " Create Installation")
-	GUICtrlSetData($CHK_DISTRIBUTE[3], " Sign Installation")
-	GUICtrlSetData($CHK_DISTRIBUTE[4], " Distribute Source Code")
-	GUICtrlSetData($CHK_DISTRIBUTE[5], " Update GitHub Repository")
-	GUICtrlSetData($CHK_DISTRIBUTE[6], " Create Source Code Package")
+	GUICtrlSetData($g_ChkDistribute[0], " Create Distribution")
+	GUICtrlSetData($g_ChkDistribute[1], " Create Portable Package")
+	GUICtrlSetData($g_ChkDistribute[2], " Create Installation")
+	GUICtrlSetData($g_ChkDistribute[3], " Sign Installation")
+	GUICtrlSetData($g_ChkDistribute[4], " Distribute Source Code")
+	GUICtrlSetData($g_ChkDistribute[5], " Update GitHub Repository")
+	GUICtrlSetData($g_ChkDistribute[6], " Create Source Code Package")
 
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 
-	GUICtrlSetOnEvent($REBAR_GUI_ICON, "_ShowAboutDialog")
-
-	_SplashUpdate("Loading Distros", 98, $REBAR_SPLASH_ENABLE, True)
+	_SplashUpdate("Loading Distros", 98, True)
 	_PopulateDistros()
-	_SplashUpdate("Checking Prerequasites", 99, $REBAR_SPLASH_ENABLE, True)
+	_SplashUpdate("Checking Prerequasites", 99, True)
 	_CheckPrerequisites()
 
-	_SplashUpdate("", 100, $REBAR_SPLASH_ENABLE)
-	GUISetState(@SW_SHOW, $REBAR_GUI_CORE)
+	_SplashUpdate("", 100)
+	GUISetState(@SW_SHOW, $g_ReBarCoreGui)
 
 	; For some reason, a column can only be hidden after the GUI is shown.
-	_GUICtrlListView_HideColumn($LIST_DISTROS, 1)
-	_GUICtrlListView_HideColumn($LIST_DISTROS, 2)
+	_GUICtrlListView_HideColumn($g_ListDistros, 1)
+	_GUICtrlListView_HideColumn($g_ListDistros, 2)
 
-	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $REBAR_GUI_CORE)
+	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $g_ReBarCoreGui)
 
+	AdlibRegister("_OnMainIconHover", 50)
+	AdlibRegister("_GUIHoverControlExtended", 50)
+	_SoftwareUpdateCheck()
 
 	While 1
-		_OnMainIconHover()
-		_GUIHoverControlExtended()
-		Sleep(55)
+		Sleep(50)
 	WEnd
 
 EndFunc   ;==>_StartCoreGUI
+
+
+Func _HidePrerequisite($iCol, $iRow)
+
+	GUICtrlSetState($g_IconPreStatus[$iCol][$iRow], $GUI_HIDE)
+	GUICtrlSetState($g_LblPreStatus[$iCol][$iRow], $GUI_HIDE)
+	GUICtrlSetState($g_LblPreName[$iCol][$iRow], $GUI_HIDE)
+	GUICtrlSetState($g_LblPreURL[$iCol][$iRow], $GUI_HIDE)
+
+EndFunc
 
 
 Func _OnMainIconHover()
@@ -496,32 +506,33 @@ Func _OnMainIconHover()
 	Local $iCursor = GUIGetCursorInfo()
 
 	If Not @error Then
-		If $iCursor[4] = $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 1 Then
-			$REBAR_GUI_ICON_HOVER = 0
-			GUICtrlSetImage($REBAR_GUI_ICON, $ICON_HOVER, 201)
-		ElseIf $iCursor[4] <> $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 0 Then
-			$REBAR_GUI_ICON_HOVER = 1
-			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON, 99)
+		If $iCursor[4] = $g_ReBarGuiIcon And $g_ReBarIcoHovering = 1 Then
+			$g_ReBarIcoHovering = 0
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIconHover, 201)
+		ElseIf $iCursor[4] <> $g_ReBarGuiIcon And $g_ReBarIcoHovering = 0 Then
+			$g_ReBarIcoHovering = 1
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIcon, 99)
 		EndIf
 	EndIf
+
 
 EndFunc   ;==>_OnMainIconHover
 
 
 Func _PopulateDistros()
 
-	_GUICtrlListView_BeginUpdate($LIST_DISTROS)
-	_GUICtrlListView_DeleteAllItems($LIST_DISTROS)
+	_GUICtrlListView_BeginUpdate($g_ListDistros)
+	_GUICtrlListView_DeleteAllItems($g_ListDistros)
 
 	; Build Groups
-	_GUICtrlListView_EnableGroupView($LIST_DISTROS)
-	_GUICtrlListView_InsertGroup($LIST_DISTROS, -1, 1, "Prototype")
-	_GUICtrlListView_InsertGroup($LIST_DISTROS, -1, 2, "Beta")
-	_GUICtrlListView_InsertGroup($LIST_DISTROS, -1, 3, "Release Candidate")
-	_GUICtrlListView_InsertGroup($LIST_DISTROS, -1, 4, "Final Release")
-	_GUICtrlListView_InsertGroup($LIST_DISTROS, -1, 5, "Unknown")
+	_GUICtrlListView_EnableGroupView($g_ListDistros)
+	_GUICtrlListView_InsertGroup($g_ListDistros, -1, 1, "Prototype")
+	_GUICtrlListView_InsertGroup($g_ListDistros, -1, 2, "Beta")
+	_GUICtrlListView_InsertGroup($g_ListDistros, -1, 3, "Release Candidate")
+	_GUICtrlListView_InsertGroup($g_ListDistros, -1, 4, "Final Release")
+	_GUICtrlListView_InsertGroup($g_ListDistros, -1, 5, "Unknown")
 
-	$COUNT_DISTROS = 0
+	$g_CountDistros = 0
 
 	Local $sConcreteDir = @ScriptDir & "\Concrete"
 	Local $hSearch = FileFindFirstFile($sConcreteDir & "\*.*")
@@ -549,15 +560,16 @@ Func _PopulateDistros()
 				Local $sAu3ScriptIn = $sDistroPath & "\" & $sDSetScript
 				Local $sDistroName = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Comment")
 				Local $sDistroDescription = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Description")
-				Local $sDistroShortName = _GetFilenameFromPath($sAu3ScriptIn)
+				Local $sDistroShortName = _AutoIt3Script_GetFilename($sAu3ScriptIn)
 				Local $sDistroIcon = $sDistroPath & "\" & _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Icon")
 				Local $sDistroVersion = _AutoIt3Script_GetVersion($sAu3ScriptIn, 0)
-				Local $iDistroBuild = _AutoIt3Script_GetVersion($sAu3ScriptIn, 4)
+				Local $sDistroMajor = _AutoIt3Script_GetVersion($sAu3ScriptIn, 1)
 				Local $iDistroMaintenance = _AutoIt3Script_GetVersion($sAu3ScriptIn, 3)
+				Local $iDistroBuild = _AutoIt3Script_GetVersion($sAu3ScriptIn, 4)
 				Local $sDistroBuildPath = $sDistroPath & "\Distribution\" & $iDistroBuild
-				Local $sDistroPathPortableName = $sDistroShortName & "-" & $iDistroBuild
+				Local $sDistroPathPortableName = $sDistroShortName & "_" & $iDistroBuild
 				Local $sDistroPathPortable = $sDistroBuildPath & "\" & $sDistroPathPortableName
-				Local $sDistroPathSource = $sDistroBuildPath & "\" & $sDistroPathPortableName & "-Source"
+				Local $sDistroPathSource = $sDistroBuildPath & "\" & $sDistroPathPortableName & "_Source"
 				Local $sUseX64 = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_UseX64")
 				Local $sCompileBoth = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Compile_both")
 				Local $sOutFile = "", $sOutFile64 = "", $sOutFilePath = "", $sOutFilePath_X64 = ""
@@ -576,14 +588,14 @@ Func _PopulateDistros()
 
 				If IniRead($sDistroIniPath, "SDK", "Compatibilty", "") = "Rizonesoft.SDK.2" Then
 
-					_GUICtrlListView_AddItem($LIST_DISTROS, " " & $sDistroName & " (Build " & $iDistroBuild & ")", 0)
-					_GUICtrlListView_AddSubItem($LIST_DISTROS, $COUNT_DISTROS, $sAu3ScriptIn, 1)
-					_GUICtrlListView_AddSubItem($LIST_DISTROS, $COUNT_DISTROS, $sDistroIniPath, 2)
-					_GUICtrlListView_SetItemGroupID($LIST_DISTROS, $COUNT_DISTROS, $iDistroMaintenance + 1)
-					_GUIImageList_AddIcon($IMG_DISTROS, $sDistroIcon, 0)
-					_GUICtrlListView_SetItemImage($LIST_DISTROS, $COUNT_DISTROS, $COUNT_DISTROS, 0)
+					_GUICtrlListView_AddItem($g_ListDistros, " " & $sDistroName & " " & $sDistroMajor & " (Build " & $iDistroBuild & ")", 0)
+					_GUICtrlListView_AddSubItem($g_ListDistros, $g_CountDistros, $sAu3ScriptIn, 1)
+					_GUICtrlListView_AddSubItem($g_ListDistros, $g_CountDistros, $sDistroIniPath, 2)
+					_GUICtrlListView_SetItemGroupID($g_ListDistros, $g_CountDistros, $iDistroMaintenance + 1)
+					_GUIImageList_AddIcon($g_ImgDistros, $sDistroIcon, 0)
+					_GUICtrlListView_SetItemImage($g_ListDistros, $g_CountDistros, $g_CountDistros, 0)
 
-					$COUNT_DISTROS += 1
+					$g_CountDistros += 1
 
 				EndIf
 
@@ -592,8 +604,9 @@ Func _PopulateDistros()
 				IniWrite($sDistroIniPath, "Environment", "ProgramName", $sDistroName)
 				IniWrite($sDistroIniPath, "Environment", "ProgramShortName", $sDistroShortName)
 				IniWrite($sDistroIniPath, "Environment", "ProgramVersion", $sDistroVersion)
-				IniWrite($sDistroIniPath, "Environment", "ProgramVersionBuild", $iDistroBuild)
+				IniWrite($sDistroIniPath, "Environment", "ProgramMajor", $sDistroMajor)
 				IniWrite($sDistroIniPath, "Environment", "ProgramVersionMaintenance", $iDistroMaintenance)
+				IniWrite($sDistroIniPath, "Environment", "ProgramVersionBuild", $iDistroBuild)
 				IniWrite($sDistroIniPath, "Environment", "ProgramDescription", $sDistroDescription)
 				IniWrite($sDistroIniPath, "Environment", "DistributionPath", $sDistroBuildPath)
 				IniWrite($sDistroIniPath, "Environment", "DistributionPortableName", $sDistroPathPortableName)
@@ -614,7 +627,7 @@ Func _PopulateDistros()
 
 	FileClose($hSearch)
 
-	_GUICtrlListView_EndUpdate($LIST_DISTROS)
+	_GUICtrlListView_EndUpdate($g_ListDistros)
 
 EndFunc   ;==>_PopulateDistros
 
@@ -622,29 +635,29 @@ EndFunc   ;==>_PopulateDistros
 Func _RunBuildOption()
 
 	Switch @GUI_CtrlId
-		Case $BTNGO_BUILD[0]
+		Case $g_BtnGoBuild[0]
 			_ProcessSelectedDistros(1)
-		Case $BTNGO_BUILD[1]
+		Case $g_BtnGoBuild[1]
 			_ProcessSelectedDistros(2)
-		Case $BTNGO_BUILD[2]
+		Case $g_BtnGoBuild[2]
 			_ProcessSelectedDistros(3)
-		Case $BTNGO_BUILD[3]
+		Case $g_BtnGoBuild[3]
 			_ProcessSelectedDistros(4)
-		Case $BTNGO_DISTRIBUTE[0]
+		Case $g_BtnGoDistribute[0]
 			_ProcessSelectedDistros(5)
-		Case $BTNGO_DISTRIBUTE[1]
+		Case $g_BtnGoDistribute[1]
 			_ProcessSelectedDistros(6)
-		Case $BTNGO_DISTRIBUTE[2]
+		Case $g_BtnGoDistribute[2]
 			_ProcessSelectedDistros(7)
-		Case $BTNGO_DISTRIBUTE[3]
+		Case $g_BtnGoDistribute[3]
 			_ProcessSelectedDistros(8)
-		Case $BTNGO_DISTRIBUTE[4]
+		Case $g_BtnGoDistribute[4]
 			_ProcessSelectedDistros(9)
-		Case $BTNGO_DISTRIBUTE[5]
+		Case $g_BtnGoDistribute[5]
 			_ProcessSelectedDistros(10)
-		Case $BTNGO_DISTRIBUTE[6]
+		Case $g_BtnGoDistribute[6]
 			_ProcessSelectedDistros(11)
-		Case $BTN_PROCESS_ALL
+		Case $g_BtnProcessAll
 			_ProcessSelectedDistros(99)
 	EndSwitch
 
@@ -656,11 +669,11 @@ EndFunc   ;==>_RunBuildOption
 
 Func _ProcessSelectedDistros($iOption)
 
-	Local $iDistroCount = _GUICtrlListView_GetItemCount($LIST_DISTROS)
+	Local $iDistroCount = _GUICtrlListView_GetItemCount($g_ListDistros)
 
 	If $iDistroCount > 0 Then
 
-		$COUNT_CHECKED_DISTROS = _GetCheckedItemCount($LIST_DISTROS)
+		$COUNT_CHECKED_DISTROS = _GetCheckedItemCount($g_ListDistros)
 
 		If $COUNT_CHECKED_DISTROS > 0 Then
 
@@ -675,11 +688,11 @@ Func _ProcessSelectedDistros($iOption)
 
 				For $i = 0 To $iDistroCount
 
-					Local $iSelCount = _GUICtrlListView_GetItemChecked($LIST_DISTROS, $i)
+					Local $iSelCount = _GUICtrlListView_GetItemChecked($g_ListDistros, $i)
 
 					If $iSelCount = 1 Then
 
-						Local $sItem = _GUICtrlListView_GetItemTextString($LIST_DISTROS, $i)
+						Local $sItem = _GUICtrlListView_GetItemTextString($g_ListDistros, $i)
 						Local $sSplit = StringSplit($sItem, "|")
 						If @error Then ContinueLoop
 
@@ -705,17 +718,19 @@ Func _ProcessSelectedDistros($iOption)
 								_SignExecutables($sDistroIniPath, 0, 3)
 							Case 9
 								_DistributSourceCode($sDistroIniPath, 4)
+							Case 10
+								_CopySourceToGitDirectory($sDistroIniPath, 5)
 							Case 99
 
 ;~ 								$B_SINGULARITY = False
 
-;~ 								If GUICtrlRead($CHK_BUILD[0]) = $GUI_CHECKED Then
+;~ 								If GUICtrlRead($g_ChkBuild[0]) = $GUI_CHECKED Then
 ;~ 									_BuildSelection($sScriptPath, $i)
 ;~ 								EndIf
 
-;~ 								If GUICtrlRead($CHK_BUILD[1]) = $GUI_CHECKED Then
+;~ 								If GUICtrlRead($g_ChkBuild[1]) = $GUI_CHECKED Then
 ;~ 									MsgBox(0, "", "Doing something else!")
-;~ 									GUICtrlSetState($CHK_BUILD[1], $GUI_UNCHECKED)
+;~ 									GUICtrlSetState($g_ChkBuild[1], $GUI_UNCHECKED)
 ;~ 								EndIf
 
 						EndSwitch
@@ -748,7 +763,7 @@ EndFunc   ;==>_ProcessSelectedDistros
 
 Func _StartProcess()
 
-	GUICtrlSetState($TAB_LOGGING, $GUI_SHOW)
+	GUICtrlSetState($g_TabLogging, $GUI_SHOW)
 	_SetGUIState($GUI_DISABLE)
 
 EndFunc   ;==>_StartProcess
@@ -762,13 +777,13 @@ Func _EndProcess()
 	; Reset Build Icons
 	If _CheckedBuildCount() = 0 Or $B_SINGULARITY = True Then
 		For $iBuild = 0 To $COUNT_BUILD - 1
-			GUICtrlSetImage($ICON_BUILD[$iBuild], $REBAR_RES_FUGUE, 109 + $iBuild)
+			GUICtrlSetImage($g_IconBuild[$iBuild], $g_ReBarResFugue, 109 + $iBuild)
 		Next
 	EndIf
 
 	If _CheckedDistrobuteCount() = 0 Or $B_SINGULARITY = True Then
 		For $iDis = 0 To $COUNT_DISTRIBUTE - 1
-			GUICtrlSetImage($ICON_DISTRIBUTE[$iDis], $REBAR_RES_FUGUE, 114 + $iDis)
+			GUICtrlSetImage($g_IconDistribute[$iDis], $g_ReBarResFugue, 114 + $iDis)
 		Next
 	EndIf
 
@@ -779,21 +794,21 @@ EndFunc   ;==>_EndProcess
 
 Func _SetGUIState($iState)
 
-	GUICtrlSetState($LIST_DISTROS, $iState)
-	GUICtrlSetState($BTN_PROCESS_ALL, $iState)
+	GUICtrlSetState($g_ListDistros, $iState)
+	GUICtrlSetState($g_BtnProcessAll, $iState)
 
 	For $iBuild = 0 To $COUNT_BUILD - 1
-		GUICtrlSetState($ICON_BUILD[$iBuild], $iState)
-		GUICtrlSetState($CHK_BUILD[$iBuild], $iState)
-		GUICtrlSetState($BTNHLP_BUILD[$iBuild], $iState)
-		GUICtrlSetState($BTNGO_BUILD[$iBuild], $iState)
+		GUICtrlSetState($g_IconBuild[$iBuild], $iState)
+		GUICtrlSetState($g_ChkBuild[$iBuild], $iState)
+		GUICtrlSetState($g_BtnHlpBuild[$iBuild], $iState)
+		GUICtrlSetState($g_BtnGoBuild[$iBuild], $iState)
 	Next
 
 	For $iDis = 0 To $COUNT_DISTRIBUTE - 1
-		GUICtrlSetState($ICON_DISTRIBUTE[$iDis], $iState)
-		GUICtrlSetState($CHK_DISTRIBUTE[$iDis], $iState)
-		GUICtrlSetState($BTNHLP_DISTRIBUTE[$iDis], $iState)
-		GUICtrlSetState($BTNGO_DISTRIBUTE[$iDis], $iState)
+		GUICtrlSetState($g_IconDistribute[$iDis], $iState)
+		GUICtrlSetState($g_ChkDistribute[$iDis], $iState)
+		GUICtrlSetState($g_BtnHlpDistribute[$iDis], $iState)
+		GUICtrlSetState($g_BtnGoDistribute[$iDis], $iState)
 	Next
 
 EndFunc   ;==>_SetGUIState
@@ -828,7 +843,7 @@ Func _StartLoggingMessage($iMessage)
 			$sMessage = "Creating Source Code Package"
 	EndSwitch
 
-	_StartLogging($sMessage & " ...")
+	_StartLogging($sMessage & "...")
 
 EndFunc   ;==>_StartLoggingMessage
 
@@ -836,7 +851,7 @@ EndFunc   ;==>_StartLoggingMessage
 Func _StartBuildProcess($iP)
 
 	If $INT_BLDPERC[$iP] = 0 Then
-		GUICtrlSetImage($ICON_BUILD[$iP], @ScriptDir & "\SDK\Themes\Processing\16\Process.ani", 0)
+		GUICtrlSetImage($g_IconBuild[$iP], @ScriptDir & "\SDK\Themes\Processing\16\Process.ani", 0)
 	EndIf
 
 EndFunc   ;==>_StartBuildProcess
@@ -846,18 +861,18 @@ Func _UpdateBuildProcess($iP)
 
 	$INT_BLDPOS[$iP] += 1
 	$INT_BLDPERC[$iP] = ($INT_BLDPOS[$iP] / $COUNT_CHECKED_DISTROS) * 100
-	_DrawStatusSizeFromPercentage($PROGRESS_BUILD[$iP], $INT_BLDPERC[$iP], 503, $PRGTOP_BUILD[$iP] - 1, 215, 1)
+	_DrawStatusSizeFromPercentage($g_ProgressBuild[$iP], $INT_BLDPERC[$iP], 503, $g_PrTopBuild[$iP] - 1, 215, 1)
 
 	If $INT_BLDPERC[$iP] = 100 Then
 
 		$INT_BLDPERC[$iP] = 0
 		$INT_BLDPOS[$iP] = 0
 
-		GUICtrlSetState($CHK_BUILD[$iP], $GUI_UNCHECKED)
-		GUICtrlSetImage($ICON_BUILD[$iP], $REBAR_RES_FUGUE, 130)
+		GUICtrlSetState($g_ChkBuild[$iP], $GUI_UNCHECKED)
+		GUICtrlSetImage($g_IconBuild[$iP], $g_ReBarResFugue, 130)
 		Sleep(1000)
 
-		_DrawStatusSizeFromPercentage($PROGRESS_BUILD[$iP], $INT_BLDPERC[$iP], 503, $PRGTOP_BUILD[$iP] - 1, 215, 1)
+		_DrawStatusSizeFromPercentage($g_ProgressBuild[$iP], $INT_BLDPERC[$iP], 503, $g_PrTopBuild[$iP] - 1, 215, 1)
 
 	EndIf
 
@@ -867,7 +882,7 @@ EndFunc   ;==>_UpdateBuildProcess
 Func _StartDistributionProcess($iP)
 
 	If $INT_DISPERC[$iP] = 0 Then
-		GUICtrlSetImage($ICON_DISTRIBUTE[$iP], @ScriptDir & "\Themes\Processing\16\Process.ani", 0)
+		GUICtrlSetImage($g_IconDistribute[$iP], @ScriptDir & "\SDK\Themes\Processing\16\Process.ani", 0)
 	EndIf
 
 EndFunc   ;==>_StartDistributionProcess
@@ -883,11 +898,11 @@ Func _UpdateDistributionProcess($iP)
 		$INT_DISPOS[$iP] = 0
 		$INT_DISPERC[$iP] = 0
 
-		GUICtrlSetState($CHK_DISTRIBUTE[$iP], $GUI_UNCHECKED)
-		GUICtrlSetImage($ICON_DISTRIBUTE[$iP], $REBAR_RES_FUGUE, 130)
+		GUICtrlSetState($g_ChkDistribute[$iP], $GUI_UNCHECKED)
+		GUICtrlSetImage($g_IconDistribute[$iP], $g_ReBarResFugue, 130)
 		Sleep(1000)
 
-		_DrawStatusSizeFromPercentage($PROGRESS_DISTRIBUTE[$iP], $INT_DISPERC[$iP], 503, $PRGTOP_DISTRIBUTE[$iP] - 1, 215, 1)
+		_DrawStatusSizeFromPercentage($g_ProgressDistribute[$iP], $INT_DISPERC[$iP], 503, $g_PrgTopDistribute[$iP] - 1, 215, 1)
 
 	EndIf
 
@@ -899,7 +914,7 @@ EndFunc   ;==>_UpdateDistributionProcess
 
 #Region ~Build
 
-Func _BuildSelection($sDistroIni_Path, $sAu3ScriptIn, $iCurrDistro, $iB)
+Func _BuildSelection($sDistroIniPath, $sAu3ScriptIn, $iCurrDistro, $iB)
 
 	_StartBuildProcess($iB)
 
@@ -923,25 +938,27 @@ Func _BuildSelection($sDistroIni_Path, $sAu3ScriptIn, $iCurrDistro, $iB)
 
 				WEnd
 
-				Local $sDistroPath = IniRead($sDistroIni_Path, "Environment", "ScriptPath", "")
-				Local $sDistroName = IniRead($sDistroIni_Path, "Environment", "ProgramName", "ReBar Application Framework")
-				Local $sDistroShortName = IniRead($sDistroIni_Path, "Environment", "ProgramShortName", "ReBar")
+				Local $sDistroPath = IniRead($sDistroIniPath, "Environment", "ScriptPath", "")
+				Local $sDistroName = IniRead($sDistroIniPath, "Environment", "ProgramName", "ReBar Application Framework")
+				Local $sDistroShortName = IniRead($sDistroIniPath, "Environment", "ProgramShortName", "ReBar")
 				Local $sDistroVersion = _AutoIt3Script_GetVersion($sAu3ScriptIn, 0)
+				Local $sDistroMajor = _AutoIt3Script_GetVersion($sAu3ScriptIn, 1)
 				Local $iDistroBuild = _AutoIt3Script_GetVersion($sAu3ScriptIn, 4)
 				Local $sDistroBuildPath = $sDistroPath & "\Distribution\" & $iDistroBuild
-				Local $sDistroPathPortableName = $sDistroShortName & "-" & $iDistroBuild
+				Local $sDistroPathPortableName = $sDistroShortName & "_" & $iDistroBuild
 				Local $sDistroPathPortable = $sDistroBuildPath & "\" & $sDistroPathPortableName
-				Local $sDistroPathSource = $sDistroBuildPath & "\" & $sDistroPathPortableName & "-Source"
+				Local $sDistroPathSource = $sDistroBuildPath & "\" & $sDistroPathPortableName & "_Source"
 
-				IniWrite($sDistroIni_Path, "Environment", "ProgramVersion", $sDistroVersion)
-				IniWrite($sDistroIni_Path, "Environment", "ProgramVersionBuild", $iDistroBuild)
-				IniWrite($sDistroIni_Path, "Environment", "DistributionPath", $sDistroBuildPath)
-				IniWrite($sDistroIni_Path, "Environment", "DistributionPortableName", $sDistroPathPortableName)
-				IniWrite($sDistroIni_Path, "Environment", "DistributionPortablePath", $sDistroPathPortable)
-				IniWrite($sDistroIni_Path, "Environment", "DistributionPathSource", $sDistroPathSource)
+				IniWrite($sDistroIniPath, "Environment", "ProgramVersion", $sDistroVersion)
+				IniWrite($sDistroIniPath, "Environment", "ProgramMajor", $sDistroMajor)
+				IniWrite($sDistroIniPath, "Environment", "ProgramVersionBuild", $iDistroBuild)
+				IniWrite($sDistroIniPath, "Environment", "DistributionPath", $sDistroBuildPath)
+				IniWrite($sDistroIniPath, "Environment", "DistributionPortableName", $sDistroPathPortableName)
+				IniWrite($sDistroIniPath, "Environment", "DistributionPortablePath", $sDistroPathPortable)
+				IniWrite($sDistroIniPath, "Environment", "DistributionPathSource", $sDistroPathSource)
 
-				_GUICtrlListView_SetItemText($LIST_DISTROS, $iCurrDistro, " " & $sDistroName & " (Build " & $iDistroBuild & ")")
-				_GUICtrlListView_SetItemChecked($LIST_DISTROS, $iCurrDistro, False)
+				_GUICtrlListView_SetItemText($g_ListDistros, $iCurrDistro, " " & $sDistroName & " " & $sDistroMajor & " (Build " & $iDistroBuild & ")")
+				; _GUICtrlListView_SetItemChecked($g_ListDistros, $iCurrDistro, False)
 
 			Else
 
@@ -1086,7 +1103,7 @@ Func _SignExecutables($sDistroIniPath, $iB = 0, $iD = 0)
 
 						Local $sInstallOutputPath = IniRead($sDistroIniPath, "Environment", "InstallOutputPath", "")
 						If FileExists($sInstallOutputPath) Then
-							_RunSignCommand($sInstallOutputPath, $sCertPath, $sDescription, $sWebsite, $sPassword)
+							_RunSignCommand($sInstallOutputPath, $sCertPath, $sDescription & " Setup", $sWebsite, $sPassword)
 						EndIf
 
 					Else
@@ -1196,7 +1213,7 @@ Func _GenerateDocumentation($sDistroIniPath, $iB)
 	_StartBuildProcess($iB)
 
 
-	$INST_SIZE = _CalculateInstallSize($sDistroIniPath)
+	$g_InstallSize = _CalculateInstallSize($sDistroIniPath)
 
 	Local $aDocFiles = IniReadSection($sDistroIniPath, "DocumentFiles")
 	; Check if an error occurred.
@@ -1222,7 +1239,7 @@ Func _ProcessTemplateFile($sDistroIniPath, $sDocTemplate, $sDocOutput)
 	Local $sDistroVersion = IniRead($sDistroIniPath, "Environment", "ProgramVersion", "")
 	Local $sDistroURL = IniRead($sDistroIniPath, "Documents", "CompanyURL", "https://www.rizonesoft.com")
 	Local $sDistroDay = @MDAY
-	Local $sDistroMonth = @MON
+	Local $sDistroMonth = _DateToMonth(@MON)
 	Local $sDistroYear = @YEAR
 
 	; Open the Distro Template file for reading and store the handle to a variable.
@@ -1241,7 +1258,7 @@ Func _ProcessTemplateFile($sDistroIniPath, $sDocTemplate, $sDocOutput)
 	$sTemplateRead = StringReplace($sTemplateRead, "[:DAY:]", $sDistroDay)
 	$sTemplateRead = StringReplace($sTemplateRead, "[:MONTH:]", $sDistroMonth)
 	$sTemplateRead = StringReplace($sTemplateRead, "[:YEAR:]", $sDistroYear)
-	$sTemplateRead = StringReplace($sTemplateRead, "[:INSTSIZE:]", $INST_SIZE & " MB")
+	$sTemplateRead = StringReplace($sTemplateRead, "[:INSTSIZE:]", $g_InstallSize & " MB")
 
 	; Close the handle returned by FileOpen.
 	FileClose($hTemplateOpen)
@@ -1290,6 +1307,24 @@ Func _CreateDistribution($sDistroIniPath, $iD)
 			_DistributeFile($sInputPath & "\" & $aDocFiles[$x][1], $sOutputPath & "\" & $aDocFiles[$x][1])
 		Next
 	EndIf
+
+	_EditLoggingWrite("Generating update file.")
+
+	Local $sUpdateURL = IniRead($sDistroIniPath, "Update", "UpdateURL", "http://www.rizonesoft.com")
+	Local $iDistroBuild = IniRead($sDistroIniPath, "Environment", "ProgramVersionBuild", 0)
+	Local $sDistroShortName = IniRead($sDistroIniPath, "Environment", "ProgramShortName", "ReBar")
+	Local $sUpdateFilePath = @ScriptDir & "\Upload\www\update\" & $sDistroShortName & ".ru"
+
+	DirCreate($sUpdateFilePath)
+
+	IniWrite($sUpdateFilePath, "Update", "LatestBuild", $iDistroBuild)
+	IniWrite($sUpdateFilePath, "Update", "UpdateURL", $sUpdateURL)
+
+	If FileExists($sUpdateFilePath) Then
+		_EditLoggingWrite("Successfully generated update file.")
+		_EditLoggingWrite("[" & $sUpdateFilePath & "]")
+	EndIf
+
 
 	_UpdateDistributionProcess($iD)
 
@@ -1407,9 +1442,9 @@ Func _CreateInstall($sDistroIniPath, $iD)
 
 		_GenerateInstallationScript($sDistroIniPath)
 
-		Local $sInstallOutputPath = IniRead($sDistroIniPath, "Environment", "InstallOutputPath", "")
-		If FileExists($sInstallOutputPath) Then
-			_ProcessCommand(Chr(34) & $INN_CMD & Chr(34) & Chr(32) & Chr(34) & $sInstallOutputPath & Chr(34))
+		Local $sInstallScriptPath = IniRead($sDistroIniPath, "Environment", "InstallScriptPath", "")
+		If FileExists($sInstallScriptPath) Then
+			_ProcessCommand(Chr(34) & $INN_CMD & Chr(34) & Chr(32) & Chr(34) & $sInstallScriptPath & Chr(34))
 		EndIf
 
 	EndIf
@@ -1429,14 +1464,14 @@ Func _GenerateInstallationScript($sDistroIniPath)
 	Local $sCompanyURL = IniRead($sDistroIniPath, "Documents", "CompanyURL", "")
 	Local $sSupportURL = IniRead($sDistroIniPath, "Documents", "SupportURL", "")
 	Local $sContactURL = IniRead($sDistroIniPath, "Documents", "ContactURL", "")
-	Local $sUpdatesURL = IniRead($sDistroIniPath, "Documents", "UpdatesURL", "")
+	Local $sUpdateURL = IniRead($sDistroIniPath, "Update", "UpdateURL", "http://www.rizonesoft.com")
 	Local $sProgName = IniRead($sDistroIniPath, "Environment", "ProgramName", "")
 	Local $sProgShortName = IniRead($sDistroIniPath, "Environment", "ProgramShortName", "")
 	Local $sOutputFile = IniRead($sDistroIniPath, "Environment", "OutputFile", "")
 	Local $sOutput64Bit = IniRead($sDistroIniPath, "Environment", "OutputFile64Bit", "")
 
-	Local $sOutputBaseName = $sProgShortName & "-" & $sProgVersion & "-Setup.exe"
-	Local $sScriptBaseName = $sProgShortName & "-" & $sProgVersion & "-Setup.iss"
+	Local $sOutputBaseName = $sProgShortName & "_" & $sProgVersion & "_Setup.exe"
+	Local $sScriptBaseName = $sProgShortName & "_" & $sProgVersion & "_Setup.iss"
 	Local $sOutputFullPath = $sDistoPath & "\" & $sOutputBaseName
 	Local $sScriptFullPath = $sDistoPath & "\" & $sScriptBaseName
 	Local $sIniFilBaseName = $sProgShortName & ".ini"
@@ -1497,7 +1532,7 @@ Func _GenerateInstallationScript($sDistroIniPath)
 	FileWrite($hFileOpen, "AppPublisher=" & $sCompanyName & @CRLF)
 	FileWrite($hFileOpen, "AppPublisherURL=" & $sCompanyURL & @CRLF)
 	FileWrite($hFileOpen, "AppSupportURL=" & $sSupportURL & @CRLF)
-	FileWrite($hFileOpen, "AppUpdatesURL=" & $sUpdatesURL & @CRLF)
+	FileWrite($hFileOpen, "AppUpdatesURL=" & $sUpdateURL & @CRLF)
 	FileWrite($hFileOpen, "AppContact=" & $sContactURL & @CRLF)
 	FileWrite($hFileOpen, "AppCopyright={#app_copyright}" & @CRLF)
 	FileWrite($hFileOpen, "UninstallDisplayIcon={app}\" & $sOutputFile & @CRLF)
@@ -1505,7 +1540,7 @@ Func _GenerateInstallationScript($sDistroIniPath)
 	FileWrite($hFileOpen, "DefaultDirName={pf}\" & $sCompanyName & "\" & $sProgName & @CRLF)
 	FileWrite($hFileOpen, "LicenseFile=" & $sPackPathName & "\License.txt" & @CRLF)
 	FileWrite($hFileOpen, "OutputDir=." & @CRLF)
-	FileWrite($hFileOpen, "OutputBaseFilename=" & $sOutputBaseName & @CRLF)
+	FileWrite($hFileOpen, "OutputBaseFilename=" & StringReplace($sOutputBaseName, ".exe", "") & @CRLF)
 	FileWrite($hFileOpen, "WizardImageFile=compiler:WizModernImage-IS.bmp" & @CRLF)
 	FileWrite($hFileOpen, "Compression=lzma2/max" & @CRLF)
 	FileWrite($hFileOpen, "InternalCompressLevel=max" & @CRLF)
@@ -1706,7 +1741,9 @@ Func _GenerateInstallationScript($sDistroIniPath)
 
 	FileClose($hFileOpen)
 
+	IniWrite($sDistroIniPath, "Environment", "InstallScriptPath", $sScriptFullPath)
 	IniWrite($sDistroIniPath, "Environment", "InstallOutputPath", $sOutputFullPath)
+	; _ProcessCommand($INN_CMD & " " & Chr(34) & $sScriptFullPath & Chr(34))
 
 EndFunc   ;==>_GenerateInstallationScript
 
@@ -1718,7 +1755,7 @@ Func _DistributSourceCode($sDistroIniPath, $iD)
 	Local $sInputPath = IniRead($sDistroIniPath, "Environment", "ScriptPath", _GetParentPath($sDistroIniPath))
 	Local $sOutputPath = IniRead($sDistroIniPath, "Environment", "DistributionPathSource", "")
 	Local $sAu3ScriptIn = IniRead($sDistroIniPath, "Environment", "ScriptFullPath", "")
-	Local $sScriptBaseName = IniRead($sDistroIniPath, "Distro", "Script", "")
+	Local $sScriptBaseName = IniRead($sDistroIniPath, "SDK", "Script", "")
 	Local $sScriptFullPath = $sOutputPath & "\" & $sScriptBaseName
 	Local $sIncludesSource = @ScriptDir & "\Includes"
 	Local $sIncludesOutput = $sOutputPath & "\Includes"
@@ -1732,11 +1769,22 @@ Func _DistributSourceCode($sDistroIniPath, $iD)
 		Next
 	EndIf
 
-	_EditLoggingWrite("Processing core Script")
+	_EditLoggingWrite("Processing Core Script...")
 	_ProcessAutoItScript($sAu3ScriptIn, $sScriptFullPath)
 
-	_EditLoggingWrite("Processing ReBar Includes")
-	Local $aReBarIncludes = _FindReBarIncludes($sDistroIniPath)
+	_EditLoggingWrite("Processing ReBar Includes...")
+	Local $sIncludesSource = @ScriptDir & "\Includes\"
+
+    Local $aReBarIncludes = _FileListToArray($sIncludesSource, "*")
+    If @error = 1 Then
+		_EditLoggingWrite("Error: Invalid Includes Path")
+		_EditLoggingWrite("^ [" & $sIncludesSource & "]")
+    EndIf
+	If @error = 4 Then
+        _EditLoggingWrite("Error: Nothing Here")
+		_EditLoggingWrite("^ [" & $sIncludesSource & "]")
+    EndIf
+
 	For $a = 1 To $aReBarIncludes[0]
 		_DistributeFile($sIncludesSource & "\" & $aReBarIncludes[$a], $sIncludesOutput & "\" & $aReBarIncludes[$a])
 	Next
@@ -1832,7 +1880,112 @@ Func _ProcessAutoItScript($sAu3ScriptIn, $sOutScript)
 EndFunc   ;==>_ProcessAutoItScript
 
 
+Func _CopySourceToGitDirectory($sDistroIniPath, $iD)
+
+	_StartDistributionProcess($iD)
+
+	Local $sInputPath = IniRead($sDistroIniPath, "Environment", "DistributionPathSource", "")
+	Local $sGitBaseName = IniRead($sDistroIniPath, "Environment", "ProgramShortName", "")
+	Local $sGitFullBath = @ScriptDir & "\GitHub\" & $sGitBaseName
+
+	If FileExists($sGitFullBath) Then
+		_CleanGitDirectory($sGitFullBath)
+	Else
+		DirCreate($sGitFullBath)
+	EndIf
+
+	Local $aSourceFiles = _FileListToArray($sInputPath, "*")
+    If @error = 1 Then
+		_EditLoggingWrite("Error: Source Code Path")
+		_EditLoggingWrite("^ [" & $sInputPath & "]")
+    EndIf
+	If @error = 4 Then
+        _EditLoggingWrite("Error: Nothing Here")
+		_EditLoggingWrite("^ [" & $sInputPath & "]")
+    EndIf
+
+	For $x = 1 To $aSourceFiles[0]
+
+		Local $sInputFilePath = $sInputPath & "\" & $aSourceFiles[$x]
+		Local $sGitFilePath = $sGitFullBath & "\" & $aSourceFiles[$x]
+
+		If StringInStr(FileGetAttrib($sInputFilePath), "D") Then
+			DirCopy($sInputFilePath, $sGitFilePath, 1)
+		Else
+			FileCopy($sInputFilePath, $sGitFilePath, 1)
+		EndIf
+	Next
+
+	_UpdateDistributionProcess($iD)
+
+EndFunc
+
+
+Func _CleanGitDirectory($sGitFullBath)
+
+;~ 	Local $aGitFiles = _FileListToArray($sGitFullBath, "*")
+;~     If @error = 1 Then
+;~ 		_EditLoggingWrite("Error: Invalid Git Path")
+;~ 		_EditLoggingWrite("^ [" & $sGitFullBath & "]")
+;~     EndIf
+
+;~ 	For $x = 1 To $aGitFiles[0]
+
+;~ 		If StringInStr($aGitFiles[$x], ".git") Then
+;~ 			ContinueLoop
+;~ 		EndIf
+
+;~ 		Local $sGitFilePath = @ScriptDir & "\GitHub\SDK\" & $aGitFiles[$x]
+
+;~ 		If StringInStr(FileGetAttrib($sGitFilePath), "D") Then
+;~ 			DirRemove($sGitFilePath, 1)
+;~ 		Else
+;~ 			FileDelete($sGitFilePath)
+;~ 		EndIf
+;~ 	Next
+
+EndFunc
+
+
 #EndRegion ~Distribution
+
+
+Func _AutoIt3Script_WrapperOutPut($sOutPut)
+
+	If StringStripWS($sOutPut, 8) <> "" Then
+
+		;$sReplaceOut = StringReplace($sOutPut, "+>", "")
+		;$sReplaceOut = StringReplace($sReplaceOut, "...>", "")
+		;$sReplaceOut = StringReplace($sReplaceOut, "!>", "!")
+		Local $sReplaceOut = StringReplace($sOutPut, "to:", "to: ")
+		$sReplaceOut = StringReplace($sReplaceOut, "Created program:", "Created program: ")
+		$sReplaceOut = StringReplace($sReplaceOut, "ended.", "ended. ")
+		; This shortcut will not be used in the Distro Building Environment, so we remove it.
+		$sReplaceOut = StringReplace($sReplaceOut, "Press F4 to jump to next error.", "")
+
+		$sReplaceOut = StringRegExpReplace($sReplaceOut, "([0-9]+):([0-5][0-9]):([0-5][0-9])", "")
+
+		If StringLeft($sReplaceOut, 1) == ">" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
+		If StringLeft($sReplaceOut, 1) == "-" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
+
+		If StringInStr($sReplaceOut, "Environment") Then StringReplace($sReplaceOut, @CRLF, "")
+
+		If StringInStr($sReplaceOut, @CRLF) Then
+			Local $aOutSplt = StringSplit($sReplaceOut, @CRLF, $STR_ENTIRESPLIT)
+			For $x = 1 To $aOutSplt[0] ; Loop through the array returned by StringSplit to display the individual values.
+				If StringStripWS($aOutSplt[$x], 8) <> "" Then
+					_EditLoggingWrite(StringStripWS($aOutSplt[$x], 7))
+				EndIf
+			Next
+		Else
+			If StringStripWS($sReplaceOut, 8) <> "" Then
+				_EditLoggingWrite(StringStripWS($sReplaceOut, 7))
+			EndIf
+		EndIf
+
+	EndIf
+
+EndFunc
 
 
 Func _CleanDirectoryName($sFileName)
@@ -1848,14 +2001,14 @@ EndFunc   ;==>_CleanDirectoryName
 
 Func _CreateNewSolutionDialog()
 
-	GUICtrlSetState($MENU_CREATESLN, $GUI_DISABLE)
-	WinSetTrans($REBAR_GUI_CORE, Default, 200)
+	GUICtrlSetState($g_MenuCreateSln, $GUI_DISABLE)
+	WinSetTrans($g_ReBarCoreGui, Default, 200)
 
-	$GUI_CREATESLN = GUICreate("Create New Solution", 500, 550, -1, -1, BitOR($WS_CAPTION, $WS_POPUPWINDOW))
-	GUISetIcon($REBAR_RES_FUGUE, 140)
-	GUISetFont($REBAR_FONT_SIZE, 400, -1, $REBAR_FONT_NAME, $GUI_CREATESLN, $CLEARTYPE_QUALITY)
+	$g_GuiCreateSln = GUICreate("Create New Solution", 500, 550, -1, -1, BitOR($WS_CAPTION, $WS_POPUPWINDOW))
+	GUISetIcon($g_ReBarResFugue, 140)
+	GUISetFont($g_ReBarFontSize, 400, -1, $g_ReBarFontName, $g_GuiCreateSln, $CLEARTYPE_QUALITY)
 
-	Local $snSolutionName = IniRead($REBAR_PATH_INI, "Solution", "SolutionName", "ReBar")
+	Local $snSolutionName = IniRead($g_ReBarPathIni, "Solution", "SolutionName", "ReBar")
 
 	GUICtrlCreateTab(10, 10, 480, 450)
 
@@ -1891,9 +2044,9 @@ Func _CreateNewSolutionDialog()
 	$NSD_BTNCREATE = GUICtrlCreateButton("Create", 285, 510, 200, 35)
 	GUICtrlSetOnEvent($NSD_BTNCREATE, "_CreateNewSolution")
 
-	GUISetOnEvent($GUI_EVENT_CLOSE, "_CloseNewSolutionDialog", $GUI_CREATESLN)
+	GUISetOnEvent($GUI_EVENT_CLOSE, "_CloseNewSolutionDialog", $g_GuiCreateSln)
 
-	GUISetState(@SW_SHOW, $GUI_CREATESLN)
+	GUISetState(@SW_SHOW, $g_GuiCreateSln)
 
 EndFunc   ;==>_CreateNewSolutionDialog
 
@@ -1935,23 +2088,11 @@ EndFunc   ;==>_CreateNewSolution
 
 Func _CloseNewSolutionDialog()
 
-	GUICtrlSetState($MENU_CREATESLN, $GUI_ENABLE)
-	GUIDelete($GUI_CREATESLN)
-	WinSetTrans($REBAR_GUI_CORE, Default, 255)
+	GUICtrlSetState($g_MenuCreateSln, $GUI_ENABLE)
+	GUIDelete($g_GuiCreateSln)
+	WinSetTrans($g_ReBarCoreGui, Default, 255)
 
 EndFunc   ;==>_CloseNewSolutionDialog
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 Func _ProcessCommand($sCMD, $sWorkingDir = "")
@@ -1977,7 +2118,7 @@ Func _ProcessCommand($sCMD, $sWorkingDir = "")
 
 		For $i = 1 To $aOutput[0] ; Loop through the array returned by StringSplit to display the individual values.
 			If StringStripWS($aOutput[$i], $STR_STRIPALL) <> "" Then
-				_EditLoggingWrite($aOutput[$i])
+				_EditLoggingWrite(StringStripWS($aOutput[$i], 3))
 			EndIf
 		Next
 
@@ -1986,8 +2127,6 @@ Func _ProcessCommand($sCMD, $sWorkingDir = "")
 		_ProcessCloseHandle($pHandle)
 
 	EndIf
-
-
 
 EndFunc   ;==>_ProcessCommand
 
@@ -2085,7 +2224,7 @@ Func _CheckedBuildCount()
 	Local $iCount = 0
 
 	For $c = 0 To $COUNT_BUILD - 1
-		If GUICtrlRead($CHK_BUILD[$c]) = $GUI_CHECKED Then
+		If GUICtrlRead($g_ChkBuild[$c]) = $GUI_CHECKED Then
 			$iCount += 1
 		EndIf
 	Next
@@ -2100,7 +2239,7 @@ Func _CheckedDistrobuteCount()
 	Local $iCount = 0
 
 	For $c = 0 To $COUNT_DISTRIBUTE - 1
-		If GUICtrlRead($CHK_DISTRIBUTE[$c]) = $GUI_CHECKED Then
+		If GUICtrlRead($g_ChkDistribute[$c]) = $GUI_CHECKED Then
 			$iCount += 1
 		EndIf
 	Next
@@ -2188,9 +2327,9 @@ Func _CheckPrerequisites()
 	Local $sUPXPath = @ScriptDir & "\SDK\Bin\UPX\upx.exe"
 	If FileExists($sUPXPath) Then
 
-		GUICtrlSetImage($ICO_PRESTATUS[0][3], $REBAR_RES_FUGUE, 123)
-		GUICtrlSetData($LBL_PRESTATUS[0][3], "Installed")
-		GUICtrlSetData($LBL_PRENAME[0][3], "UPX version " & FileGetVersion($sUPXPath))
+		GUICtrlSetImage($g_IconPreStatus[0][3], $g_ReBarResFugue, 123)
+		GUICtrlSetData($g_LblPreStatus[0][3], "Installed")
+		GUICtrlSetData($g_LblPreName[0][3], "UPX version " & FileGetVersion($sUPXPath))
 
 		$UPX_INSTALLED = True
 		$UPX_CMD = $sUPXPath
@@ -2209,20 +2348,20 @@ Func _CheckPrerequisites()
 		$AU3_INSTALLED = False
 	EndIf
 
-	; _CheckPrerequisite("7-Zip", "7-Zip 9 +", 1, 1)
-	Local $aInnoInfo = _CheckPrerequisite("Inno Setup 5\unins000.exe", "Inno Setup 5", 1, 2)
-	If $aInnoInfo[0] = "Installed" Then
-		$INN_INSTALLED = True
-		$INN_DIR = $aInnoInfo[9]
-		$INN_CMD = $INN_DIR & "ISCC.exe"
-	EndIf
-
 	Local $a7zip = _CheckPrerequisite("7-Zip\Uninstall.exe", "7-Zip", 1, 0)
 	; _ArrayDisplay($a7zip)
 	If $a7zip[0] = "Installed" Then
 		$7ZP_INSTALLED = True
 		$7ZP_DIR = $a7zip[9]
 		$7ZP_CMD = $7ZP_DIR & "7z.exe"
+	EndIf
+
+		; _CheckPrerequisite("7-Zip", "7-Zip 9 +", 1, 1)
+	Local $aInnoInfo = _CheckPrerequisite("Inno Setup 5\unins000.exe", "Inno Setup 5", 1, 1)
+	If $aInnoInfo[0] = "Installed" Then
+		$INN_INSTALLED = True
+		$INN_DIR = $aInnoInfo[9]
+		$INN_CMD = $INN_DIR & "ISCC.exe"
 	EndIf
 
 EndFunc   ;==>_CheckPrerequisites
@@ -2232,9 +2371,9 @@ Func _CheckPrerequisite($sSearch, $sExpectedName, $iCol, $iRow, $InfoURL = "")
 
 	Local $aPrereqInfo = _GetInstall($sSearch, $sExpectedName)
 
-	GUICtrlSetImage($ICO_PRESTATUS[$iCol][$iRow], $REBAR_RES_FUGUE, $aPrereqInfo[1])
-	GUICtrlSetData($LBL_PRESTATUS[$iCol][$iRow], $aPrereqInfo[0])
-	GUICtrlSetData($LBL_PRENAME[$iCol][$iRow], $aPrereqInfo[4])
+	GUICtrlSetImage($g_IconPreStatus[$iCol][$iRow], $g_ReBarResFugue, $aPrereqInfo[1])
+	GUICtrlSetData($g_LblPreStatus[$iCol][$iRow], $aPrereqInfo[0])
+	GUICtrlSetData($g_LblPreName[$iCol][$iRow], $aPrereqInfo[4])
 
 	Return $aPrereqInfo
 
@@ -2316,36 +2455,39 @@ Func _GUIHoverControlExtended()
 	If Not @error Then
 
 		For $iBuild = 0 To $COUNT_BUILD - 1
-			If $iCursor[4] = $BTNGO_BUILD[$iBuild] And $BTNGO_BUILD_H[$iBuild] = 1 Then
-				$BTNGO_BUILD_H[$iBuild] = 0
-				GUICtrlSetImage($BTNGO_BUILD[$iBuild], $REBAR_RES_FUGUE, 107)
-			ElseIf $iCursor[4] <> $BTNGO_BUILD[$iBuild] And $BTNGO_BUILD_H[$iBuild] = 0 Then
-				$BTNGO_BUILD_H[$iBuild] = 1
-				GUICtrlSetImage($BTNGO_BUILD[$iBuild], $REBAR_RES_FUGUE, 108)
+			If $iCursor[4] = $g_BtnGoBuild[$iBuild] And $g_BtnGoBuildH[$iBuild] = 1 Then
+				$g_BtnGoBuildH[$iBuild] = 0
+				GUICtrlSetImage($g_BtnGoBuild[$iBuild], $g_ReBarResFugue, 107)
+			ElseIf $iCursor[4] <> $g_BtnGoBuild[$iBuild] And $g_BtnGoBuildH[$iBuild] = 0 Then
+				$g_BtnGoBuildH[$iBuild] = 1
+				GUICtrlSetImage($g_BtnGoBuild[$iBuild], $g_ReBarResFugue, 108)
 			EndIf
 		Next
 
 		For $iDis = 0 To $COUNT_DISTRIBUTE - 1
-			If $iCursor[4] = $BTNGO_DISTRIBUTE[$iDis] And $BTNGO_DISTRIBUTE_H[$iDis] = 1 Then
-				$BTNGO_DISTRIBUTE_H[$iDis] = 0
-				GUICtrlSetImage($BTNGO_DISTRIBUTE[$iDis], $REBAR_RES_FUGUE, 107)
-			ElseIf $iCursor[4] <> $BTNGO_DISTRIBUTE[$iDis] And $BTNGO_DISTRIBUTE_H[$iDis] = 0 Then
-				$BTNGO_DISTRIBUTE_H[$iDis] = 1
-				GUICtrlSetImage($BTNGO_DISTRIBUTE[$iDis], $REBAR_RES_FUGUE, 108)
+			If $iCursor[4] = $g_BtnGoDistribute[$iDis] And $g_BtnGoDistributeH[$iDis] = 1 Then
+				$g_BtnGoDistributeH[$iDis] = 0
+				GUICtrlSetImage($g_BtnGoDistribute[$iDis], $g_ReBarResFugue, 107)
+			ElseIf $iCursor[4] <> $g_BtnGoDistribute[$iDis] And $g_BtnGoDistributeH[$iDis] = 0 Then
+				$g_BtnGoDistributeH[$iDis] = 1
+				GUICtrlSetImage($g_BtnGoDistribute[$iDis], $g_ReBarResFugue, 108)
 			EndIf
 		Next
 
 		If $iCursor[4] = $ICO_PREREFRESH And $ICO_PREREFRESH_H = 1 Then
 			$ICO_PREREFRESH_H = 0
-			GUICtrlSetImage($ICO_PREREFRESH, $REBAR_RES_FUGUE, 129)
+			GUICtrlSetImage($ICO_PREREFRESH, $g_ReBarResFugue, 129)
 		ElseIf $iCursor[4] <> $ICO_PREREFRESH And $ICO_PREREFRESH_H = 0 Then
 			$ICO_PREREFRESH_H = 1
-			GUICtrlSetImage($ICO_PREREFRESH, $REBAR_RES_FUGUE, 128)
+			GUICtrlSetImage($ICO_PREREFRESH, $g_ReBarResFugue, 128)
 		EndIf
 
 	EndIf
 
 EndFunc   ;==>_GUIHoverControlExtended
+
+
+
 
 
 #include "Includes\ReBar_End.au3"

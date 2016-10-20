@@ -30,64 +30,68 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #ce ----------------------------------------------------------------------------
-
+Opt("MustDeclareVars", 1) ;~ 0=no, 1=require pre-declaration
 
 #include <WindowsConstants.au3>
 #include <StaticConstants.au3>
 #include <StringConstants.au3>
 #include <GuiConstantsEx.au3>
 
+;#include "ReBar_Declarations.au3"
 
-Global $SPLASH_FORM
-Global $SPLASH_MESSAGE
-Global $SPLASH_STATUSBAR
 
-Func _SplashStart($sMessage = "Loading Message", $ShowSplash = True)
+Global $g_SplashForm
+Global $g_SplashMessage
+Global $g_SplashProgress
 
-	If $ShowSplash Then
+If Not IsDeclared("g_ReBarSplashEnable") Then Global $g_ReBarSplashEnable = True
+If Not IsDeclared("g_ReBarSplashAni") Then Global $g_ReBarSplashAni = ""
 
-		If Not IsDeclared("REBAR_SPLASH_ANI") Then Global $REBAR_SPLASH_ANI = ""
+Func _SplashStart($sMessage = "Loading Message")
 
-		$SPLASH_FORM = GUICreate("", 250, 150, -1, -1, BitOr($WS_POPUP, $WS_BORDER))
-		GuiSetFont(9, -1, -1, "Tahoma", $SPLASH_FORM, 5)
-		GUICtrlCreateIcon($REBAR_SPLASH_ANI, -1, (250 - 32) / 2, 15, 32, 32)
-		$SPLASH_MESSAGE = GuiCtrlCreateLabel($sMessage, 1, 65, 248, -1, $SS_CENTER)
+	If $g_ReBarSplashEnable = True Then
+
+		$g_SplashForm = GUICreate("", 250, 150, -1, -1, BitOr($WS_POPUP, $WS_BORDER))
+		GuiSetFont(9, -1, -1, "Tahoma", $g_SplashForm, 5)
+		GUICtrlCreateIcon($g_ReBarSplashAni, -1, (250 - 32) / 2, 15, 32, 32)
+		$g_SplashMessage = GuiCtrlCreateLabel($sMessage, 1, 65, 248, -1, $SS_CENTER)
 
 		;~ StatusBar Background
 		GUICtrlCreateLabel("", 9, 99, 232, 12)
 		GUICtrlSetBkColor(-1, 0x000000)
 		GUICtrlCreateLabel("", 10, 100, 230, 10)
 		GUICtrlSetBkColor(-1, 0xC0C0C0)
-		;~ StatusBar
-		$SPLASH_STATUSBAR = GUICtrlCreateLabel("", 11, 101, 1, 8)
-		GUICtrlSetBkColor($SPLASH_STATUSBAR, 0x000000)
-		GUICtrlSetState($SPLASH_STATUSBAR, $GUI_HIDE)
 
-		GUISetState(@SW_SHOW, $SPLASH_FORM)
+		;~ StatusBar
+		$g_SplashProgress = GUICtrlCreateLabel("", 11, 101, 1, 8)
+		GUICtrlSetBkColor($g_SplashProgress, 0x000000)
+		GUICtrlSetState($g_SplashProgress, $GUI_HIDE)
+
+		GUISetState(@SW_SHOW, $g_SplashForm)
 
 	EndIf
 
 EndFunc
 
 
-Func _SplashUpdate($sMessage, $iPerc, $UpdateSplash = True, $Important = False)
+Func _SplashUpdate($sMessage, $iPerc, $bIsImportant = False)
 
-	If $UpdateSplash = True Then
+	If $g_ReBarSplashEnable = True Then
 
 		If $iPerc > -1 Then
 			If $iPerc > 100 Then $iPerc = 100
 			If $iPerc = 0 Then
-				GUICtrlSetState($SPLASH_STATUSBAR, $GUI_HIDE)
+				GUICtrlSetState($g_SplashProgress, $GUI_HIDE)
 			Else
-				If BitAND(GUICtrlGetState($SPLASH_STATUSBAR), 32) = 32 Then
-					GUICtrlSetState($SPLASH_STATUSBAR, $GUI_SHOW)
+				If BitAND(GUICtrlGetState($g_SplashProgress), 32) = 32 Then
+					GUICtrlSetState($g_SplashProgress, $GUI_SHOW)
 				EndIf
-				GUICtrlSetPos($SPLASH_STATUSBAR, 11, 101, 228 * $iPerc / 100)
+				GUICtrlSetPos($g_SplashProgress, 11, 101, 228 * $iPerc / 100)
 			EndIf
 
 			If StringStripWS($sMessage, $STR_STRIPALL) <> "" Then
-				GUICtrlSetData($SPLASH_MESSAGE, $sMessage)
-				If $Important Then
+				GUICtrlSetData($g_SplashMessage, $sMessage)
+				If $bIsImportant Then
 					Sleep(1000)
 				EndIf
 			EndIf
@@ -95,7 +99,7 @@ Func _SplashUpdate($sMessage, $iPerc, $UpdateSplash = True, $Important = False)
 		EndIf
 
 		If $iPerc = 100 Then
-			GUIDelete($SPLASH_FORM)
+			GUIDelete($g_SplashForm)
 		EndIf
 
 	EndIf

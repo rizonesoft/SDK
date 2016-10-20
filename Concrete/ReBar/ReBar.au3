@@ -8,61 +8,61 @@
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=Y										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
-	#AutoIt3Wrapper_Run_Debug_Mode=N								 ;~ (Y/N) Run Script with console debugging. Default=N
-	#AutoIt3Wrapper_Run_SciTE_Minimized=Y 							 ;~ (Y/N) Minimize SciTE while script is running. Default=N
-	#AutoIt3Wrapper_Run_SciTE_OutputPane_Minimized=N				 ;~ (Y/N) Minimize SciTE output pane at run time. Default=N
+	#AutoIt3Wrapper_UseX64=Y										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	#AutoIt3Wrapper_Run_Debug_Mode=N								;~ (Y/N) Run Script with console debugging. Default=N
+	#AutoIt3Wrapper_Run_SciTE_Minimized=Y 							;~ (Y/N) Minimize SciTE while script is running. Default=N
+	#AutoIt3Wrapper_Run_SciTE_OutputPane_Minimized=N				;~ (Y/N) Minimize SciTE output pane at run time. Default=N
 	;===============================================================================================================
 	; Tidy Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_Tidy=Y										 ;~ (Y/N) Run Tidy before compilation. Default=N
-	#AutoIt3Wrapper_Tidy_Stop_OnError=N								 ;~ (Y/N) Continue when only Warnings. Default=Y
+	#AutoIt3Wrapper_Run_Tidy=Y										;~ (Y/N) Run Tidy before compilation. Default=N
+	#AutoIt3Wrapper_Tidy_Stop_OnError=N								;~ (Y/N) Continue when only Warnings. Default=Y
 	;#Tidy_Parameters= 												;~ Tidy Parameters...see SciTE4AutoIt3 Helpfile for options
 	;===============================================================================================================
 	; AU3Check settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_AU3Check=Y									 ;~ (Y/N) Run au3check before compilation. Default=Y
+	#AutoIt3Wrapper_Run_AU3Check=Y									;~ (Y/N) Run au3check before compilation. Default=Y
 	;#AutoIt3Wrapper_AU3Check_Parameters=							;~ Au3Check parameters...see SciTE4AutoIt3 Helpfile for options
 	;#AutoIt3Wrapper_AU3Check_Stop_OnWarning=						;~ (Y/N) Continue/Stop on Warnings.(Default=N)
 
 #Autoit3Wrapper_If_Compile
 
-	#AutoIt3Wrapper_ShowProgress=Y									 ;~ (Y/N) Show ProgressWindow during Compile. Default=Y
+	#AutoIt3Wrapper_ShowProgress=Y									;~ (Y/N) Show ProgressWindow during Compile. Default=Y
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=Y										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
-	#AutoIt3Wrapper_Version=B                        				 ;~ (B/P) Use Beta or Production for AutoIt3 and Aut2Eex. Default is P
-	#AutoIt3Wrapper_Run_Debug_Mode=N								 ;~ (Y/N) Run Script with console debugging. Default=N
+	#AutoIt3Wrapper_UseX64=Y										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	#AutoIt3Wrapper_Version=B                        				;~ (B/P) Use Beta or Production for AutoIt3 and Aut2Eex. Default is P
+	#AutoIt3Wrapper_Run_Debug_Mode=N								;~ (Y/N) Run Script with console debugging. Default=N
 	;#AutoIt3Wrapper_Autoit3Dir=									;~ Optionally override the AutoIt3 install directory to use.
 	;#AutoIt3Wrapper_Aut2exe=										;~ Optionally override the Aut2exe.exe to use for this script
 	;#AutoIt3Wrapper_AutoIt3=										;~ Optionally override the Autoit3.exe to use for this script
 	;===============================================================================================================
 	; Aut2Exe Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Icon=Themes\Icons\ReBar.ico						 ;~ Filename of the Ico file to use for the compiled exe
-	#AutoIt3Wrapper_OutFile_Type=exe								 ;~ exe=Standalone executable (Default); a3x=Tokenised AutoIt3 code file
-	#AutoIt3Wrapper_OutFile=ReBar.exe								 ;~ Target exe/a3x filename.
-	#AutoIt3Wrapper_OutFile_X64=ReBar_X64.exe						 ;~ Target exe filename for X64 compile.
+	#AutoIt3Wrapper_Icon=Themes\Icons\ReBar.ico						;~ Filename of the Ico file to use for the compiled exe
+	#AutoIt3Wrapper_OutFile_Type=exe								;~ exe=Standalone executable (Default); a3x=Tokenised AutoIt3 code file
+	#AutoIt3Wrapper_OutFile=ReBar.exe								;~ Target exe/a3x filename.
+	#AutoIt3Wrapper_OutFile_X64=ReBar_X64.exe						;~ Target exe filename for X64 compile.
 	;#AutoIt3Wrapper_Compression=4									;~ Compression parameter 0-4  0=Low 2=normal 4=High. Default=2
 	;#AutoIt3Wrapper_UseUpx=Y										;~ (Y/N) Compress output program.  Default=Y
 	;#AutoIt3Wrapper_UPX_Parameters=								;~ Override the default settings for UPX.
-	#AutoIt3Wrapper_Change2CUI=N									 ;~ (Y/N) Change output program to CUI in stead of GUI. Default=N
-	#AutoIt3Wrapper_Compile_both=Y									 ;~ (Y/N) Compile both X86 and X64 in one run. Default=N
+	#AutoIt3Wrapper_Change2CUI=N									;~ (Y/N) Change output program to CUI in stead of GUI. Default=N
+	#AutoIt3Wrapper_Compile_both=Y									;~ (Y/N) Compile both X86 and X64 in one run. Default=N
 	;===============================================================================================================
 	; Target Program Resource info
 	;===============================================================================================================
-	#AutoIt3Wrapper_Res_Comment=ReBar Framework							 ;~ Comment field
-	#AutoIt3Wrapper_Res_Description=AutoIt Application Framework      	 ;~ Description field
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.739
-	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					 ;~ (Y/N/P) AutoIncrement FileVersion. Default=N
-	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					 ;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
-	#AutoIt3Wrapper_Res_HiDpi=Y                      					 ;~ (Y/N) Compile for high DPI. Default=N
-	#AutoIt3Wrapper_Res_ProductVersion=0             					 ;~ Product Version
-	#AutoIt3Wrapper_Res_Language=2057									 ;~ Resource Language code . Default 2057=English (United Kingdom)
-	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				 ;~ Copyright field
-	#AutoIt3Wrapper_res_requestedExecutionLevel=highestAvailable		 ;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
-	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				 ;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
+	#AutoIt3Wrapper_Res_Comment=ReBar Framework							;~ Comment field
+	#AutoIt3Wrapper_Res_Description=AutoIt Application Framework      	;~ Description field
+	#AutoIt3Wrapper_Res_Fileversion=1.0.0.813
+	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
+	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
+	#AutoIt3Wrapper_Res_HiDpi=Y                      					;~ (Y/N) Compile for high DPI. Default=N
+	#AutoIt3Wrapper_Res_ProductVersion=0             					;~ Product Version
+	#AutoIt3Wrapper_Res_Language=2057									;~ Resource Language code . Default 2057=English (United Kingdom)
+	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				;~ Copyright field
+	#AutoIt3Wrapper_res_requestedExecutionLevel=highestAvailable		;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
+	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81,Win10		;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
 	;#AutoIt3Wrapper_Res_SaveSource=N									;~ (Y/N) Save a copy of the Script_source in the EXE resources. Default=N
 	; If _Res_SaveSource=Y the content of Script_source depends on the _Run_Au3Stripper and #Au3Stripper_parameters directives:
 	;    If _Run_Au3Stripper=Y then
@@ -99,21 +99,21 @@
 	;===============================================================================================================
 	; Tidy Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_Tidy=N										 ;~ (Y/N) Run Tidy before compilation. Default=N
+	#AutoIt3Wrapper_Run_Tidy=N										;~ (Y/N) Run Tidy before compilation. Default=N
 	;#AutoIt3Wrapper_Tidy_Stop_OnError=              				;~ (Y/N) Continue when only Warnings. Default=Y
 	;#Tidy_Parameters=                               				;~ Tidy Parameters...see SciTE4AutoIt3 Helpfile for options
 	;===============================================================================================================
 	; Au3Stripper Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_Au3Stripper=N								 ;~ (Y/N) Run Au3Stripper before compilation. default=N
+	#AutoIt3Wrapper_Run_Au3Stripper=N								;~ (Y/N) Run Au3Stripper before compilation. default=N
 	;#Au3Stripper_Parameters=										;~ Au3Stripper parameters...see SciTE4AutoIt3 Helpfile for options
 	;#Au3Stripper_Ignore_Variables=
 	;===============================================================================================================
 	; AU3Check settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_AU3Check=Y									 ;~ (Y/N) Run au3check before compilation. Default=Y
+	#AutoIt3Wrapper_Run_AU3Check=Y									;~ (Y/N) Run au3check before compilation. Default=Y
 	;#AutoIt3Wrapper_AU3Check_Parameters=							;~ Au3Check parameters...see SciTE4AutoIt3 Helpfile for options
-	#AutoIt3Wrapper_AU3Check_Stop_OnWarning=Y 						 ;~ (Y/N) Continue/Stop on Warnings.(Default=N)
+	#AutoIt3Wrapper_AU3Check_Stop_OnWarning=Y 						;~ (Y/N) Continue/Stop on Warnings.(Default=N)
 	;===============================================================================================================
 	; Versioning Settings
 	;===============================================================================================================
@@ -185,7 +185,6 @@ Opt("WinWaitDelay", 250) ;~ 250 milliseconds
 #include <GDIPlus.au3>
 #include <GuiMenu.au3>
 
-
 #include "..\..\Includes\ReBar_Declarations.au3"
 #include "..\..\Includes\ReBar_ModernMenu.au3"
 #include "..\..\Includes\ReBar_Versioning.au3"
@@ -197,23 +196,23 @@ Opt("WinWaitDelay", 250) ;~ 250 milliseconds
 
 #include "..\..\Includes\ReBar_Startup.au3"
 
+
 ;===============================================================================================================
 ; Declarations
 ;===============================================================================================================
-Global $GUI_ICON_HOVER = 0
-Global $ICON_HOVER = @ScriptFullPath
+
 ;===============================================================================================================
 
 
-_SplashStart("Initializing " & $REBAR_PROG_NAME, $REBAR_SPLASH_ENABLE)
-_SplashUpdate("Setting Working Directories", 1, $REBAR_SPLASH_ENABLE)
+_SplashStart("Initializing " & $g_ReBarProgName)
+_SplashUpdate("Setting Working Directories", 1)
 _SetWorkingDirectories()
-_SplashUpdate("Initializing Logging Subsystem", 2, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Initializing Logging Subsystem", 2)
 _LoggingInitialize()
-_SplashUpdate("Checking Integrity", 3, $REBAR_SPLASH_ENABLE)
-_CheckResources($REBAR_RES_FUGUE)
-_CheckResources($REBAR_RES_DOORS)
-_SplashUpdate("Building Interface", 5, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Checking Integrity", 3)
+_CheckResources($g_ReBarResFugue)
+_CheckResources($g_ReBarResDoors)
+_SplashUpdate("Building Interface", 5)
 _StartCoreGUI()
 
 
@@ -222,50 +221,51 @@ Func _StartCoreGUI()
 	Local $mnuFile, $miFileClose
 	Local $mnuHelp, $miHlpHome, $miHlpSupport
 
-	$REBAR_GUI_CORE = GUICreate($REBAR_ISADMINST & _GUIGetTitle($REBAR_PROG_NAME), $REBAR_FORM_WIDTH, $REBAR_FORM_HEIGHT, -1, -1, -1)
+	$g_ReBarCoreGui = GUICreate($g_ReBarGuiTitle, $g_ReBarFormWidth, $g_ReBarFormHeight, -1, -1, -1)
 	GUIRegisterMsg($WM_GETMINMAXINFO, "WM_GETMINMAXINFO")
-	GUISetFont($REBAR_FONT_SIZE, 400, -1, $REBAR_FONT_NAME, $REBAR_GUI_CORE, $CLEARTYPE_QUALITY)
+	GUISetFont($g_ReBarFontSize, 400, -1, $g_ReBarFontName, $g_ReBarCoreGui, $CLEARTYPE_QUALITY)
+
 	If Not @Compiled Then
-		GUISetIcon($REBAR_ICON, 0, $REBAR_GUI_CORE)
-		$ICON_HOVER = @ScriptDir & "\Themes\Icons\ReBarH.ico"
+		GUISetIcon($g_ReBarIcon, 0, $g_ReBarCoreGui)
 	EndIf
 
-	$mnuFile = _GUICtrlCreateODTopMenu("&File", $REBAR_GUI_CORE)
-	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $REBAR_GUI_CORE)
+	$mnuFile = _GUICtrlCreateODTopMenu("&File", $g_ReBarCoreGui)
+	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $g_ReBarCoreGui)
 
 	_GUICtrlCreateODMenuItem("", $mnuFile)
-	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $REBAR_RES_FUGUE, 102)
+	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $g_ReBarResFugue, 102)
 	_GUICtrlCreateODMenuItem("", $mnuFile)
-	$REBAR_ABOUT_MENU = _GUICtrlCreateODMenuItem("&About " & $REBAR_PROG_NAME, $mnuHelp, $REBAR_RES_FUGUE, 103)
-	$miHlpHome = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Home", $mnuHelp, $REBAR_RES_FUGUE, 106)
+	$g_ReBarAboutMenu = _GUICtrlCreateODMenuItem("&About " & $g_ReBarProgName, $mnuHelp, $g_ReBarResFugue, 103)
+	$miHlpHome = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Home", $mnuHelp, $g_ReBarResFugue, 106)
 	_GUICtrlCreateODMenuItem("", $mnuHelp)
-	$miHlpSupport = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Support", $mnuHelp, $REBAR_RES_FUGUE, 101)
+	$miHlpSupport = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Support", $mnuHelp, $g_ReBarResFugue, 101)
 
 	_SetMenuSelectBkColor(0xF7E0C9)
 	_SetMenuSelectRectColor(0xE4A262)
 
 	GUICtrlSetOnEvent($miFileClose, "_ShutdownProgram")
-	GUICtrlSetOnEvent($REBAR_ABOUT_MENU, "_ShowAboutDialog")
+	GUICtrlSetOnEvent($g_ReBarAboutMenu, "_ShowAboutDialog")
 	GUICtrlSetOnEvent($miHlpHome, "_OpenHomePageLink")
 	GUICtrlSetOnEvent($miHlpSupport, "_OpenSupportLink")
 
-	$REBAR_GUI_ICON = GUICtrlCreateIcon($REBAR_ICON, 99, 10, 10, 64, 64)
-	GUICtrlSetTip($REBAR_GUI_ICON, "Version " & FileGetVersion(@ScriptFullPath) & @CRLF & _
+	$g_ReBarGuiIcon = GUICtrlCreateIcon($g_ReBarIcon, 99, 10, 10, 64, 64)
+	GUICtrlSetTip($g_ReBarGuiIcon, "Version " & $g_ReBarRunVersion & @CRLF & _
 			"Build with AutoIt version " & @AutoItVersion & @CRLF & _
-			"Copyright © " & @YEAR & " " & $REBAR_COMP_NAME, _
-			"About " & $REBAR_PROG_NAME, $TIP_INFOICON, $TIP_BALLOON)
-	GUICtrlSetCursor($REBAR_GUI_ICON, 0)
+			"Copyright © " & @YEAR & " " & $g_ReBarCompName, _
+			"About " & $g_ReBarProgName, $TIP_INFOICON, $TIP_BALLOON)
+	GUICtrlSetCursor($g_ReBarGuiIcon, 0)
 
-	GUICtrlSetOnEvent($REBAR_GUI_ICON, "_ShowAboutDialog")
+	GUICtrlSetOnEvent($g_ReBarGuiIcon, "_ShowAboutDialog")
 
 	; This will close the splash page.
-	_SplashUpdate("", 100, $REBAR_SPLASH_ENABLE)
-	GUISetState(@SW_SHOW, $REBAR_GUI_CORE)
+	_SplashUpdate("", 100)
+	GUISetState(@SW_SHOW, $g_ReBarCoreGui)
+	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $g_ReBarCoreGui)
 
-	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $REBAR_GUI_CORE)
+	AdlibRegister("_OnMainIconHover", 50)
+	_SoftwareUpdateCheck()
 
 	While 1
-		_OnMainIconHover()
 		Sleep(55)
 	WEnd
 
@@ -277,12 +277,12 @@ Func _OnMainIconHover()
 	Local $iCursor = GUIGetCursorInfo()
 
 	If Not @error Then
-		If $iCursor[4] = $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 1 Then
-			$REBAR_GUI_ICON_HOVER = 0
-			GUICtrlSetImage($REBAR_GUI_ICON, $ICON_HOVER, 201)
-		ElseIf $iCursor[4] <> $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 0 Then
-			$REBAR_GUI_ICON_HOVER = 1
-			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON, 99)
+		If $iCursor[4] = $g_ReBarGuiIcon And $g_ReBarIcoHovering = 1 Then
+			$g_ReBarIcoHovering = 0
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIconHover, 201)
+		ElseIf $iCursor[4] <> $g_ReBarGuiIcon And $g_ReBarIcoHovering = 0 Then
+			$g_ReBarIcoHovering = 1
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIcon, 99)
 		EndIf
 	EndIf
 

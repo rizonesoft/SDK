@@ -20,42 +20,15 @@
 
 #include <FileConstants.au3>
 #include <StringConstants.au3>
-#include "ReBar_Logging.au3"
 
 
 #Region Functions list
 ; #CURRENT# =====================================================================================================================
 ; _AutoIt3Script_GetDirectiveValue
+; _AutoIt3Script_GetFilename
 ; _AutoIt3Script_GetVersion
-; _AutoIt3Script_WrapperOutPut
 ; ==============================================================================================================================
 #EndRegion Functions list
-
-
-; #FUNCTION# ====================================================================================================================
-; Author(s) .....: Derick Payne (Rizonesoft)
-; Modified ......:
-; ===============================================================================================================================
-Func _AutoIt3Script_GetVersion($sAu3ScriptIn, $index = 0)
-
-	Local $sReturn = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Fileversion")
-	Local $sAutoIncrement = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_FileVersion_AutoIncrement")
-	Local $sFirstIncrement = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_FileVersion_First_Increment")
-
-	If $sAutoIncrement == "Y" Then
-		If $sFirstIncrement == "Y" Then
-			; Return Unchanged version from Script.
-			Return __GetVersionFromString($sReturn, $index, 0)
-		Else
-			; Return Compiled version from Script.
-			Return __GetVersionFromString($sReturn, $index, 1)
-		EndIf
-	Else
-		; Return Unchanged version from Script.
-		Return __GetVersionFromString($sReturn, $index, 0)
-	EndIf
-
-EndFunc
 
 
 ; #FUNCTION# ====================================================================================================================
@@ -141,39 +114,36 @@ Func _AutoIt3Script_GetDirectiveValue($sAu3Script_In, $sParam)
 EndFunc
 
 
-Func _AutoIt3Script_WrapperOutPut($sOutPut)
+Func _AutoIt3Script_GetFilename($sScriptFullPath)
 
-	If StringStripWS($sOutPut, 8) <> "" Then
+	Local $sDrive = "", $sDir = "", $sFileName = "", $sExtension = ""
+	Local $aPathSplit = _PathSplit($sScriptFullPath, $sDrive, $sDir, $sFileName, $sExtension)
+	Return StringReplace($sFileName, "_X64", "")
 
-		;$sReplaceOut = StringReplace($sOutPut, "+>", "")
-		;$sReplaceOut = StringReplace($sReplaceOut, "...>", "")
-		;$sReplaceOut = StringReplace($sReplaceOut, "!>", "!")
-		Local $sReplaceOut = StringReplace($sOutPut, "to:", "to: ")
-		$sReplaceOut = StringReplace($sReplaceOut, "Created program:", "Created program: ")
-		$sReplaceOut = StringReplace($sReplaceOut, "ended.", "ended. ")
-		; This shortcut will not be used in the Distro Building Environment, so we remove it.
-		$sReplaceOut = StringReplace($sReplaceOut, "Press F4 to jump to next error.", "")
+EndFunc
 
-		$sReplaceOut = StringRegExpReplace($sReplaceOut, "([0-9]+):([0-5][0-9]):([0-5][0-9])", "")
 
-		If StringLeft($sReplaceOut, 1) == ">" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
-		If StringLeft($sReplaceOut, 1) == "-" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
+; #FUNCTION# ====================================================================================================================
+; Author(s) .....: Derick Payne (Rizonesoft)
+; Modified ......:
+; ===============================================================================================================================
+Func _AutoIt3Script_GetVersion($sAu3ScriptIn, $index = 0)
 
-		If StringInStr($sReplaceOut, "Environment") Then StringReplace($sReplaceOut, @CRLF, "")
+	Local $sReturn = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_Fileversion")
+	Local $sAutoIncrement = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_FileVersion_AutoIncrement")
+	Local $sFirstIncrement = _AutoIt3Script_GetDirectiveValue($sAu3ScriptIn, "#AutoIt3Wrapper_Res_FileVersion_First_Increment")
 
-		If StringInStr($sReplaceOut, @CRLF) Then
-			Local $aOutSplt = StringSplit($sReplaceOut, @CRLF, $STR_ENTIRESPLIT)
-			For $x = 1 To $aOutSplt[0] ; Loop through the array returned by StringSplit to display the individual values.
-				If StringStripWS($aOutSplt[$x], 8) <> "" Then
-					_EditLoggingWrite(StringStripWS($aOutSplt[$x], 7))
-				EndIf
-			Next
+	If $sAutoIncrement == "Y" Then
+		If $sFirstIncrement == "Y" Then
+			; Return Unchanged version from Script.
+			Return __GetVersionFromString($sReturn, $index, 0)
 		Else
-			If StringStripWS($sReplaceOut, 8) <> "" Then
-				_EditLoggingWrite(StringStripWS($sReplaceOut, 7))
-			EndIf
+			; Return Compiled version from Script.
+			Return __GetVersionFromString($sReturn, $index, 1)
 		EndIf
-
+	Else
+		; Return Unchanged version from Script.
+		Return __GetVersionFromString($sReturn, $index, 0)
 	EndIf
 
 EndFunc

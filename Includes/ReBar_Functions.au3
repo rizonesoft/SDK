@@ -2,6 +2,7 @@
 
 
 #include <StringConstants.au3>
+#include <InetConstants.au3>
 #include <WinAPIFiles.au3>
 #include <WinAPI.au3>
 #include <File.au3>
@@ -20,66 +21,12 @@ Func _GetParentPath($sFullPath)
 EndFunc
 
 
-;~ Func _GetBuildNumber($sFileName)
-
-;~ 	Local $sReturn = ""
-
-;~ 	If @Compiled Then
-;~ 		Local $sReturn = FileGetVersion($sFileName)
-
-;~ 		Local $sPltReturn = StringSplit($sReturn, ".")
-;~ 		If IsArray($sPltReturn) Then
-;~ 			$sReturn = $sPltReturn[$sPltReturn[0]]
-;~ 		EndIf
-;~ 	Else
-;~ 		$sReturn = 0
-;~ 	EndIf
-
-;~ 	Return $sReturn
-
-;~ EndFunc
-
-
-;~ Func _GetTrueBuildFromString($sVersion)
-
-;~ 	Local $sPltReturn = StringSplit($sVersion, ".")
-
-;~ 	If IsArray($sPltReturn) Then
-
-;~ 		Local $sBuild = $sPltReturn[$sPltReturn[0]]
-;~ 		If StringIsInt($sBuild) Then
-;~ 			Local $iBuild = $sBuild - 1
-;~ 			Return $iBuild
-;~ 		Else
-;~ 			Return 0
-;~ 		EndIf
-
-;~ 	Else
-;~ 		Return 0
-;~ 	EndIf
-
-;~ EndFunc
-
-
-;~ Func _GetProgramVersion()
-
-;~ 	Local $sReturn
-
-;~ 	If @Compiled Then
-;~ 		$sReturn = FileGetVersion(@ScriptFullPath)
-;~ 	Else
-;~ 		$sReturn = @AutoItVersion
-;~ 	EndIf
-
-;~ 	Return $sReturn
-
-;~ EndFunc
-
-
-Func _GetWindowsVersion($sWinVer)
+Func _GetWindowsVersion()
 
 	Local $sReturn = ""
-	$sReturn = StringReplace($sWinVer, "WIN_", "Windows ",  $STR_CASESENSE)
+    Local $sWinVersion = @OSVersion
+	If StringRegExp(FileGetVersion('winver.exe'), "^10\.\d") Then $sWinVersion = "WIN_10"
+	$sReturn = StringReplace($sWinVersion, "WIN_", "Windows ",  $STR_CASESENSE)
 	Return $sReturn
 
 EndFunc
@@ -115,15 +62,6 @@ Func _CheckResources($sResFile)
 	EndIf
 
 EndFunc   ;==>_CheckResources
-
-
-Func _GetFilenameFromPath($sFileFullPath)
-
-	Local $sDrive = "", $sDir = "", $sFileName = "", $sExtension = ""
-	Local $aPathSplit = _PathSplit($sFileFullPath, $sDrive, $sDir, $sFileName, $sExtension)
-	Return StringReplace($sFileName, "_X64", "")
-
-EndFunc
 
 
 ; #FUNCTION# ====================================================================================================================

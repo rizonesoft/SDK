@@ -8,32 +8,32 @@
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=Y										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
-	#AutoIt3Wrapper_Run_Debug_Mode=N								 ;~ (Y/N) Run Script with console debugging. Default=N
-	#AutoIt3Wrapper_Run_SciTE_Minimized=Y 							 ;~ (Y/N) Minimize SciTE while script is running. Default=N
-	#AutoIt3Wrapper_Run_SciTE_OutputPane_Minimized=N				 ;~ (Y/N) Minimize SciTE output pane at run time. Default=N
+	#AutoIt3Wrapper_UseX64=Y										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	#AutoIt3Wrapper_Run_Debug_Mode=N								;~ (Y/N) Run Script with console debugging. Default=N
+	#AutoIt3Wrapper_Run_SciTE_Minimized=Y 							;~ (Y/N) Minimize SciTE while script is running. Default=N
+	#AutoIt3Wrapper_Run_SciTE_OutputPane_Minimized=N				;~ (Y/N) Minimize SciTE output pane at run time. Default=N
 	;===============================================================================================================
 	; Tidy Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_Tidy=Y										 ;~ (Y/N) Run Tidy before compilation. Default=N
-	#AutoIt3Wrapper_Tidy_Stop_OnError=N								 ;~ (Y/N) Continue when only Warnings. Default=Y
+	#AutoIt3Wrapper_Run_Tidy=Y										;~ (Y/N) Run Tidy before compilation. Default=N
+	#AutoIt3Wrapper_Tidy_Stop_OnError=N								;~ (Y/N) Continue when only Warnings. Default=Y
 	;#Tidy_Parameters= 												;~ Tidy Parameters...see SciTE4AutoIt3 Helpfile for options
 	;===============================================================================================================
 	; AU3Check settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_Run_AU3Check=Y									 ;~ (Y/N) Run au3check before compilation. Default=Y
+	#AutoIt3Wrapper_Run_AU3Check=Y									;~ (Y/N) Run au3check before compilation. Default=Y
 	;#AutoIt3Wrapper_AU3Check_Parameters=							;~ Au3Check parameters...see SciTE4AutoIt3 Helpfile for options
 	;#AutoIt3Wrapper_AU3Check_Stop_OnWarning=						;~ (Y/N) Continue/Stop on Warnings.(Default=N)
 
 #Autoit3Wrapper_If_Compile
 
-	#AutoIt3Wrapper_ShowProgress=Y									 ;~ (Y/N) Show ProgressWindow during Compile. Default=Y
+	#AutoIt3Wrapper_ShowProgress=Y									;~ (Y/N) Show ProgressWindow during Compile. Default=Y
 	;===============================================================================================================
 	; AutoIt3 Settings
 	;===============================================================================================================
-	#AutoIt3Wrapper_UseX64=N										 ;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
-	#AutoIt3Wrapper_Version=B                        				 ;~ (B/P) Use Beta or Production for AutoIt3 and Aut2Eex. Default is P
-	#AutoIt3Wrapper_Run_Debug_Mode=N								 ;~ (Y/N) Run Script with console debugging. Default=N
+	#AutoIt3Wrapper_UseX64=N										;~ (Y/N) Use AutoIt3_x64 or Aut2Exe_x64. Default=N
+	#AutoIt3Wrapper_Version=B                        				;~ (B/P) Use Beta or Production for AutoIt3 and Aut2Eex. Default is P
+	#AutoIt3Wrapper_Run_Debug_Mode=N								;~ (Y/N) Run Script with console debugging. Default=N
 	;#AutoIt3Wrapper_Autoit3Dir=									;~ Optionally override the AutoIt3 install directory to use.
 	;#AutoIt3Wrapper_Aut2exe=										;~ Optionally override the Aut2exe.exe to use for this script
 	;#AutoIt3Wrapper_AutoIt3=										;~ Optionally override the Autoit3.exe to use for this script
@@ -52,17 +52,17 @@
 	;===============================================================================================================
 	; Target Program Resource info
 	;===============================================================================================================
-	#AutoIt3Wrapper_Res_Comment=Selfie									 ;~ Comment field
-	#AutoIt3Wrapper_Res_Description=Create Rizonesoft SDK Distribution ;~ Description field
-	#AutoIt3Wrapper_Res_Fileversion=1.0.0.55
-	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					 ;~ (Y/N/P) AutoIncrement FileVersion. Default=N
-	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					 ;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
-	#AutoIt3Wrapper_Res_HiDpi=Y                      					 ;~ (Y/N) Compile for high DPI. Default=N
-	#AutoIt3Wrapper_Res_ProductVersion=0             					 ;~ Product Version
-	#AutoIt3Wrapper_Res_Language=2057									 ;~ Resource Language code . Default 2057=English (United Kingdom)
-	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				 ;~ Copyright field
-	#AutoIt3Wrapper_res_requestedExecutionLevel=highestAvailable		 ;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
-	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				 ;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
+	#AutoIt3Wrapper_Res_Comment=Selfie									;~ Comment field
+	#AutoIt3Wrapper_Res_Description=Create Rizonesoft SDK Distribution	;~ Description field
+	#AutoIt3Wrapper_Res_Fileversion=1.0.0.138
+	#AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
+	#AutoIt3Wrapper_Res_FileVersion_First_Increment=N					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
+	#AutoIt3Wrapper_Res_HiDpi=Y                      					;~ (Y/N) Compile for high DPI. Default=N
+	#AutoIt3Wrapper_Res_ProductVersion=0             					;~ Product Version
+	#AutoIt3Wrapper_Res_Language=2057									;~ Resource Language code . Default 2057=English (United Kingdom)
+	#AutoIt3Wrapper_Res_LegalCopyright=© 2016 Rizonesoft				;~ Copyright field
+	#AutoIt3Wrapper_res_requestedExecutionLevel=asInvoker				;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
+	#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
 	;#AutoIt3Wrapper_Res_SaveSource=N									;~ (Y/N) Save a copy of the Script_source in the EXE resources. Default=N
 	; If _Res_SaveSource=Y the content of Script_source depends on the _Run_Au3Stripper and #Au3Stripper_parameters directives:
 	;    If _Run_Au3Stripper=Y then
@@ -172,21 +172,17 @@ Opt("WinTitleMatchMode", 1) ;~ 1=start, 2=subStr, 3=exact, 4=advanced, -1 to -4=
 Opt("WinWaitDelay", 250) ;~ 250 milliseconds
 
 
-#include <ListviewConstants.au3>
 #include <WindowsConstants.au3>
 #include <ButtonConstants.au3>
 #include <StaticConstants.au3>
 #include <StringConstants.au3>
 #include <GuiConstantsEx.au3>
 #include <EditConstants.au3>
-#include <GuiImageList.au3>
-#include <GuiListView.au3>
 #include <Constants.au3>
 #include <GDIPlus.au3>
 #include <GuiMenu.au3>
 
-#include <WinAPITheme.au3>
-
+#include "Includes\ReBar_AutoIt3Script.au3"
 #include "Includes\ReBar_Declarations.au3"
 #include "Includes\ReBar_ModernMenu.au3"
 #include "Includes\ReBar_Versioning.au3"
@@ -199,130 +195,131 @@ Opt("WinWaitDelay", 250) ;~ 250 milliseconds
 
 #include "Includes\ReBar_Startup.au3"
 
-Global Const $AU3_RIZONESOFTSDK = @ScriptDir & "\Distro.au3"
+Global Const $g_Au3RizonesoftSDK = @ScriptDir & "\Distro.au3"
 ;===============================================================================================================
 ; Declarations
 ;===============================================================================================================
-Global $DIR_AUTOIT3, $CMD_AUTOIT3
-Global $DIR_AUTOIT3_BETA, $CMD_AUTOIT3_BETA
-Global $DIR_AUTOIT3_WRAPPER, $CMD_AUTOIT3_WRAPPER
-Global $DIR_SCITE, $CMD_SCITE
-Global $DIR_KSIGN, $CMD_KSIGN
-Global $DIR_INNOSETUP, $CMD_INNOSETUP
-Global $DIR_UPX, $CMD_UPX
-
-Global $GUI_ICON_HOVER = 0
-Global $ICON_HOVER = @ScriptFullPath
-Global $LST_STATUS, $IMG_STATUS, $LBL_STATUS
+Global $g_DirAutoIt3, $g_CmdAutoIt3
+Global $g_DirAutoIt3Beta, $g_CmdAutoIt3Beta
+Global $g_DirAutoIt3Wrapper, $g_CmdAutoIt3Wrapper
+Global $g_DirUPX, $g_CmdUPX, $g_DirKSign, $g_CmdKSign, $g_DirScite, $g_CmdScite
+Global $g_ProcessingAni, $g_ListStatus, $g_ImgStatus, $g_LblStatus
 ;===============================================================================================================
 
 
-_SplashStart("Initializing " & $REBAR_PROG_NAME, $REBAR_SPLASH_ENABLE)
-_SplashUpdate("Setting Working Directories", 1, $REBAR_SPLASH_ENABLE)
+_SplashStart("Initializing " & $g_ReBarProgName)
+_SplashUpdate("Setting Working Directories", 1)
 _SetWorkingDirectories()
-_SplashUpdate("Initializing Logging Subsystem", 2, $REBAR_SPLASH_ENABLE)
-_LoggingInitialize()
-_SplashUpdate("Checking Integrity", 3, $REBAR_SPLASH_ENABLE)
-_CheckResources($REBAR_RES_FUGUE)
-_CheckResources($REBAR_RES_DOORS)
-_SplashUpdate("Loading Environment", 3, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Checking Integrity", 2)
+_CheckResources($g_ReBarResFugue)
+_CheckResources($g_ReBarResDoors)
+_SplashUpdate("Loading Environment", 3)
 _LoadEnvironment()
-_SplashUpdate("Building Interface", 5, $REBAR_SPLASH_ENABLE)
+_SplashUpdate("Building Interface", 4)
 _StartCoreGUI()
 
 
 Func _StartCoreGUI()
 
 	Local $mnuFile, $miFileClose
-	Local $mnuTasks, $miTsksBuild, $miTsksCompressExes, $miTsksSign, $miTskDocs, $miTsksGit
+	Local $mnuTasks, $miTskBuild, $miTskCompressExes, $miTskSign, $miTskDocs, $miTskGit, $miTskDistribute
 	Local $mnuHelp, $miHlpHome, $miHlpSupport
 
-
-	$REBAR_GUI_CORE = GUICreate($REBAR_ISADMINST & _GUIGetTitle($REBAR_PROG_NAME), $REBAR_FORM_WIDTH, $REBAR_FORM_HEIGHT, -1, -1, _
-			BitOR($WS_OVERLAPPEDWINDOW, $WS_VISIBLE, $WS_CLIPSIBLINGS))
+	$g_ReBarCoreGui = GUICreate($g_ReBarGuiTitle, $g_ReBarFormWidth, $g_ReBarFormHeight, -1, -1, BitOR($WS_OVERLAPPEDWINDOW, $WS_VISIBLE, $WS_CLIPSIBLINGS))
 	GUIRegisterMsg($WM_GETMINMAXINFO, "WM_GETMINMAXINFO")
-	GUISetFont($REBAR_FONT_SIZE, 400, -1, $REBAR_FONT_NAME, $REBAR_GUI_CORE, $CLEARTYPE_QUALITY)
+	GUISetFont($g_ReBarFontSize, 400, -1, $g_ReBarFontName, $g_ReBarCoreGui, $CLEARTYPE_QUALITY)
 	If Not @Compiled Then
-		GUISetIcon($REBAR_ICON, 0, $REBAR_GUI_CORE)
-		$ICON_HOVER = @ScriptDir & "\SDK\Themes\Icons\SelfieH.ico"
+		GUISetIcon($g_ReBarIcon, 0, $g_ReBarCoreGui)
 	EndIf
 
-	$mnuFile = _GUICtrlCreateODTopMenu("&File", $REBAR_GUI_CORE)
-	$mnuTasks = _GUICtrlCreateODTopMenu("&Tasks", $REBAR_GUI_CORE)
-	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $REBAR_GUI_CORE)
+	$mnuFile = _GUICtrlCreateODTopMenu("&File", $g_ReBarCoreGui)
+	$mnuTasks = _GUICtrlCreateODTopMenu("&Tasks", $g_ReBarCoreGui)
+	$mnuHelp = _GUICtrlCreateODTopMenu("&Help", $g_ReBarCoreGui)
 
 	_GUICtrlCreateODMenuItem("", $mnuFile)
-	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $REBAR_RES_FUGUE, 102)
+	$miFileClose = _GUICtrlCreateODMenuItem("&Close" & @TAB & "Esc", $mnuFile, $g_ReBarResFugue, 102)
 	_GUICtrlCreateODMenuItem("", $mnuFile)
 
-	$miTsksBuild = _GUICtrlCreateODMenuItem("&Build Rizonesoft SDK", $mnuTasks, $REBAR_RES_FUGUE, 109)
-	$miTsksCompressExes = _GUICtrlCreateODMenuItem("&Compress Executables", $mnuTasks, $REBAR_RES_FUGUE, 110)
-	$miTsksSign = _GUICtrlCreateODMenuItem("&Sign Executables", $mnuTasks, $REBAR_RES_FUGUE, 111)
-	$miTskDocs = _GUICtrlCreateODMenuItem("Generate &Documentation", $mnuTasks, $REBAR_RES_FUGUE, 112)
+	$miTskBuild = _GUICtrlCreateODMenuItem("&Build Rizonesoft SDK", $mnuTasks, $g_ReBarResFugue, 109)
+	$miTskCompressExes = _GUICtrlCreateODMenuItem("&Compress Executables", $mnuTasks, $g_ReBarResFugue, 110)
+	$miTskSign = _GUICtrlCreateODMenuItem("&Sign Executables", $mnuTasks, $g_ReBarResFugue, 111)
+	$miTskDocs = _GUICtrlCreateODMenuItem("&Generate Documentation", $mnuTasks, $g_ReBarResFugue, 112)
 	_GUICtrlCreateODMenuItem("", $mnuTasks)
-	$miTsksGit = _GUICtrlCreateODMenuItem("Update GitHub Repository", $mnuTasks, $REBAR_RES_FUGUE, 119)
+	$miTskDistribute = _GUICtrlCreateODMenuItem("Create &Distribution", $mnuTasks, $g_ReBarResFugue, 114)
+	$miTskGit = _GUICtrlCreateODMenuItem("Update GitHub Repository", $mnuTasks, $g_ReBarResFugue, 119)
 
-
-	$REBAR_ABOUT_MENU = _GUICtrlCreateODMenuItem("&About " & $REBAR_PROG_NAME, $mnuHelp, $REBAR_RES_FUGUE, 103)
-	$miHlpHome = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Home", $mnuHelp, $REBAR_RES_FUGUE, 106)
+	$g_ReBarAboutMenu = _GUICtrlCreateODMenuItem("&About " & $g_ReBarProgName, $mnuHelp, $g_ReBarResFugue, 103)
+	$miHlpHome = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Home", $mnuHelp, $g_ReBarResFugue, 106)
 	_GUICtrlCreateODMenuItem("", $mnuHelp)
-	$miHlpSupport = _GUICtrlCreateODMenuItem($REBAR_COMP_NAME & " &Support", $mnuHelp, $REBAR_RES_FUGUE, 101)
+	$miHlpSupport = _GUICtrlCreateODMenuItem($g_ReBarCompName & " &Support", $mnuHelp, $g_ReBarResFugue, 101)
 
 	_SetMenuSelectBkColor(0xF7E0C9)
 	_SetMenuSelectRectColor(0xE4A262)
 
 	GUICtrlSetOnEvent($miFileClose, "_ShutdownProgram")
 
-	GUICtrlSetOnEvent($miTsksBuild, "_BuildRizonesoftSDK")
-	GUICtrlSetOnEvent($miTsksCompressExes, "_CompressExecutables")
-	GUICtrlSetOnEvent($miTsksSign, "_SignExecutables")
-	GUICtrlSetOnEvent($miTsksGit, "_CopyToGit")
-	GUICtrlSetOnEvent($REBAR_ABOUT_MENU, "_ShowAboutDialog")
+	GUICtrlSetOnEvent($miTskBuild, "_BuildRizonesoftSDK")
+	GUICtrlSetOnEvent($miTskCompressExes, "_CompressExecutables")
+	GUICtrlSetOnEvent($miTskSign, "_SignExecutables")
+	GUICtrlSetOnEvent($miTskDistribute, "_CreateDistribution")
+	GUICtrlSetOnEvent($miTskGit, "_CopyToGit")
+	GUICtrlSetOnEvent($g_ReBarAboutMenu, "_ShowAboutDialog")
 	GUICtrlSetOnEvent($miHlpHome, "_OpenHomePageLink")
 	GUICtrlSetOnEvent($miHlpSupport, "_OpenSupportLink")
 
-	$REBAR_GUI_ICON = GUICtrlCreateIcon($REBAR_ICON, 99, 10, 10, 64, 64)
-	GUICtrlSetTip($REBAR_GUI_ICON, "Version " & FileGetVersion(@ScriptFullPath) & @CRLF & _
+	$g_ReBarGuiIcon = GUICtrlCreateIcon($g_ReBarIcon, 99, 10, 10, 64, 64)
+	GUICtrlSetTip($g_ReBarGuiIcon, "Version " & $g_ReBarRunVersion & @CRLF & _
 			"Build with AutoIt version " & @AutoItVersion & @CRLF & _
-			"Copyright © " & @YEAR & " " & $REBAR_COMP_NAME, _
-			"About " & $REBAR_PROG_NAME, $TIP_INFOICON, $TIP_BALLOON)
-	GUICtrlSetCursor($REBAR_GUI_ICON, 0)
+			"Copyright © " & @YEAR & " " & $g_ReBarCompName, _
+			"About " & $g_ReBarProgName, $TIP_INFOICON, $TIP_BALLOON)
+	GUICtrlSetCursor($g_ReBarGuiIcon, 0)
 
+	$g_ProcessingAni = GUICtrlCreateIcon(@ScriptDir & "\SDK\Themes\Processing\32\Stroke.ani", 0, $g_ReBarFormWidth - 42, 10, 32, 32)
+	GUICtrlSetResizing($g_ProcessingAni, BitOR($GUI_DOCKRIGHT, $GUI_DOCKWIDTH, $GUI_DOCKHEIGHT))
+	GUICtrlSetState($g_ProcessingAni, $GUI_HIDE)
 	GUICtrlCreateLabel("Selfie " & _GetProgramVersion(), 90, 10, 500, 20)
 	GUICtrlSetFont(-1, 12, 400)
-	$LBL_STATUS = GUICtrlCreateLabel("", 90, 35, 500, 20)
-	GUICtrlSetFont($LBL_STATUS, 10, 400)
+	$g_LblStatus = GUICtrlCreateLabel("", 90, 35, 500, 20)
+	GUICtrlSetFont($g_LblStatus, 10, 400)
 
-	GUICtrlSetOnEvent($REBAR_GUI_ICON, "_ShowAboutDialog")
+	GUICtrlSetOnEvent($g_ReBarGuiIcon, "_ShowAboutDialog")
 
-	$LST_STATUS = GUICtrlCreateListView("", 10, 85, 630, 380, BitOR($LVS_REPORT, $LVS_NOCOLUMNHEADER))
-	GUICtrlSetResizing($LST_STATUS, BitOR($GUI_DOCKLEFT, $GUI_DOCKRIGHT, $GUI_DOCKBOTTOM, $GUI_DOCKTOP))
-	_GUICtrlListView_SetExtendedListViewStyle($LST_STATUS, BitOR($LVS_EX_FULLROWSELECT, $LVS_EX_DOUBLEBUFFER, _
+	$g_ListStatus = GUICtrlCreateListView("", 10, 85, 630, 380, BitOR($LVS_REPORT, $LVS_NOCOLUMNHEADER))
+	GUICtrlSetResizing($g_ListStatus, BitOR($GUI_DOCKLEFT, $GUI_DOCKRIGHT, $GUI_DOCKBOTTOM, $GUI_DOCKTOP))
+	_GUICtrlListView_SetExtendedListViewStyle($g_ListStatus, BitOR($LVS_EX_FULLROWSELECT, $LVS_EX_DOUBLEBUFFER, _
 			$LVS_EX_SUBITEMIMAGES, $LVS_EX_INFOTIP, _
 			$WS_EX_CLIENTEDGE))
-	_GUICtrlListView_AddColumn($LST_STATUS, "", 800)
-	_WinAPI_SetWindowTheme(GUICtrlGetHandle($LST_STATUS), "Explorer")
+	_GUICtrlListView_AddColumn($g_ListStatus, "", 680)
+	_WinAPI_SetWindowTheme(GUICtrlGetHandle($g_ListStatus), "Explorer")
 
-	$IMG_STATUS = _GUIImageList_Create(16, 16, 5, 1, 8, 8)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -103)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -130)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -122)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -134)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -133)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -135)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -136)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -138)
-	_GUIImageList_AddIcon($IMG_STATUS, $REBAR_RES_FUGUE, -999)
-	_GUICtrlListView_SetImageList($LST_STATUS, $IMG_STATUS, 1)
+	$g_ImgStatus = _GUIImageList_Create(16, 16, 5, 1, 8, 8)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -103)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -130)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -122)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -134)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -133)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -135)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -136)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -138)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -159)
+	_GUIImageList_AddIcon($g_ImgStatus, $g_ReBarResFugue, -999)
+	_GUICtrlListView_SetImageList($g_ListStatus, $g_ImgStatus, 1)
+
+	GUICtrlSetFont($g_ListStatus, 9, -1, -1, "Courier New")
+	GUICtrlSetColor($g_ListStatus, 0x222222)
+
+	_SplashUpdate("Initializing Logging Subsystem", 5)
+	_LoggingInitialize()
 
 	; This will close the splash page.
-	_SplashUpdate("", 100, $REBAR_SPLASH_ENABLE)
-	GUISetState(@SW_SHOW, $REBAR_GUI_CORE)
+	_SplashUpdate("", 100)
+	GUISetState(@SW_SHOW, $g_ReBarCoreGui)
 
-	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $REBAR_GUI_CORE)
+	GUISetOnEvent($GUI_EVENT_CLOSE, "_ShutdownProgram", $g_ReBarCoreGui)
+	AdlibRegister("_OnMainIconHover", 50)
 
 	While 1
-		_OnMainIconHover()
+
 		Sleep(55)
 	WEnd
 
@@ -330,9 +327,20 @@ EndFunc   ;==>_StartCoreGUI
 
 
 Func _StartProcess($sMessage)
+
 	_StartLogging($sMessage)
-	GUICtrlSetData($LBL_STATUS, $sMessage)
+	GUICtrlSetState($g_ProcessingAni, $GUI_SHOW)
+	GUICtrlSetData($g_LblStatus, $sMessage)
+
 EndFunc   ;==>_StartProcess
+
+
+Func _EndProcess()
+
+	_EndLogging()
+	GUICtrlSetState($g_ProcessingAni, $GUI_HIDE)
+
+EndFunc
 
 
 Func _OnMainIconHover()
@@ -340,12 +348,12 @@ Func _OnMainIconHover()
 	Local $iCursor = GUIGetCursorInfo()
 
 	If Not @error Then
-		If $iCursor[4] = $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 1 Then
-			$REBAR_GUI_ICON_HOVER = 0
-			GUICtrlSetImage($REBAR_GUI_ICON, $ICON_HOVER, 201)
-		ElseIf $iCursor[4] <> $REBAR_GUI_ICON And $REBAR_GUI_ICON_HOVER = 0 Then
-			$REBAR_GUI_ICON_HOVER = 1
-			GUICtrlSetImage($REBAR_GUI_ICON, $REBAR_ICON, 99)
+		If $iCursor[4] = $g_ReBarGuiIcon And $g_ReBarIcoHovering = 1 Then
+			$g_ReBarIcoHovering = 0
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIconHover, 201)
+		ElseIf $iCursor[4] <> $g_ReBarGuiIcon And $g_ReBarIcoHovering = 0 Then
+			$g_ReBarIcoHovering = 1
+			GUICtrlSetImage($g_ReBarGuiIcon, $g_ReBarIcon, 99)
 		EndIf
 	EndIf
 
@@ -356,14 +364,14 @@ Func _BuildRizonesoftSDK()
 
 	_StartProcess("Building Rizonesoft SDK")
 
-	If FileExists($AU3_RIZONESOFTSDK) Then
+	If FileExists($g_Au3RizonesoftSDK) Then
 
-		If FileExists($CMD_AUTOIT3) Then
+		If FileExists($g_CmdAutoIt3) Then
 
-			If FileExists($CMD_AUTOIT3_WRAPPER) Then
+			If FileExists($g_CmdAutoIt3Wrapper) Then
 
-				Local $iWrapPID = Run(Chr(34) & $CMD_AUTOIT3 & Chr(34) & Chr(32) & Chr(34) & $CMD_AUTOIT3_WRAPPER & Chr(34) & _
-						" /NoStatus /prod /in " & Chr(34) & $AU3_RIZONESOFTSDK & Chr(34), _GetParentPath($AU3_RIZONESOFTSDK), @SW_SHOW, $STDOUT_CHILD)
+				Local $iWrapPID = Run(Chr(34) & $g_CmdAutoIt3 & Chr(34) & Chr(32) & Chr(34) & $g_CmdAutoIt3Wrapper & Chr(34) & _
+						" /NoStatus /prod /in " & Chr(34) & $g_Au3RizonesoftSDK & Chr(34), _GetParentPath($g_Au3RizonesoftSDK), @SW_SHOW, $STDOUT_CHILD)
 
 				While 1
 
@@ -382,6 +390,8 @@ Func _BuildRizonesoftSDK()
 
 	EndIf
 
+	_EndProcess()
+
 EndFunc   ;==>_BuildRizonesoftSDK
 
 
@@ -390,7 +400,7 @@ Func _CompressExecutables()
 	_StartProcess("Compressing Program Executables")
 
 	; Read the INI section labelled 'UPX'. This will return a 2 dimensional array.
-	Local $aUPXFiles = IniReadSection($REBAR_PATH_INI, "UPX")
+	Local $aUPXFiles = IniReadSection($g_ReBarPathIni, "UPX")
 
 	; Check if an error occurred.
 	If Not @error Then
@@ -398,6 +408,8 @@ Func _CompressExecutables()
 			_CompressExecutable(@ScriptDir & "\" & $aUPXFiles[$x][1])
 		Next
 	EndIf
+
+	_EndProcess()
 
 EndFunc   ;==>_CompressExecutables
 
@@ -409,10 +421,10 @@ Func _CompressExecutable($sOutFilePath)
 
 	If FileExists($sOutFilePath) Then
 
-		If FileExists($CMD_UPX) Then
+		If FileExists($g_CmdUPX) Then
 
 			Local $sTempOutFile = Chr(34) & $sOutFilePath & Chr(34)
-			Local $sTempUPX = Chr(34) & $CMD_UPX & Chr(34)
+			Local $sTempUPX = Chr(34) & $g_CmdUPX & Chr(34)
 
 			_EditLoggingWrite("Compressing: " & $sTempOutFile)
 			_EditLoggingWrite("Parameters: " & $sUPXParam)
@@ -460,7 +472,7 @@ Func _SignExecutables()
 
 	_StartProcess("Signing Executables")
 
-	If FileExists($CMD_KSIGN) Then
+	If FileExists($g_CmdKSign) Then
 
 		_EditLoggingWrite("Checking connection to the Comodo Timestamp Server.")
 		Local $iPing = Ping("timestamp.comodoca.com", 5000)
@@ -470,7 +482,7 @@ Func _SignExecutables()
 
 			_EditLoggingWrite("Response Received: " & $iPing & " milliseconds.")
 
-			Local $sCertInfoIni = IniRead($REBAR_PATH_INI, "Signing", "CertificateSet", "Signing\Certum.ini")
+			Local $sCertInfoIni = IniRead($g_ReBarPathIni, "Signing", "CertificateSet", "Signing\Certum.ini")
 			Local $sCertInfoPath = @ScriptDir & "\" & _CleanDirectoryName($sCertInfoIni)
 			Local $sCertWorkPath = _GetParentPath($sCertInfoPath)
 			Local $sCertBaseName = IniRead($sCertInfoPath, "Certificate", "CertificateName", "Certum.p12")
@@ -480,15 +492,15 @@ Func _SignExecutables()
 
 				_EditLoggingWrite("Certificate Information loaded from [" & $sCertInfoPath & "]")
 
-				Local $sDescription = IniRead($REBAR_PATH_INI, "Signing", "Description", "Rizonesoft SDK")
-				Local $sWebsite = IniRead($REBAR_PATH_INI, "Signing", "Website", "http://wwww.rizonesoft.com")
+				Local $sDescription = IniRead($g_ReBarPathIni, "Signing", "Description", "Rizonesoft SDK")
+				Local $sWebsite = IniRead($g_ReBarPathIni, "Signing", "Website", "http://wwww.rizonesoft.com")
 				Local $sPassword = IniRead($sCertInfoPath, "Certificate", "Password", "*************")
 
 				If FileExists($sCertPath) Then
 
 					_EditLoggingWrite("Certificate loaded: [" & $sCertPath & "]")
 
-					Local $aFilesSign = IniReadSection($REBAR_PATH_INI, "UPX")
+					Local $aFilesSign = IniReadSection($g_ReBarPathIni, "UPX")
 
 					; Check if an error occurred.
 					If Not @error Then
@@ -528,6 +540,8 @@ Func _SignExecutables()
 		_EditLoggingWrite("ERROR: kSign is required for signing!")
 	EndIf
 
+	_EndProcess()
+
 EndFunc   ;==>_SignExecutables
 
 
@@ -551,7 +565,7 @@ Func _SignExecutable($sCertPath, $sFileToSign, $sDescription, $sWebsite, $sPassw
 	_EditLoggingWrite("Password: " & $sPassMsk)
 	_EditLoggingWrite("Signing: " & $sFileToSign)
 
-	Local $iPID = Run($CMD_KSIGN & " /d " & Chr(34) & $sDescription & Chr(34) & " /du " & Chr(34) & $sWebsite & Chr(34) & _
+	Local $iPID = Run($g_CmdKSign & " /d " & Chr(34) & $sDescription & Chr(34) & " /du " & Chr(34) & $sWebsite & Chr(34) & _
 		" /f " & Chr(34) & $sCertPath & Chr(34) & " /p " & $sPassword & Chr(32) & $sFileToSign, "", @SW_HIDE)
 
 	If $iPID Then
@@ -572,6 +586,59 @@ Func _SignExecutable($sCertPath, $sFileToSign, $sDescription, $sWebsite, $sPassw
 	Else
 		_EditLoggingWrite("ERROR: Failed to sign the executable.")
 	EndIf
+
+EndFunc
+
+
+Func _CreateDistribution()
+
+	Local $sDistroExeName = IniRead($g_ReBarPathIni, "Distribution", "SDKExe", "Distro.exe")
+	Local $sDistroExePath = @ScriptDir & "\" & $sDistroExeName
+	Local $sDistroBuild = _GetProgramVersionFromFile($sDistroExePath, 4)
+	Local $sDistroDir = @ScriptDir & "\Distribution\RizonesoftSDK_" & $sDistroBuild
+
+
+	_StartProcess("Creating Distribution")
+	DirCreate($sDistroDir)
+
+	_EditLoggingWrite("Building File List")
+	Local $aDisFileList = _FileListToArrayRec(@ScriptDir, "*",  $FLTAR_FILESFOLDERS, 1)
+
+    If @error = 1 Then
+		_EditLoggingWrite("Error: Invalid Source Path")
+		_EditLoggingWrite("^ [" & @ScriptDir & "]")
+    EndIf
+
+	For $a = 1 To $aDisFileList[0]
+
+		If _ValidateExcludes($aDisFileList[$a]) Then ContinueLoop
+		If StringInStr(FileGetAttrib(@ScriptDir & "\" & $aDisFileList[$a]), "D") Then
+			_DistributeDirectory($sDistroDir & "\" & $aDisFileList[$a])
+		Else
+			_DistributeFile(@ScriptDir & "\" & $aDisFileList[$a], $sDistroDir & "\" & $aDisFileList[$a])
+		EndIf
+
+	Next
+
+	IniWrite($sDistroDir & "\Signing\Certum.ini", "Certificate", "Password", "**********")
+	IniWrite($g_ReBarPathIni, "Environment", "DistributionPath", $sDistroDir)
+	_EndProcess()
+
+EndFunc
+
+
+Func _ValidateExcludes($sFileName)
+
+	Local $aExcludes = IniReadSection($g_ReBarPathIni, "Excludes")
+	If Not @error Then
+		For $x = 1 To $aExcludes[0][0]
+			If StringLeft($sFileName, StringLen($aExcludes[$x][1])) = $aExcludes[$x][1] Then
+				Return True
+			EndIf
+		Next
+	EndIf
+
+	Return False
 
 EndFunc
 
@@ -612,21 +679,21 @@ Func _LoadEnvironment()
 	Local $aInnoInfo = _GetProgramInstallInfo("Inno Setup 5\unins000.exe")
 	Local $a7zip = _GetProgramInstallInfo("7-Zip\Uninstall.exe")
 
-	$DIR_AUTOIT3 = $aAutoItInfo[7]
-	$CMD_AUTOIT3 = $DIR_AUTOIT3 & "AutoIt3.exe"
-	$DIR_AUTOIT3_BETA = $aAutoItBetaInfo[7]
-	$CMD_AUTOIT3_BETA = $DIR_AUTOIT3_BETA & "AutoIt3.exe"
-	$DIR_SCITE = $aSciteInfo[7]
-	$CMD_SCITE = $DIR_SCITE & "SciTE.exe"
-	$DIR_KSIGN = $aKSignInfo[7]
-	$CMD_KSIGN = $DIR_KSIGN & "kSignCMD.exe"
+	$g_DirAutoIt3 = $aAutoItInfo[7]
+	$g_CmdAutoIt3 = $g_DirAutoIt3 & "AutoIt3.exe"
+	$g_DirAutoIt3Beta = $aAutoItBetaInfo[7]
+	$g_CmdAutoIt3Beta = $g_DirAutoIt3Beta & "AutoIt3.exe"
+	$g_DirScite = $aSciteInfo[7]
+	$g_CmdScite = $g_DirScite & "SciTE.exe"
+	$g_DirKSign = $aKSignInfo[7]
+	$g_CmdKSign = $g_DirKSign & "kSignCMD.exe"
 
-	$CMD_UPX = @ScriptDir & "\SDK\Bin\UPX\upx.exe"
-	$DIR_UPX = _GetParentPath($CMD_UPX)
+	$g_CmdUPX = @ScriptDir & "\SDK\Bin\UPX\upx.exe"
+	$g_DirUPX = _GetParentPath($g_CmdUPX)
 
-	If FileExists($DIR_SCITE & "AutoIt3Wrapper\AutoIt3Wrapper.au3") Then
-		$DIR_AUTOIT3_WRAPPER = $DIR_SCITE & "AutoIt3Wrapper\"
-		$CMD_AUTOIT3_WRAPPER = $DIR_AUTOIT3_WRAPPER & "AutoIt3Wrapper.au3"
+	If FileExists($g_DirScite & "AutoIt3Wrapper\AutoIt3Wrapper.au3") Then
+		$g_DirAutoIt3Wrapper = $g_DirScite & "AutoIt3Wrapper\"
+		$g_CmdAutoIt3Wrapper = $g_DirAutoIt3Wrapper & "AutoIt3Wrapper.au3"
 	EndIf
 
 EndFunc   ;==>_LoadEnvironment
@@ -697,37 +764,44 @@ EndFunc   ;==>_GetProgramInstallInfo
 
 Func _CopyToGit()
 
+	_StartProcess("Updating GitHub Repository")
+	_EditLoggingWrite("Cleaning GitHub Repository")
 	_CleanGitDirectory()
 
-	Local $aGitSourceDirs = IniReadSection($REBAR_PATH_INI, "Source-Dirs")
-	If Not @error Then
-        For $x = 1 To $aGitSourceDirs[0][0]
-			_DistributeDirectory(@ScriptDir & "\GitHub\SDK\" & _CleanDirectoryName($aGitSourceDirs[$x][1]))
-        Next
-    EndIf
+	Local $sDistroDir = IniRead($g_ReBarPathIni, "Environment", "DistributionPath", "")
+	Local $sGitDir = @ScriptDir & "\GitHub\SDK"
 
-	Local $aGitSourceFiles = IniReadSection($REBAR_PATH_INI, "Source-Files")
-	Local $sSourceGitPath = "", $sDestGitPath = ""
+	If FileExists($sDistroDir) Then
 
-	If Not @error Then
-        For $z = 1 To $aGitSourceFiles[0][0]
-			$sDestGitPath = @ScriptDir & "\GitHub\SDK\" & _CleanDirectoryName($aGitSourceFiles[$z][1])
-			_DistributeFile(@ScriptDir & "\" & _CleanDirectoryName($aGitSourceFiles[$z][0]), $sDestGitPath)
-			If StringInStr($sDestGitPath, "Selfie.exe") Then
-				_SignSelfie($sDestGitPath)
+		_EditLoggingWrite("Building File List")
+		Local $aGitFiles = _FileListToArrayRec($sDistroDir, "*",  $FLTAR_FILESFOLDERS, 1)
+
+		If @error = 1 Then
+			_EditLoggingWrite("Error: Invalid Source Path")
+			_EditLoggingWrite("^ [" & $sDistroDir & "]")
+		EndIf
+
+		For $a = 1 To $aGitFiles[0]
+
+		If _ValidateExcludes($aGitFiles[$a]) Then ContinueLoop
+			If StringInStr(FileGetAttrib($sDistroDir & "\" & $aGitFiles[$a]), "D") Then
+				_DistributeDirectory($sGitDir & "\" & $aGitFiles[$a])
+			Else
+				_DistributeFile($sDistroDir & "\" & $aGitFiles[$a], $sGitDir & "\" & $aGitFiles[$a])
 			EndIf
-        Next
-    EndIf
 
-	IniWrite(@ScriptDir & "\GitHub\SDK\Signing\Certum.ini", "Certificate", "Password", "")
+		Next
 
+	EndIf
+
+	_EndProcess()
 
 EndFunc
 
 
 Func _SignSelfie($sFileToSign)
 
-	If FileExists($CMD_KSIGN) Then
+	If FileExists($g_CmdKSign) Then
 
 		_EditLoggingWrite("Checking connection to the Comodo Timestamp Server.")
 		Local $iPing = Ping("timestamp.comodoca.com", 5000)
@@ -737,7 +811,7 @@ Func _SignSelfie($sFileToSign)
 
 			_EditLoggingWrite("Response Received: " & $iPing & " milliseconds.")
 
-			Local $sCertInfoIni = IniRead($REBAR_PATH_INI, "Signing", "CertificateSet", "Signing\Certum.ini")
+			Local $sCertInfoIni = IniRead($g_ReBarPathIni, "Signing", "CertificateSet", "Signing\Certum.ini")
 			Local $sCertInfoPath = @ScriptDir & "\" & _CleanDirectoryName($sCertInfoIni)
 			Local $sCertWorkPath = _GetParentPath($sCertInfoPath)
 			Local $sCertBaseName = IniRead($sCertInfoPath, "Certificate", "CertificateName", "Certum.p12")
@@ -748,8 +822,8 @@ Func _SignSelfie($sFileToSign)
 				Local $sPassword = IniRead($sCertInfoPath, "Certificate", "Password", "*************")
 				_EditLoggingWrite("Certificate Information loaded from [" & $sCertInfoPath & "]")
 
-				Local $sDescription = IniRead($REBAR_PATH_INI, "Signing", "SelfieDescription", "Rizonesoft SDK Selfie")
-				Local $sWebsite = IniRead($REBAR_PATH_INI, "Signing", "Website", "http://wwww.rizonesoft.com")
+				Local $sDescription = IniRead($g_ReBarPathIni, "Signing", "SelfieDescription", "Rizonesoft SDK Selfie")
+				Local $sWebsite = IniRead($g_ReBarPathIni, "Signing", "Website", "http://wwww.rizonesoft.com")
 
 				If FileExists($sCertPath) Then
 
@@ -852,6 +926,57 @@ Func _DistributeDirectory($sDestPath)
 	Return 1
 
 EndFunc   ;==>_DistributeDirectory
+
+
+Func _AutoIt3Script_WrapperOutPut($sOutPut)
+
+	If StringStripWS($sOutPut, 8) <> "" Then
+
+		;$sReplaceOut = StringReplace($sOutPut, "+>", "")
+		;$sReplaceOut = StringReplace($sReplaceOut, "...>", "")
+		;$sReplaceOut = StringReplace($sReplaceOut, "!>", "!")
+		Local $sReplaceOut = StringReplace($sOutPut, "to:", "to: ")
+		$sReplaceOut = StringReplace($sReplaceOut, "Created program:", "Created program: ")
+		$sReplaceOut = StringReplace($sReplaceOut, "ended.", "ended. ")
+		; This shortcut will not be used in the Distro Building Environment, so we remove it.
+		$sReplaceOut = StringReplace($sReplaceOut, "Press F4 to jump to next error.", "")
+
+		$sReplaceOut = StringRegExpReplace($sReplaceOut, "([0-9]+):([0-5][0-9]):([0-5][0-9])", "")
+
+		If StringLeft($sReplaceOut, 1) == ">" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
+		If StringLeft($sReplaceOut, 1) == "-" Then $sReplaceOut = StringTrimLeft($sReplaceOut, 1)
+
+		If StringInStr($sReplaceOut, "Environment") Then StringReplace($sReplaceOut, @CRLF, "")
+
+		If StringInStr($sReplaceOut, @CRLF) Then
+			Local $aOutSplt = StringSplit($sReplaceOut, @CRLF, $STR_ENTIRESPLIT)
+			For $x = 1 To $aOutSplt[0] ; Loop through the array returned by StringSplit to display the individual values.
+				If StringStripWS($aOutSplt[$x], 8) <> "" Then
+					_EditLoggingWrite(StringStripWS($aOutSplt[$x], 7))
+				EndIf
+			Next
+		Else
+			If StringStripWS($sReplaceOut, 8) <> "" Then
+				_EditLoggingWrite(StringStripWS($sReplaceOut, 7))
+			EndIf
+		EndIf
+
+	EndIf
+
+EndFunc
+
+
+;~ Func _AutoItWrapperOutputReplace($sOutput)
+
+;~ 	Local $sReturn = $sOutput
+;~ 	$sReturn = StringReplace($sReturn, "+>", "(::n::)+>")
+;~ 	$sReturn = StringReplace($sReturn, "...>", "(::n::)...>")
+;~ 	$sReturn = StringReplace($sReturn, ">Running:", "(::n::)>Running:")
+;~ 	$sReturn = StringReplace($sReturn, ">", "> ")
+
+;~ 	Return $sReturn
+
+;~ EndFunc   ;==>_AutoItWrapperOutputReplace
 
 
 #include "Includes\ReBar_End.au3"
