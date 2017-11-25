@@ -11,5 +11,5 @@ Thumbs.db
 ######################
 # SDK Concrete #
 ######################
-\Concrete\ComIntRep
-\Concrete\WinRepair
+/Concrete/ComIntRep
+/Concrete/WinRepair
