@@ -39607,3 +39607,696 @@
 [ 25/11/2017 21:29:54 ] WINDOWS DIRECTORY:					 C:\Windows
 -----------------------------------------------------------------------------------------
 
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 26/11/2017 13:09:01 ] DATE:								 26/11/2017 13:09:01
+[ 26/11/2017 13:09:01 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 26/11/2017 13:09:01 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 26/11/2017 13:09:01 ] COMPILED:							 YES
+[ 26/11/2017 13:09:01 ] WINDOWS VERSION:					 WIN_10 
+[ 26/11/2017 13:09:01 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 26/11/2017 13:09:01 ] MEMORY (RAM):						 8157.89 MB
+[ 26/11/2017 13:09:01 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 26/11/2017 13:09:01 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 26/11/2017 13:15:22 ] Het kompressie begin.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:15:22 ] Kompressie: "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe"
+[ 26/11/2017 13:15:22 ] Grense: --best --no-backup --overlay=copy --compress-exports=1 --compress-resources=1 --strip-relocs=1
+[ 26/11/2017 13:15:34 ]                        Ultimate Packer for eXecutables
+[ 26/11/2017 13:15:34 ]                           Copyright (C) 1996 - 2017
+[ 26/11/2017 13:15:34 ] UPX 3.93w       Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 29th 2017
+[ 26/11/2017 13:15:34 ]         File size         Ratio      Format      Name
+[ 26/11/2017 13:15:34 ]    --------------------   ------   -----------   -----------
+[ 26/11/2017 13:15:34 ]    1955840 ->   1209856   61.86%    win32/pe     ComIntRep.exe
+[ 26/11/2017 13:15:34 ] Packed 1 file.
+[ 26/11/2017 13:15:34 ] Kompressie: "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe"
+[ 26/11/2017 13:15:34 ] Grense: --best --no-backup --overlay=copy --compress-exports=1 --compress-resources=1 --strip-relocs=1
+[ 26/11/2017 13:15:41 ]                        Ultimate Packer for eXecutables
+[ 26/11/2017 13:15:41 ]                           Copyright (C) 1996 - 2017
+[ 26/11/2017 13:15:41 ] UPX 3.93w       Markus Oberhumer, Laszlo Molnar & John Reiser   Jan 29th 2017
+[ 26/11/2017 13:15:41 ]         File size         Ratio      Format      Name
+[ 26/11/2017 13:15:41 ]    --------------------   ------   -----------   -----------
+[ 26/11/2017 13:15:41 ]    2074624 ->   1245696   60.04%    win64/pe     ComIntRep_X64.exe
+[ 26/11/2017 13:15:41 ] Packed 1 file.
+[ 26/11/2017 13:15:41 ] Finished: Kompressie is klaar.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:15:47 ] Genereer dokumentasie vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:15:47 ] Sjabloon vouer gevind by: 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates'
+[ 26/11/2017 13:15:47 ] 03 sjabloons files gevind.
+[ 26/11/2017 13:15:47 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\Changes.tpl' te verwerk.
+[ 26/11/2017 13:15:47 ] Die Dokument was suksesvol geskep.
+[ 26/11/2017 13:15:47 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\Changes.txt
+[ 26/11/2017 13:15:47 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\License.tpl' te verwerk.
+[ 26/11/2017 13:15:47 ] Die Dokument was suksesvol geskep.
+[ 26/11/2017 13:15:47 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\License.txt
+[ 26/11/2017 13:15:47 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\Readme.tpl' te verwerk.
+[ 26/11/2017 13:15:47 ] Die Dokument was suksesvol geskep.
+[ 26/11/2017 13:15:47 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\Readme.txt
+[ 26/11/2017 13:15:47 ] Finished: Alle dokument sjablone verwerk.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:16:00 ] Verspreiding van Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.exe'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep_X64.exe'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.ini'
+[ 26/11/2017 13:16:00 ] Error: Die bron lêer bestaan nie!
+[ 26/11/2017 13:16:00 ] ^ 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\ComIntRep\Changes.txt'
+[ 26/11/2017 13:16:00 ] Error: Die bron lêer bestaan nie!
+[ 26/11/2017 13:16:00 ] ^ 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\ComIntRep\License.txt'
+[ 26/11/2017 13:16:00 ] Error: Die bron lêer bestaan nie!
+[ 26/11/2017 13:16:00 ] ^ 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\ComIntRep\Readme.txt'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\af.ini'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\en.ini'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\16\Process.ani'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\32\Stroke.ani'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\64\Globe.ani'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Complete.wav'
+[ 26/11/2017 13:16:00 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Welcome.wav'
+[ 26/11/2017 13:16:01 ] Error: Finished with (03) errors!
+------------------------------------------------------------------------------------------
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 26/11/2017 13:16:53 ] DATE:								 26/11/2017 13:16:53
+[ 26/11/2017 13:16:53 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 26/11/2017 13:16:53 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 26/11/2017 13:16:53 ] COMPILED:							 YES
+[ 26/11/2017 13:16:53 ] WINDOWS VERSION:					 WIN_10 
+[ 26/11/2017 13:16:53 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 26/11/2017 13:16:53 ] MEMORY (RAM):						 8157.89 MB
+[ 26/11/2017 13:16:53 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 26/11/2017 13:16:53 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 26/11/2017 13:17:01 ] Verspreiding van Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.exe'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep_X64.exe'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.ini'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\Changes.txt'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\License.txt'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\Readme.txt'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\af.ini'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\en.ini'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\16\Process.ani'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\32\Stroke.ani'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\64\Globe.ani'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Complete.wav'
+[ 26/11/2017 13:17:01 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Welcome.wav'
+[ 26/11/2017 13:17:02 ] Finished: Complete Internet Repair verspreiding geskep.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:17:18 ] Besig on zip-pakket te skep vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:17:19 ] 7-Zip (a) [64] 16.04 : Copyright (c) 1999-2016 Igor Pavlov : 2016-10-04
+[ 26/11/2017 13:17:19 ] Scanning the drive:
+[ 26/11/2017 13:17:19 ] 10 folders, 13 files, 3528080 bytes (3446 KiB)
+[ 26/11/2017 13:17:19 ] Creating archive: ComIntRep_3758.zip
+[ 26/11/2017 13:17:19 ] Items to compress: 23
+[ 26/11/2017 13:17:19 ] Files read from disk: 13
+[ 26/11/2017 13:17:19 ] Archive size: 2763757 bytes (2699 KiB)
+[ 26/11/2017 13:17:19 ] Everything is Ok
+[ 26/11/2017 13:17:19 ] Finished: Zip-pakket geskep.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:17:27 ] Skep Instellingslêer vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 26/11/2017 13:17:27 ] Inno Setup 5 Command-Line Compiler
+[ 26/11/2017 13:17:27 ] Copyright (C) 1997-2016 Jordan Russell. All rights reserved.
+[ 26/11/2017 13:17:27 ] Portions Copyright (C) 2000-2016 Martijn Laan
+[ 26/11/2017 13:17:28 ] Inno Setup Preprocessor
+[ 26/11/2017 13:17:28 ] Copyright (C) 2001-2004 Alex Yackimoff. All rights reserved.
+[ 26/11/2017 13:17:28 ] Compiler engine version: Inno Setup 5.5.9 (a)
+[ 26/11/2017 13:17:28 ] [ISPP] Preprocessing.
+[ 26/11/2017 13:17:28 ] [ISPP] Preprocessed.
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 28
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 29
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 30
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 31
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 32
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 33
+[ 26/11/2017 13:17:28 ] Parsing [Setup] section, line 34
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 35
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 36
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 37
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 38
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 39
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 40
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 41
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 42
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 43
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 44
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 45
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 46
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 47
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 48
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 49
+[ 26/11/2017 13:17:29 ] Parsing [Setup] section, line 50
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 51
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 52
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 53
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 54
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 55
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 56
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 57
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 58
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 59
+[ 26/11/2017 13:17:30 ] Parsing [Setup] section, line 60
+[ 26/11/2017 13:17:30 ] Reading file (LicenseFile)
+[ 26/11/2017 13:17:30 ] Reading file (WizardImageFile)
+[ 26/11/2017 13:17:30 ] File: C:\Program Files (x86)\Inno Setup 5\WizModernImage-IS.bmp
+[ 26/11/2017 13:17:30 ] Reading file (WizardSmallImageFile)
+[ 26/11/2017 13:17:30 ] File: C:\Program Files (x86)\Inno Setup 5\WIZMODERNSMALLIMAGE.BMP
+[ 26/11/2017 13:17:31 ] Preparing Setup program executable
+[ 26/11/2017 13:17:31 ] Reading default messages from Default.isl
+[ 26/11/2017 13:17:31 ] Parsing [Languages] section, line 63
+[ 26/11/2017 13:17:31 ] File: C:\Program Files (x86)\Inno Setup 5\Default.isl
+[ 26/11/2017 13:17:31 ] Parsing [LangOptions], [Messages], and [CustomMessages] sections
+[ 26/11/2017 13:17:31 ] Messages in script file
+[ 26/11/2017 13:17:31 ] Reading [Code] section
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 81
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 82
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 83
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 84
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 85
+[ 26/11/2017 13:17:31 ] Parsing [Tasks] section, line 86
+[ 26/11/2017 13:17:31 ] Parsing [Icons] section, line 106
+[ 26/11/2017 13:17:31 ] Parsing [Icons] section, line 107
+[ 26/11/2017 13:17:32 ] Parsing [Icons] section, line 108
+[ 26/11/2017 13:17:32 ] Parsing [Icons] section, line 109
+[ 26/11/2017 13:17:32 ] Parsing [INI] section, line 112
+[ 26/11/2017 13:17:32 ] Parsing [INI] section, line 113
+[ 26/11/2017 13:17:32 ] Parsing [InstallDelete] section, line 120
+[ 26/11/2017 13:17:32 ] Parsing [InstallDelete] section, line 121
+[ 26/11/2017 13:17:32 ] Parsing [InstallDelete] section, line 122
+[ 26/11/2017 13:17:32 ] Parsing [InstallDelete] section, line 123
+[ 26/11/2017 13:17:32 ] Parsing [InstallDelete] section, line 124
+[ 26/11/2017 13:17:32 ] Parsing [UninstallDelete] section, line 127
+[ 26/11/2017 13:17:32 ] Parsing [UninstallDelete] section, line 128
+[ 26/11/2017 13:17:32 ] Parsing [Run] section, line 116
+[ 26/11/2017 13:17:32 ] Parsing [Run] section, line 117
+[ 26/11/2017 13:17:32 ] Parsing [Files] section, line 89
+[ 26/11/2017 13:17:32 ] Parsing [Files] section, line 90
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 91
+[ 26/11/2017 13:17:33 ] Reading version info: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.ini
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 92
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 93
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 94
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 95
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 96
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 97
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 98
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 99
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 100
+[ 26/11/2017 13:17:33 ] Parsing [Files] section, line 101
+[ 26/11/2017 13:17:33 ] Compiling [Code] section
+[ 26/11/2017 13:17:33 ] Creating setup files
+[ 26/11/2017 13:17:33 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep_X64.exe
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.exe
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\ComIntRep.ini
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\Changes.txt
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\License.txt
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Docs\Readme.txt
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\af.ini
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Language\ComIntRep\en.ini
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\16\Process.ani
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\32\Stroke.ani
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Processing\64\Globe.ani
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Complete.wav
+[ 26/11/2017 13:17:34 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758\Themes\Sounds\Welcome.wav
+[ 26/11/2017 13:17:34 ] Compressing Setup program executable
+[ 26/11/2017 13:17:34 ] Updating version info
+[ 26/11/2017 13:17:34 ] Successful compile (1.094 sec). Resulting Setup program filename is:
+[ 26/11/2017 13:17:35 ] D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3758\ComIntRep_3758_Setup.exe
+[ 26/11/2017 13:17:35 ] Finished: Instellingslêer geskep vir Complete Internet Repair
+------------------------------------------------------------------------------------------
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 29/11/2017 21:39:20 ] DATE:								 29/11/2017 21:39:20
+[ 29/11/2017 21:39:20 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 29/11/2017 21:39:20 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 29/11/2017 21:39:20 ] COMPILED:							 YES
+[ 29/11/2017 21:39:20 ] WINDOWS VERSION:					 WIN_10 
+[ 29/11/2017 21:39:20 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 29/11/2017 21:39:20 ] MEMORY (RAM):						 8157.89 MB
+[ 29/11/2017 21:39:20 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 29/11/2017 21:39:20 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 29/11/2017 21:39:31 ] Het begin om ReBar Framework te bou.
+------------------------------------------------------------------------------------------
+[ 29/11/2017 21:39:31 ] +> Starting AutoIt3Wrapper v.15.920.938.0
+[ 29/11/2017 21:39:31 ] SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 29/11/2017 21:39:31 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 29/11/2017 21:39:32 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ReBar\ReBar.au3
+[ 29/11/2017 21:39:33 ] +> AU3Check ended. rc:0
+[ 29/11/2017 21:39:33 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ReBar\ReBar.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU1CFB.tmp.exe" /nopack /icon "Themes\Icons\ReBar.ico" /comp 2
+[ 29/11/2017 21:39:52 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU1CFB.tmp.exe. rc:0
+[ 29/11/2017 21:39:52 ] > Performing the Program Resource Update steps:
+[ 29/11/2017 21:39:52 ] ...>Updating Program Version information.
+[ 29/11/2017 21:39:52 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 29/11/2017 21:39:52 ] ...>Setting DPI awareness Manifest information to true
+[ 29/11/2017 21:39:52 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 29/11/2017 21:39:52 ] ...>Updating Program Manifest information.
+[ 29/11/2017 21:39:52 ] ...>Adding 65 Icon(s).
+[ 29/11/2017 21:39:58 ] > Program Resource updating finished successfully.
+[ 29/11/2017 21:39:58 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ReBar\ReBar.exe
+[ 29/11/2017 21:39:58 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ReBar\ReBar.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU1CFB.tmp.exe" /nopack /icon "Themes\Icons\ReBar.ico" /comp 2 /x64
+[ 29/11/2017 21:40:00 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU1CFB.tmp.exe. rc:0
+[ 29/11/2017 21:40:00 ] > Performing the Program Resource Update steps:
+[ 29/11/2017 21:40:01 ] ...>Updating Program Version information.
+[ 29/11/2017 21:40:01 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 29/11/2017 21:40:01 ] ...>Setting DPI awareness Manifest information to true
+[ 29/11/2017 21:40:01 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 29/11/2017 21:40:01 ] ...>Updating Program Manifest information.
+[ 29/11/2017 21:40:01 ] ...>Adding 65 Icon(s).
+[ 29/11/2017 21:40:01 ] > Program Resource updating finished successfully.
+[ 29/11/2017 21:40:01 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ReBar\ReBar_X64.exe
+[ 29/11/2017 21:40:02 ] -Updated the Source Version to: 5.0.2.2005
+[ 29/11/2017 21:40:02 ] +> AutoIt3Wrapper Finished.
+[ 29/11/2017 21:40:03 ] Finished: ReBar Framework is klaar gebou.
+------------------------------------------------------------------------------------------
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 02/12/2017 19:00:28 ] DATE:								 02/12/2017 19:00:28
+[ 02/12/2017 19:00:28 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 02/12/2017 19:00:28 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 02/12/2017 19:00:28 ] COMPILED:							 YES
+[ 02/12/2017 19:00:28 ] WINDOWS VERSION:					 WIN_10 
+[ 02/12/2017 19:00:28 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 02/12/2017 19:00:28 ] MEMORY (RAM):						 8157.89 MB
+[ 02/12/2017 19:00:28 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 02/12/2017 19:00:28 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 02/12/2017 19:00:51 ] Het begin om Complete Internet Repair te bou.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:00:52 ] +> Starting AutoIt3Wrapper v.15.920.938.0
+[ 02/12/2017 19:00:52 ] SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 02/12/2017 19:00:52 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 02/12/2017 19:00:52 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3
+[ 02/12/2017 19:00:54 ] +> AU3Check ended. rc:0
+[ 02/12/2017 19:00:54 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUC5CF.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2
+[ 02/12/2017 19:01:13 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUC5CF.tmp.exe. rc:0
+[ 02/12/2017 19:01:13 ] > Performing the Program Resource Update steps:
+[ 02/12/2017 19:01:13 ] ...>Updating Program Version information.
+[ 02/12/2017 19:01:13 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 02/12/2017 19:01:13 ] ...>Setting DPI awareness Manifest information to true
+[ 02/12/2017 19:01:13 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 02/12/2017 19:01:13 ] ...>Updating Program Manifest information.
+[ 02/12/2017 19:01:13 ] ...>Adding 98 Icon(s).
+[ 02/12/2017 19:01:19 ] > Program Resource updating finished successfully.
+[ 02/12/2017 19:01:19 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe
+[ 02/12/2017 19:01:19 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUC5CF.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2 /x64
+[ 02/12/2017 19:01:21 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUC5CF.tmp.exe. rc:0
+[ 02/12/2017 19:01:21 ] > Performing the Program Resource Update steps:
+[ 02/12/2017 19:01:21 ] ...>Updating Program Version information.
+[ 02/12/2017 19:01:21 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 02/12/2017 19:01:21 ] ...>Setting DPI awareness Manifest information to true
+[ 02/12/2017 19:01:21 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 02/12/2017 19:01:21 ] ...>Updating Program Manifest information.
+[ 02/12/2017 19:01:21 ] ...>Adding 98 Icon(s).
+[ 02/12/2017 19:01:22 ] > Program Resource updating finished successfully.
+[ 02/12/2017 19:01:22 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe
+[ 02/12/2017 19:01:22 ] -Updated the Source Version to: 5.0.0.3794
+[ 02/12/2017 19:01:23 ] +> AutoIt3Wrapper Finished.
+[ 02/12/2017 19:01:24 ] Finished: Complete Internet Repair is klaar gebou.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:29 ] Het kompressie begin.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:29 ] Kompressie: "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe"
+[ 02/12/2017 19:01:29 ] Grense: --best --no-backup --overlay=copy --compress-exports=1 --compress-resources=1 --strip-relocs=1
+[ 02/12/2017 19:01:41 ] Kompressie: "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe"
+[ 02/12/2017 19:01:41 ] Grense: --best --no-backup --overlay=copy --compress-exports=1 --compress-resources=1 --strip-relocs=1
+[ 02/12/2017 19:01:48 ] Finished: Kompressie is klaar.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:53 ] Genereer dokumentasie vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:53 ] Sjabloon vouer gevind by: 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates'
+[ 02/12/2017 19:01:53 ] 03 sjabloons files gevind.
+[ 02/12/2017 19:01:53 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\Changes.tpl' te verwerk.
+[ 02/12/2017 19:01:53 ] Die Dokument was suksesvol geskep.
+[ 02/12/2017 19:01:53 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\Changes.txt
+[ 02/12/2017 19:01:53 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\License.tpl' te verwerk.
+[ 02/12/2017 19:01:53 ] Die Dokument was suksesvol geskep.
+[ 02/12/2017 19:01:53 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\License.txt
+[ 02/12/2017 19:01:53 ] Besig om 'D:\Rizonesoft\SDK\Concrete\ComIntRep\Templates\Readme.tpl' te verwerk.
+[ 02/12/2017 19:01:53 ] Die Dokument was suksesvol geskep.
+[ 02/12/2017 19:01:53 ] Dokumentlêer: D:\Rizonesoft\SDK\Concrete\ComIntRep\Docs\Readme.txt
+[ 02/12/2017 19:01:53 ] Finished: Alle dokument sjablone verwerk.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:57 ] Verspreiding van Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.exe'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep_X64.exe'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.ini'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Changes.txt'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\License.txt'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Readme.txt'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\af.ini'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\en.ini'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\16\Process.ani'
+[ 02/12/2017 19:01:57 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\32\Stroke.ani'
+[ 02/12/2017 19:01:58 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\64\Globe.ani'
+[ 02/12/2017 19:01:58 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Complete.wav'
+[ 02/12/2017 19:01:58 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Welcome.wav'
+[ 02/12/2017 19:01:59 ] Finished: Complete Internet Repair verspreiding geskep.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:12 ] Verspreiding van Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.exe'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep_X64.exe'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.ini'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Changes.txt'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\License.txt'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Readme.txt'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\af.ini'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\en.ini'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\16\Process.ani'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\32\Stroke.ani'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\64\Globe.ani'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Complete.wav'
+[ 02/12/2017 19:02:12 ] Lêer geskep: '\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Welcome.wav'
+[ 02/12/2017 19:02:13 ] Finished: Complete Internet Repair verspreiding geskep.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:23 ] Besig on zip-pakket te skep vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:23 ] 7-Zip (a) [64] 16.04 : Copyright (c) 1999-2016 Igor Pavlov : 2016-10-04
+[ 02/12/2017 19:02:23 ] Scanning the drive:
+[ 02/12/2017 19:02:23 ] 10 folders, 13 files, 3529442 bytes (3447 KiB)
+[ 02/12/2017 19:02:23 ] Creating archive: ComIntRep_3793.zip
+[ 02/12/2017 19:02:23 ] Items to compress: 23
+[ 02/12/2017 19:02:23 ] Files read from disk: 13
+[ 02/12/2017 19:02:23 ] Archive size: 2764433 bytes (2700 KiB)
+[ 02/12/2017 19:02:23 ] Everything is Ok
+[ 02/12/2017 19:02:23 ] Finished: Zip-pakket geskep.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:47 ] Skep Instellingslêer vir Complete Internet Repair.
+------------------------------------------------------------------------------------------
+[ 02/12/2017 19:02:47 ] Inno Setup 5 Command-Line Compiler
+[ 02/12/2017 19:02:47 ] Copyright (C) 1997-2016 Jordan Russell. All rights reserved.
+[ 02/12/2017 19:02:47 ] Portions Copyright (C) 2000-2016 Martijn Laan
+[ 02/12/2017 19:02:47 ] Inno Setup Preprocessor
+[ 02/12/2017 19:02:47 ] Copyright (C) 2001-2004 Alex Yackimoff. All rights reserved.
+[ 02/12/2017 19:02:47 ] Compiler engine version: Inno Setup 5.5.9 (a)
+[ 02/12/2017 19:02:48 ] [ISPP] Preprocessing.
+[ 02/12/2017 19:02:48 ] [ISPP] Preprocessed.
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 28
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 29
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 30
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 31
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 32
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 33
+[ 02/12/2017 19:02:48 ] Parsing [Setup] section, line 34
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 35
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 36
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 37
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 38
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 39
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 40
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 41
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 42
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 43
+[ 02/12/2017 19:02:49 ] Parsing [Setup] section, line 44
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 45
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 46
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 47
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 48
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 49
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 50
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 51
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 52
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 53
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 54
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 55
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 56
+[ 02/12/2017 19:02:50 ] Parsing [Setup] section, line 57
+[ 02/12/2017 19:02:51 ] Parsing [Setup] section, line 58
+[ 02/12/2017 19:02:51 ] Parsing [Setup] section, line 59
+[ 02/12/2017 19:02:51 ] Parsing [Setup] section, line 60
+[ 02/12/2017 19:02:51 ] Reading file (LicenseFile)
+[ 02/12/2017 19:02:51 ] Reading file (WizardImageFile)
+[ 02/12/2017 19:02:51 ] File: C:\Program Files (x86)\Inno Setup 5\WizModernImage-IS.bmp
+[ 02/12/2017 19:02:51 ] Reading file (WizardSmallImageFile)
+[ 02/12/2017 19:02:51 ] File: C:\Program Files (x86)\Inno Setup 5\WIZMODERNSMALLIMAGE.BMP
+[ 02/12/2017 19:02:51 ] Preparing Setup program executable
+[ 02/12/2017 19:02:51 ] Reading default messages from Default.isl
+[ 02/12/2017 19:02:51 ] Parsing [Languages] section, line 63
+[ 02/12/2017 19:02:51 ] File: C:\Program Files (x86)\Inno Setup 5\Default.isl
+[ 02/12/2017 19:02:52 ] Parsing [LangOptions], [Messages], and [CustomMessages] sections
+[ 02/12/2017 19:02:52 ] Messages in script file
+[ 02/12/2017 19:02:52 ] Reading [Code] section
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 81
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 82
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 83
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 84
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 85
+[ 02/12/2017 19:02:52 ] Parsing [Tasks] section, line 86
+[ 02/12/2017 19:02:52 ] Parsing [Icons] section, line 106
+[ 02/12/2017 19:02:53 ] Parsing [Icons] section, line 107
+[ 02/12/2017 19:02:53 ] Parsing [Icons] section, line 108
+[ 02/12/2017 19:02:53 ] Parsing [Icons] section, line 109
+[ 02/12/2017 19:02:53 ] Parsing [INI] section, line 112
+[ 02/12/2017 19:02:53 ] Parsing [INI] section, line 113
+[ 02/12/2017 19:02:53 ] Parsing [InstallDelete] section, line 120
+[ 02/12/2017 19:02:53 ] Parsing [InstallDelete] section, line 121
+[ 02/12/2017 19:02:53 ] Parsing [InstallDelete] section, line 122
+[ 02/12/2017 19:02:53 ] Parsing [InstallDelete] section, line 123
+[ 02/12/2017 19:02:53 ] Parsing [InstallDelete] section, line 124
+[ 02/12/2017 19:02:54 ] Parsing [UninstallDelete] section, line 127
+[ 02/12/2017 19:02:54 ] Parsing [UninstallDelete] section, line 128
+[ 02/12/2017 19:02:54 ] Parsing [Run] section, line 116
+[ 02/12/2017 19:02:54 ] Parsing [Run] section, line 117
+[ 02/12/2017 19:02:54 ] Parsing [Files] section, line 89
+[ 02/12/2017 19:02:54 ] Parsing [Files] section, line 90
+[ 02/12/2017 19:02:54 ] Parsing [Files] section, line 91
+[ 02/12/2017 19:02:54 ] Reading version info: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.ini
+[ 02/12/2017 19:02:54 ] Parsing [Files] section, line 92
+[ 02/12/2017 19:02:54 ] Parsing [Files] section, line 93
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 94
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 95
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 96
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 97
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 98
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 99
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 100
+[ 02/12/2017 19:02:55 ] Parsing [Files] section, line 101
+[ 02/12/2017 19:02:55 ] Compiling [Code] section
+[ 02/12/2017 19:02:55 ] Creating setup files
+[ 02/12/2017 19:02:55 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep_X64.exe
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.exe
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\ComIntRep.ini
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Changes.txt
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\License.txt
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Docs\Readme.txt
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\af.ini
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Language\ComIntRep\en.ini
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\16\Process.ani
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\32\Stroke.ani
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Processing\64\Globe.ani
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Complete.wav
+[ 02/12/2017 19:02:56 ] Compressing: D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793\Themes\Sounds\Welcome.wav
+[ 02/12/2017 19:02:56 ] Compressing Setup program executable
+[ 02/12/2017 19:02:57 ] Updating version info
+[ 02/12/2017 19:02:57 ] Successful compile (1.156 sec). Resulting Setup program filename is:
+[ 02/12/2017 19:02:57 ] D:\Rizonesoft\SDK\Concrete\ComIntRep\Distribution\3793\ComIntRep_3793_Setup.exe
+[ 02/12/2017 19:02:57 ] Finished: Instellingslêer geskep vir Complete Internet Repair
+------------------------------------------------------------------------------------------
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 05/12/2017 17:30:48 ] DATE:								 05/12/2017 17:30:48
+[ 05/12/2017 17:30:48 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 05/12/2017 17:30:48 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 05/12/2017 17:30:48 ] COMPILED:							 YES
+[ 05/12/2017 17:30:48 ] WINDOWS VERSION:					 WIN_10 
+[ 05/12/2017 17:30:48 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 05/12/2017 17:30:48 ] MEMORY (RAM):						 8157.89 MB
+[ 05/12/2017 17:30:48 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 05/12/2017 17:30:48 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+[ 05/12/2017 17:30:56 ] Het begin om Complete Internet Repair te bou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 17:30:57 ] +> Starting AutoIt3Wrapper v.15.920.938.0
+[ 05/12/2017 17:30:57 ] SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 05/12/2017 17:30:57 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 05/12/2017 17:30:58 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3
+[ 05/12/2017 17:31:01 ] +> AU3Check ended. rc:0
+[ 05/12/2017 17:31:01 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU7603.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2
+[ 05/12/2017 17:31:31 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU7603.tmp.exe. rc:0
+[ 05/12/2017 17:31:31 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 17:31:32 ] ...>Updating Program Version information.
+[ 05/12/2017 17:31:32 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 17:31:32 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 17:31:32 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 17:31:32 ] ...>Updating Program Manifest information.
+[ 05/12/2017 17:31:32 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 17:31:39 ] > Program Resource updating finished successfully.
+[ 05/12/2017 17:31:39 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe
+[ 05/12/2017 17:31:39 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU7603.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2 /x64
+[ 05/12/2017 17:31:42 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU7603.tmp.exe. rc:0
+[ 05/12/2017 17:31:42 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 17:31:42 ] ...>Updating Program Version information.
+[ 05/12/2017 17:31:42 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 17:31:43 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 17:31:43 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 17:31:43 ] ...>Updating Program Manifest information.
+[ 05/12/2017 17:31:43 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 17:31:43 ] > Program Resource updating finished successfully.
+[ 05/12/2017 17:31:43 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe
+[ 05/12/2017 17:31:43 ] -Updated the Source Version to: 5.0.0.3794
+[ 05/12/2017 17:31:44 ] +> AutoIt3Wrapper Finished.
+[ 05/12/2017 17:31:48 ] Finished: Complete Internet Repair is klaar gebou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 18:36:40 ] Het begin om Complete Internet Repair te bou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 18:36:41 ] +> Starting AutoIt3Wrapper v.15.920.938.0
+[ 05/12/2017 18:36:41 ] SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 05/12/2017 18:36:41 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 05/12/2017 18:36:42 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3
+[ 05/12/2017 18:36:44 ] +> AU3Check ended. rc:0
+[ 05/12/2017 18:36:44 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU9F13.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2
+[ 05/12/2017 18:37:12 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU9F13.tmp.exe. rc:0
+[ 05/12/2017 18:37:12 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 18:37:12 ] ...>Updating Program Version information.
+[ 05/12/2017 18:37:12 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 18:37:12 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 18:37:12 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 18:37:12 ] ...>Updating Program Manifest information.
+[ 05/12/2017 18:37:12 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 18:37:19 ] > Program Resource updating finished successfully.
+[ 05/12/2017 18:37:19 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe
+[ 05/12/2017 18:37:19 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU9F13.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2 /x64
+[ 05/12/2017 18:37:23 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU9F13.tmp.exe. rc:0
+[ 05/12/2017 18:37:23 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 18:37:23 ] ...>Updating Program Version information.
+[ 05/12/2017 18:37:23 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 18:37:23 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 18:37:23 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 18:37:23 ] ...>Updating Program Manifest information.
+[ 05/12/2017 18:37:23 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 18:37:23 ] > Program Resource updating finished successfully.
+[ 05/12/2017 18:37:23 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe
+[ 05/12/2017 18:37:24 ] -Updated the Source Version to: 5.0.0.3797
+[ 05/12/2017 18:37:24 ] +> AutoIt3Wrapper Finished.
+[ 05/12/2017 18:37:28 ] Finished: Complete Internet Repair is klaar gebou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 20:35:00 ] Het begin om Complete Internet Repair te bou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 20:35:01 ] +> Starting AutoIt3Wrapper v.15.920.938.0 SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 05/12/2017 20:35:01 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 05/12/2017 20:35:01 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3
+[ 05/12/2017 20:35:03 ] +> AU3Check ended. rc:0
+[ 05/12/2017 20:35:03 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUF302.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2
+[ 05/12/2017 20:35:33 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUF302.tmp.exe. rc:0
+[ 05/12/2017 20:35:33 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 20:35:33 ] ...>Updating Program Version information.
+[ 05/12/2017 20:35:33 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 20:35:33 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 20:35:33 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 20:35:33 ] ...>Updating Program Manifest information.
+[ 05/12/2017 20:35:33 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 20:35:40 ] > Program Resource updating finished successfully.
+[ 05/12/2017 20:35:40 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe
+[ 05/12/2017 20:35:40 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUF302.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2 /x64
+[ 05/12/2017 20:35:44 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AUF302.tmp.exe. rc:0
+[ 05/12/2017 20:35:44 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 20:35:44 ] ...>Updating Program Version information.
+[ 05/12/2017 20:35:44 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 20:35:44 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 20:35:44 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 20:35:44 ] ...>Updating Program Manifest information.
+[ 05/12/2017 20:35:44 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 20:35:45 ] > Program Resource updating finished successfully.
+[ 05/12/2017 20:35:45 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe
+[ 05/12/2017 20:35:45 ] -Updated the Source Version to: 5.0.0.3800
+[ 05/12/2017 20:35:46 ] +> AutoIt3Wrapper Finished.
+[ 05/12/2017 20:35:49 ] Finished: Complete Internet Repair is klaar gebou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 20:36:15 ] Het begin om Complete Internet Repair te bou.
+------------------------------------------------------------------------------------------
+[ 05/12/2017 20:36:16 ] +> Starting AutoIt3Wrapper v.15.920.938.0
+[ 05/12/2017 20:36:16 ] SciTE v.3.6.0.0 Keyboard:00000409 OS:WIN_10/ CPU:X64 OS:X64 Environment(Language:0409)
+[ 05/12/2017 20:36:16 ] +> SciTEDir => C:\Program Files (x86)\AutoIt3\SciTE UserDir => C:\Users\deric\AppData\Local\AutoIt v3\SciTE\AutoIt3Wrapper SCITE_USERHOME => C:\Users\deric\AppData\Local\AutoIt v3\SciTE
+[ 05/12/2017 20:36:17 ] >Running AU3Check (3.3.15.0) from:C:\Program Files (x86)\AutoIt3\Beta input:D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3
+[ 05/12/2017 20:36:21 ] +> AU3Check ended. rc:0
+[ 05/12/2017 20:36:21 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU2076.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2
+[ 05/12/2017 20:36:48 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU2076.tmp.exe. rc:0
+[ 05/12/2017 20:36:48 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 20:36:48 ] ...>Updating Program Version information.
+[ 05/12/2017 20:36:48 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 20:36:48 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 20:36:48 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 20:36:48 ] ...>Updating Program Manifest information.
+[ 05/12/2017 20:36:48 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 20:36:55 ] > Program Resource updating finished successfully.
+[ 05/12/2017 20:36:55 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.exe
+[ 05/12/2017 20:36:55 ] >Running:(3.3.15.0):C:\Program Files (x86)\AutoIt3\Beta\aut2exe\aut2exe.exe /in "D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep.au3" /out "C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU2076.tmp.exe" /nopack /icon "Themes\Icons\ComIntRep.ico" /comp 2 /x64
+[ 05/12/2017 20:36:59 ] +> Aut2exe.exe ended. C:\Users\deric\AppData\Local\AutoIt v3\Aut2exe\~AU2076.tmp.exe. rc:0
+[ 05/12/2017 20:36:59 ] > Performing the Program Resource Update steps:
+[ 05/12/2017 20:36:59 ] ...>Updating Program Version information.
+[ 05/12/2017 20:36:59 ] ...>Setting Program ExecutionLevel Manifest information to highestAvailable
+[ 05/12/2017 20:36:59 ] ...>Setting DPI awareness Manifest information to true
+[ 05/12/2017 20:36:59 ] ...>Setting Program Compatibility Manifest information to Windows8.1
+[ 05/12/2017 20:36:59 ] ...>Updating Program Manifest information.
+[ 05/12/2017 20:36:59 ] ...>Adding 98 Icon(s).
+[ 05/12/2017 20:36:59 ] > Program Resource updating finished successfully.
+[ 05/12/2017 20:37:00 ] +> Created program: D:\Rizonesoft\SDK\Concrete\ComIntRep\ComIntRep_X64.exe
+[ 05/12/2017 20:37:00 ] -Updated the Source Version to: 5.0.0.3801
+[ 05/12/2017 20:37:01 ] +> AutoIt3Wrapper Finished.
+[ 05/12/2017 20:37:04 ] Finished: Complete Internet Repair is klaar gebou.
+------------------------------------------------------------------------------------------
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 05/12/2017 22:06:50 ] DATE:								 05/12/2017 22:06:50
+[ 05/12/2017 22:06:50 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 05/12/2017 22:06:50 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 05/12/2017 22:06:50 ] COMPILED:							 YES
+[ 05/12/2017 22:06:50 ] WINDOWS VERSION:					 WIN_10 
+[ 05/12/2017 22:06:50 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 05/12/2017 22:06:50 ] MEMORY (RAM):						 8157.89 MB
+[ 05/12/2017 22:06:50 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 05/12/2017 22:06:50 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+
+
+
+                                            ./
+                                          (o o)
+--------------------------------------oOOo-(-)-oOOo--------------------------------------
+
+[ 05/12/2017 22:08:12 ] DATE:								 05/12/2017 22:08:12
+[ 05/12/2017 22:08:12 ] PROGRAM:							 Rizonesoft SDK 5.0.2.3416
+[ 05/12/2017 22:08:12 ] PROGRAM PATH:						 [D:\Rizonesoft\SDK\Distro_X64.exe]
+[ 05/12/2017 22:08:12 ] COMPILED:							 YES
+[ 05/12/2017 22:08:12 ] WINDOWS VERSION:					 WIN_10 
+[ 05/12/2017 22:08:12 ] SYSTEM TYPE:						 64-Bit Operating System
+[ 05/12/2017 22:08:12 ] MEMORY (RAM):						 8157.89 MB
+[ 05/12/2017 22:08:12 ] PROGRAM FILES DIRECTORY:			 C:\Program Files
+[ 05/12/2017 22:08:12 ] WINDOWS DIRECTORY:					 C:\Windows
+-----------------------------------------------------------------------------------------
+

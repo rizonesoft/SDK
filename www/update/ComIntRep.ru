@@ -1,3 +1,3 @@
 [Update]
-LatestBuild=3706
+LatestBuild=3793
 UpdateURL=https://goo.gl/3Shqgs

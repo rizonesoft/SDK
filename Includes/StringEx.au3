@@ -62,7 +62,7 @@ EndFunc
 Func _StringEx_CalcTab($sText, $iTabLen = 28)
 
 	Local $iStringLen = StringLen($sText)
-	Local $iTabs = ($iTabLen - $iStringLen)
+	Local $iTabs = $iTabLen - $iStringLen
 	Local $sTabs
 
 	ConsoleWrite("+> _StringEx_CalcTab Function Called" & @CRLF)
@@ -70,8 +70,8 @@ Func _StringEx_CalcTab($sText, $iTabLen = 28)
 	ConsoleWrite(">  String Length: " & String($iStringLen) & @CRLF)
 	ConsoleWrite(">  String Tab Length:	" & String($iTabs) & @CRLF)
 
-	For $x = 1 To $iTabs Step 4
-		$sTabs &= @TAB
+	For $x = 1 To $iTabs
+		$sTabs &= Chr(32)
 	Next
 
 	Return $sTabs

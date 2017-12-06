@@ -116,7 +116,5 @@ Func _Localization_Preferences()
 	$g_aLangPreferences[19] = _Localization_ReplaceVar(IniRead($g_sLanguageFile, "Preferences", "Label_Logging_Cleared", "Logging cleared"))
 	$g_aLangPreferences[20] = _Localization_ReplaceVar(IniRead($g_sLanguageFile, "Preferences", "MsgBox_Language_Title", "Language Changed"))
 	$g_aLangPreferences[21] = _Localization_ReplaceVar(IniRead($g_sLanguageFile, "Preferences", "MsgBox_Language_Message", "The selected language has changed. Complete Internet Repair should be restarted for the chosen language to take effect."))
-	$g_aLangPreferences[22] = _Localization_ReplaceVar(IniRead($g_sLanguageFile, "Preferences", "MsgBox_Closing_Title", "Closing %{Program.Name}"))
-	$g_aLangPreferences[23] = _Localization_ReplaceVar(IniRead($g_sLanguageFile, "Preferences", "MsgBox_Closing_Message", "Would you like to close %{Program.Name} now?"))
 
 EndFunc
