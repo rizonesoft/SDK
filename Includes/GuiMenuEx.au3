@@ -929,6 +929,7 @@ Func WM_DRAWITEM($hWnd, $Msg, $wParam, $lParam)
 		Local $bDefault		= BitAnd($nState, 0x0020)
 		Local $bNoAcc		= BitAnd($nState, 0x0100)
 		Local $bIsRadio		= _GuiCtrlMenuEx_GetMenuIsRadio($nMenuItemID)
+		Local $nCtrlStyle 	= 0x0001
 		Local $hSideFont	= 0
 		Local $hOldObj		= 0
 		Local $nSideWidth	= 0
@@ -1059,8 +1060,6 @@ Func WM_DRAWITEM($hWnd, $Msg, $wParam, $lParam)
 			Local $y 			= DllStructGetData($stItemRect, 2) + ($nIconSize + $nSpace - $nCheckX) / 2 - $nSpace
 
 			__GuiCtrlMenuEx_SetItemRect($stItemRect, 0, 0, $nIconSize, $nIconSize)
-
-			Local $nCtrlStyle = 0x0001
 			If $bIsRadio Then $nCtrlStyle = 0x0002
 
 			_WinAPI_DrawFrameControl($hDCBitmap, DllStructGetPtr($stItemRect), 2, $nCtrlStyle)

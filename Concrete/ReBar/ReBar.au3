@@ -30,15 +30,15 @@
 ;===============================================================================================================
 #AutoIt3Wrapper_Res_Comment=ReBar Framework							;~ Comment field
 #AutoIt3Wrapper_Res_Description=AutoIt Application Framework      	;~ Description field
-#AutoIt3Wrapper_Res_Fileversion=5.0.2.2014
+#AutoIt3Wrapper_Res_Fileversion=5.0.2.2143
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 #AutoIt3Wrapper_Res_FileVersion_First_Increment=N					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
-#AutoIt3Wrapper_Res_HiDpi=Y                      					;~ (Y/N) Compile for high DPI. Default=N
+#AutoIt3Wrapper_Res_HiDpi=N                      					;~ (Y/N) Compile for high DPI. Default=N
 #AutoIt3Wrapper_Res_ProductVersion=5             					;~ Product Version
 #AutoIt3Wrapper_Res_Language=2057									;~ Resource Language code . Default 2057=English (United Kingdom)
-#AutoIt3Wrapper_Res_LegalCopyright=© 2018 Rizonesoft				;~ Copyright field
+#AutoIt3Wrapper_Res_LegalCopyright=� 2018 Rizonesoft				;~ Copyright field
 #AutoIt3Wrapper_res_requestedExecutionLevel=highestAvailable		;~ asInvoker, highestAvailable, requireAdministrator or None (remove the trsutInfo section).  Default is the setting from Aut2Exe (asInvoker)
-#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
+;#AutoIt3Wrapper_res_Compatibility=Vista,Win7,Win8,Win81				;~ Vista/Windows7/win7/win8/win81 allowed separated by a comma     (Default=Win81)
 ;#AutoIt3Wrapper_Res_SaveSource=N									;~ (Y/N) Save a copy of the Script_source in the EXE resources. Default=N
 ; If _Res_SaveSource=Y the content of Script_source depends on the _Run_Au3Stripper and #Au3Stripper_parameters directives:
 ;    If _Run_Au3Stripper=Y then
@@ -115,33 +115,43 @@
 #AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\fr.ico					; 237
 #AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\hi.ico					; 238
 #AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\hr.ico					; 239
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\id.ico					; 240
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\is.ico					; 241
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\it.ico					; 242
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\iw.ico					; 243
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ja.ico					; 244
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ko.ico					; 245
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\nl.ico					; 246
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\no.ico					; 247
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\pl.ico					; 248
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\pt.ico					; 249
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ro.ico					; 250
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ru.ico					; 251
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\sk.ico					; 252
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\sv.ico					; 253
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\th.ico					; 254
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\tr.ico					; 255
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\vi.ico					; 256
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\zh-CN.ico				; 257
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\hu.ico					; 240
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\id.ico					; 241
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\is.ico					; 242
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\it.ico					; 243
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\iw.ico					; 244
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ja.ico					; 245
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ko.ico					; 246
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\nl.ico					; 247
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\no.ico					; 248
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\pl.ico					; 249
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\pt.ico					; 250
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\pt-BR.ico				; 251
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ro.ico					; 252
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\ru.ico					; 253
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\sl.ico					; 254
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\sk.ico					; 255
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\sv.ico					; 256
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\th.ico					; 257
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\tr.ico					; 258
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\vi.ico					; 259
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Flags\zh-CN.ico				; 260
 
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Gear.ico				; 258
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Logbook.ico				; 259
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Close.ico				; 260
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Update.ico				; 261
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Home.ico				; 262
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Mail.ico				; 263
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\GitHub.ico				; 264
-#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\About.ico				; 265
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-0.ico				; 261
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-1.ico				; 262
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-2.ico				; 263
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-3.ico				; 264
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-4.ico				; 265
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Power\Power-5.ico				; 266
+
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Gear.ico				; 267
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Logbook.ico				; 268
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Close.ico				; 269
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Update.ico				; 270
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Home.ico				; 271
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\Support.ico				; 272
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\GitHub.ico				; 273
+#AutoIt3Wrapper_Res_Icon_Add=Themes\Icons\Menus\About.ico				; 274
 
 ;===============================================================================================================
 ; Tidy Settings
@@ -223,6 +233,11 @@ EndFunc   ;==>_ReBarStartUp
 
 
 #include <GuiConstantsEx.au3>
+#include <GuiImageList.au3>
+#include <GuiListView.au3>
+#include <Process.au3>
+#include <WinAPITheme.au3>
+#include <WinAPIProc.au3>
 #include <WindowsConstants.au3>
 #include <Misc.au3>
 
@@ -240,9 +255,13 @@ EndFunc   ;==>_ReBarStartUp
 #include "UDF\Localization.au3"
 
 
+;~ Developer Constants
+Global Const $DEBUG_UPDATE		= False
+
 ;~ Constants
 Global Const $CNT_MENUICONS		= 8
 Global Const $CNT_LOGICONS		= 7
+Global Const $CNT_LANGICONS		= 33
 
 ;~ General Settings
 Global $g_sCompanyName			= "Rizonesoft"
@@ -250,14 +269,16 @@ Global $g_sProgShortName		= "ReBar"
 Global $g_sProgShortName_X64	= $g_sProgShortName & "_X64"
 Global $g_sProgName				= "ReBar Framework"
 Global $g_iSingleton			= True
-Global $g_sUrlCompHomePage		= "https://goo.gl/m4Bhqe|www.rizonesoft.com"							; https://www.rizonesoft.com
-Global $g_sUrlContact			= "https://goo.gl/X1kR2a|www.rizonesoft.com/contact"					; https://www.rizonesoft.com/contact
-Global $g_sUrlDownloads			= "https://goo.gl/BWhZ4G|www.rizonesoft.com/downloads"					; https://www.rizonesoft.com/downloads/
-Global $g_sUrlFacebook			= "https://goo.gl/o1wRdC|Facebook.com/rizonesoft"						; https://www.facebook.com/rizonesoft
-Global $g_sUrlTwitter			= "https://goo.gl/Rcc5Wz|Twitter.com/Rizonesoft"						; https://twitter.com/Rizonesoft
-Global $g_sUrlGooglePlus		= "https://goo.gl/oNirJT|Plus.google.com/+Rizonesoftsa" 				; https://plus.google.com/+Rizonesoftsa/posts
-Global $g_sUrlRSS				= "https://goo.gl/s1kUi4|www.rizonesoft.com/feed"						; https://www.rizonesoft.com/feed
-Global $g_sUrlPayPal			= "https://goo.gl/WkkaUm|PayPal.me/rizonesoft"							; https://www.paypal.me/rizonesoft
+
+;~ Links
+Global $g_sUrlCompHomePage		= "https://rizone.tech/home|www.rizonesoft.com"							; https://www.rizonesoft.com
+Global $g_sUrlSupport			= "https://rizone.tech/support|www.rizonesoft.com/contact"				; https://www.rizonesoft.com/contact
+Global $g_sUrlDownloads			= "https://rizone.tech/downloads|www.rizonesoft.com/downloads"			; https://www.rizonesoft.com/downloads/
+Global $g_sUrlFacebook			= "https://rizone.tech/facebook|Facebook.com/rizonesoft"				; https://www.facebook.com/rizonesoft
+Global $g_sUrlTwitter			= "https://rizone.tech/twitter|Twitter.com/Rizonesoft"					; https://twitter.com/Rizonesoft
+Global $g_sUrlGooglePlus		= "https://rizone.tech/google|Plus.google.com/+Rizonesoftsa" 			; https://plus.google.com/+Rizonesoftsa/posts
+Global $g_sUrlRSS				= "https://rizone.tech/feed|www.rizonesoft.com/feed"					; https://www.rizonesoft.com/feed
+Global $g_sUrlPayPal			= "https://rizone.tech/paypal|PayPal.me/rizonesoft"						; https://www.paypal.me/rizonesoft
 Global $g_sUrlGitHub			= "https://goo.gl/xSVA2p|GitHub.com/rizonesoft/SDK"						; https://github.com/rizonesoft/SDK
 Global $g_sUrlGitHubIssues		= "https://goo.gl/AYwYWv|GitHub.com/rizonesoft/SDK/issues"				; https://github.com/rizonesoft/SDK/issues
 Global $g_sUrlSA				= "https://goo.gl/Fn6UKQ|Wikipedia.org/wiki/South_Africa"				; https://en.wikipedia.org/wiki/South_Africa
@@ -277,7 +298,6 @@ Global $g_sDocLicense		= $g_sDocsDir & "\License.txt"
 Global $g_sDocReadme		= $g_sDocsDir & "\Readme.txt"
 
 ; Configuration Settings
-Global $g_iClearCacheOnExit = 0
 
 ;~ Language Settings
 Global $g_sLanguageDir		= $g_sRootDir & "\Language\" & $g_sProgShortName
@@ -289,12 +309,15 @@ Global $g_sLanguageFile		= $g_sLanguageDir & "\" & $g_sSelectedLanguage & ".ini"
 Global $g_iUpdateIconStart				= 209
 Global $g_iDialogIconStart				= 211
 Global $g_iAboutIconStart				= 216
-Global $g_iMenuIconsStart				= 258
 Global $g_iLangIconStart				= 228
+Global $g_iPowerIconsStart				= 261
+Global $g_iMenuIconsStart				= 267
 Global $g_aCoreIcons[3]
 Global $g_iSizeIcon						= 64
 Global $g_aLognIcons[$CNT_LOGICONS]
+Global $g_aLanguageIcons[$CNT_LANGICONS]
 Global $g_aMenuIcons[$CNT_MENUICONS]
+Global $g_sDlgOptionsIcon
 
 ;~ Logging Settings
 Global $g_sLoggingRoot		= $g_sWorkingDir & "\Logging\" & $g_sProgShortName
@@ -303,17 +326,18 @@ Global $g_GuiLogBoxHeight	= 150
 Global $g_iLogIconStart		= -202
 Global $g_iUpdateSubStatus	= True
 
-;~ Cache Settings
-Global $g_sCacheRoot		= $g_sWorkingDir & "\Cache\" & $g_sProgShortName
-Global $g_iEnableCache		= 1
-
 ;~ Splash Page Settings
-Global $g_SplashAnimation 	= $g_sThemesDir & "\Processing\32\Stroke.ani"
-Global $g_iSplashDelay		= 100
+Global $g_SplashAnimation
+Global $g_iSplashDelay
 
 ;~ Update Notification Settings
 Global $g_sUpdateAnimation	= $g_sThemesDir & "\Processing\" & $g_iSizeIcon & "\Globe.ani"
-Global $g_sRemoteUpdateFile	= "https://www.rizonesoft.com/update/" & $g_sProgShortName & ".ru"
+Global $g_sProcessingAnimation  = $g_sThemesDir & "\Processing\" & $g_iSizeIcon & "\Stroke.ani"
+If $DEBUG_UPDATE = True Then
+	Global $g_sRemoteUpdateFile	= "https://www.rizonesoft.com/update/" & $g_sProgShortName & ".ruz"
+Else
+	Global $g_sRemoteUpdateFile	= "https://www.rizonesoft.com/update/" & $g_sProgShortName & ".ru"
+EndIf
 Global $g_iCheckForUpdates	= 4
 
 ;~ Donate Time
@@ -337,19 +361,23 @@ Global $g_iMsgBoxTimeOut	= 60
 Global $g_sAboutCredits		= "Derick Payne (Rizonesoft), Brian J Christy (Beege), " & _
 							"G Sandler (MrCreatoR), Holger Kotsch, KaFu, LarsJ, nickston, ProgAndy, Yashied"
 Global $g_sProgramTitle = _GUIGetTitle($g_sProgName)	;~ Get Program Ttile, including version.
-Global $g_hCoreGui										;~ Main GUI
+Global $g_hCoreGui, $g_hCoreGuiHandle					;~ Main GUI
 Global $g_hGuiIcon										;~ Main Icon
 Global $g_AniUpdate
+Global $g_AniProcessing
 Global $g_hMenuFile
 Global $g_hMenuHelp, $g_hUpdateMenuItem
-Global $g_hMenuDebug
 Global $g_OldSystemParam								;~ Used when resizing the main GUI
 Global $g_hSubHeading
 
+If Not IsDeclared("g_iParentState") Then Global $g_iParentState
+If Not IsDeclared("g_iParent") Then Global $g_iParent
+
 Global $g_hOptionsGui
-Global $g_hOChkClearCacheOnExit
-Global $g_hOLblCacheSize
-Global $g_hOBtnClearCache
+Global $g_hOIconPower
+Global $g_hOComboPower
+Global $g_hOChkSaveRealtime
+Global $g_hOChkReduceMemory
 Global $g_hOChkLogEnabled
 Global $g_hOInLogSize
 Global $g_hOInLogSizeTemp
@@ -363,6 +391,11 @@ Global $g_hOLblPrefsUpdated
 Global $g_hOBtnSave
 Global $g_hOBtnCancel
 
+Global $g_iProcessPriority 		= 3
+Global $g_iSaveRealtime			= 0
+Global $g_iReduceMemory 		= 1
+Global $g_iReduceEveryMill 		= 300
+Global $g_iMaxSysMemoryPerc 	= 80
 
 
 _Localization_Messages()   		;~ Load Message Language Strings
@@ -374,10 +407,10 @@ EndIf
 
 If @OSVersion = "WIN_2000" Or @OSVersion = "WIN_XPe" Or @OSVersion = "WIN_2003" Then
 	Local $iMsgBoxResult = MsgBox($MB_YESNO + $MB_ICONERROR + $MB_TOPMOST, $g_aLangMessages[3], StringFormat($g_aLangMessages[5], _
-				_Link_Split($g_sUrlContact, 2)), $g_iMsgBoxTimeOut)
+				_Link_Split($g_sUrlSupport, 2)), $g_iMsgBoxTimeOut)
 	Switch $iMsgBoxResult
 		Case $IDYES
-			ShellExecute(_Link_Split($g_sUrlContact))
+			ShellExecute(_Link_Split($g_sUrlSupport))
 			_TerminateProgram()
 		Case -1, $IDNO
 			_TerminateProgram()
@@ -408,24 +441,25 @@ Else
 
 	Else
 
+		$g_SplashAnimation 	= $g_sThemesDir & "\Processing\32\Stroke.ani"
+		$g_iSplashDelay		= 100
 		_Splash_Start($g_aLangMessages[7])
-		_Splash_Update($g_aLangMessages[8], 2)
-		_Localization_Messages()    ;~ Load Message Language Strings
+		_Splash_Update($g_aLangMessages[8], 3)
 		_Localization_Messages2()	;~ Load Custom Message Language Strings
 		_Localization_Menus()		;~ Load Menu Language Strings
 		_Localization_Custom()		;~ Load Custom Language Strings
 		_Localization_About()		;~ Load About Language Strings
-		_Splash_Update($g_aLangMessages[9], 4)
+		_Splash_Update($g_aLangMessages[9], 6)
 		_SetResources()
-		_Splash_Update($g_aLangMessages[10], 6)
+		_Splash_Update($g_aLangMessages[10], 9)
 		_SetWorkingDirectories()
-		_Splash_Update($g_aLangMessages[11], 8)
+		_Splash_Update($g_aLangMessages[11], 12)
 		_LoadConfiguration()
-		_Splash_Update($g_aLangMessages[12], 10)
+		_Splash_Update($g_aLangMessages[12], 15)
 		_Logging_Initialize($g_sProgName)
-		_Splash_Update($g_aLangMessages[13], 12)
+		_Splash_Update($g_aLangMessages[13], 18)
 		_SetHotKeys()
-		_Splash_Update($g_aLangMessages[14], 14)
+		_Splash_Update($g_aLangMessages[14], 21)
 		_StartCoreGui()
 
 	EndIf
@@ -434,16 +468,14 @@ EndIf
 
 
 Func _SetHotKeys()
-
 	HotKeySet("{ESC}", "_MinimizeProgram")
-
 EndFunc
 
 
 Func _StartCoreGui()
 
 	Local $miFileOptions, $mnuFileLog, $miLogOpenFile, $miLogOpenRoot, $miFileClose
-	Local $miHelpHome, $miHelpDownloads, $miHelpContact, $miHelpGitHub, $miHelpDonate, $miHelpAbout
+	Local $miHelpHome, $miHelpDownloads, $miHelpSupport, $miHelpGitHub, $miHelpDonate, $miHelpAbout
 	Local $hHeading
 
 	$g_hCoreGui = GUICreate($g_sProgramTitle, $g_iCoreGuiWidth, $g_iCoreGuiHeight, -1, 25, $WS_OVERLAPPEDWINDOW)
@@ -457,7 +489,6 @@ Func _StartCoreGui()
 
 	$g_hMenuFile = GUICtrlCreateMenu($g_aLangMenus[0])
 	$g_hMenuHelp = GUICtrlCreateMenu($g_aLangMenus[6])
-	$g_hMenuDebug = GUICtrlCreateMenu($g_aLangMenus[15])
 
 	_GuiCtrlMenuEx_SetMenuIconBkColor(0xF0F0F0)
 	_GuiCtrlMenuEx_SetMenuIconBkGrdColor(0xFFFFFF)
@@ -472,13 +503,13 @@ Func _StartCoreGui()
 	$g_hUpdateMenuItem = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[7], $g_hMenuHelp, $g_aMenuIcons[3], $g_iMenuIconsStart + 3)
 	_GuiCtrlMenuEx_CreateMenuItem("", $g_hMenuHelp)
 	$miHelpHome = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[8], $g_hMenuHelp, $g_aMenuIcons[4], $g_iMenuIconsStart + 4)
-	$miHelpDownloads = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[10], $g_hMenuHelp)
-	$miHelpContact = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[11], $g_hMenuHelp, $g_aMenuIcons[5], $g_iMenuIconsStart + 5)
+	$miHelpDownloads = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[9], $g_hMenuHelp)
+	$miHelpSupport = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[10], $g_hMenuHelp, $g_aMenuIcons[5], $g_iMenuIconsStart + 5)
 	_GuiCtrlMenuEx_CreateMenuItem("", $g_hMenuHelp)
-	$miHelpGitHub = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[12], $g_hMenuHelp, $g_aMenuIcons[6], $g_iMenuIconsStart + 6)
-	$miHelpDonate = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[13], $g_hMenuHelp)
+	$miHelpGitHub = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[11], $g_hMenuHelp, $g_aMenuIcons[6], $g_iMenuIconsStart + 6)
+	$miHelpDonate = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[12], $g_hMenuHelp)
 	_GuiCtrlMenuEx_CreateMenuItem("", $g_hMenuHelp)
-	$miHelpAbout = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[14], $g_hMenuHelp, $g_aMenuIcons[7], $g_iMenuIconsStart + 7)
+	$miHelpAbout = _GuiCtrlMenuEx_CreateMenuItem($g_aLangMenus[13], $g_hMenuHelp, $g_aMenuIcons[7], $g_iMenuIconsStart + 7)
 	GUICtrlSetOnEvent($miFileOptions, "_ShowPreferencesDlg")
 	GUICtrlSetOnEvent($miLogOpenFile, "_Logging_OpenFile")
 	GUICtrlSetOnEvent($miLogOpenRoot, "_Logging_OpenDirectory")
@@ -487,7 +518,7 @@ Func _StartCoreGui()
 	GUICtrlSetOnEvent($g_hUpdateMenuItem, "_CheckForUpdates")
 	GUICtrlSetOnEvent($miHelpHome, "_About_HomePage")
 	GUICtrlSetOnEvent($miHelpDownloads, "_About_Downloads")
-	GUICtrlSetOnEvent($miHelpContact, "_About_Contact")
+	GUICtrlSetOnEvent($miHelpSupport, "_About_Support")
 	GUICtrlSetOnEvent($miHelpGitHub, "_About_GitHubIssues")
 	GUICtrlSetOnEvent($miHelpDonate, "_About_PayPal")
 	GUICtrlSetOnEvent($miHelpAbout, "_About_ShowDialog")
@@ -495,12 +526,14 @@ Func _StartCoreGui()
 	$g_hGuiIcon = GUICtrlCreateIcon($g_aCoreIcons[0], 99, 10, 10, $g_iSizeIcon, $g_iSizeIcon)
 	GUICtrlSetTip($g_hGuiIcon, $g_aLangAbout[1] & Chr(32) & _GetProgramVersion(0) & @CRLF & _
 			$g_aLangAbout[2] & Chr(32) & @AutoItVersion & @CRLF & _
-			$g_aLangAbout[3] & " © " & @YEAR & " " & $g_sCompanyName, _
+			$g_aLangAbout[3] & " Â© " & @YEAR & " " & $g_sCompanyName, _
 			$g_aLangAbout[0], $TIP_INFOICON, $TIP_BALLOON)
 	GUICtrlSetCursor($g_hGuiIcon, 0)
 	GUICtrlSetOnEvent($g_hGuiIcon, "_About_ShowDialog")
 	$g_AniUpdate = GUICtrlCreateIcon($g_sUpdateAnimation, 0, 10, 10, $g_iSizeIcon, $g_iSizeIcon)
+	$g_AniProcessing = GUICtrlCreateIcon($g_sProcessingAnimation, 0, 10, 10, $g_iSizeIcon, $g_iSizeIcon)
 	GUICtrlSetState($g_AniUpdate, $GUI_HIDE)
+	GUICtrlSetState($g_AniProcessing, $GUI_HIDE)
 	$hHeading = GUICtrlCreateLabel($g_sProgName & " " & _GetProgramVersion(1), $g_iSizeIcon + 22, 15, 300, 35)
 	GUICtrlSetFont($hHeading, 12)
 	$g_hSubHeading = GUICtrlCreateLabel($g_aLangCustom[0], $g_iSizeIcon + 22, 38, 350, 35)
@@ -528,16 +561,13 @@ Func _StartCoreGui()
 	GUISetState(@SW_SHOW, $g_hCoreGui)
 	AdlibRegister("_OnIconsHover", 65)
 	AdlibRegister("_UptimeMonitor", 1000)
+	If @Compiled Then
+		AdlibRegister("_ReduceMemory", $g_iReduceEveryMill)
+	EndIf
 
 	If $g_iCheckForUpdates == 4 Then
 		_SoftwareUpdateCheck()
 	EndIf
-
-	_Logging_Start("Testing Log System.")
-	_TestLoggingSystem(_Logging_SetLevel("Testing " & $g_aLangLogging[1] & ".", "SUCCESS"), 1000)
-	_TestLoggingSystem(_Logging_SetLevel("This is an error message!", "ERROR"), 1000)
-	_TestLoggingSystem(_Logging_SetLevel($g_aLangLogging[9] & "!", "WARNING"), 1000)
-	_Logging_End()
 
 	While 1
 		Sleep(30)
@@ -615,6 +645,12 @@ Func _SetResources()
 			$g_aMenuIcons[$iMi] = @ScriptFullPath
 		Next
 
+		For $iNi = 0 To $CNT_LANGICONS - 1
+			$g_aLanguageIcons[$iNi] = @ScriptFullPath
+		Next
+
+		$g_sDlgOptionsIcon = @ScriptFullPath
+
 	Else
 
 		$g_aCoreIcons[0] = $g_sThemesDir & "\Icons\" & $g_sProgShortName & ".ico"
@@ -627,6 +663,40 @@ Func _SetResources()
 		$g_aLognIcons[4] = $g_sThemesDir & "\Icons\logging\Smiley-Glass.ico"
 		$g_aLognIcons[5] = $g_sThemesDir & "\Icons\logging\Skull.ico"
 		$g_aLognIcons[6] = $g_sThemesDir & "\Icons\logging\Snowman.ico"
+		
+		$g_aLanguageIcons[0]  = $g_sThemesDir & "\Icons\Flags\en.ico"
+		$g_aLanguageIcons[1]  = $g_sThemesDir & "\Icons\Flags\af.ico"
+		$g_aLanguageIcons[2]  = $g_sThemesDir & "\Icons\Flags\ar.ico"
+		$g_aLanguageIcons[3]  = $g_sThemesDir & "\Icons\Flags\bg.ico"
+		$g_aLanguageIcons[4]  = $g_sThemesDir & "\Icons\Flags\cs.ico"
+		$g_aLanguageIcons[5]  = $g_sThemesDir & "\Icons\Flags\da.ico"
+		$g_aLanguageIcons[6]  = $g_sThemesDir & "\Icons\Flags\de.ico"
+		$g_aLanguageIcons[7]  = $g_sThemesDir & "\Icons\Flags\el.ico"
+		$g_aLanguageIcons[8]  = $g_sThemesDir & "\Icons\Flags\es.ico"
+		$g_aLanguageIcons[9]  = $g_sThemesDir & "\Icons\Flags\fr.ico"
+		$g_aLanguageIcons[10] = $g_sThemesDir & "\Icons\Flags\hi.ico"
+		$g_aLanguageIcons[11] = $g_sThemesDir & "\Icons\Flags\hr.ico"
+		$g_aLanguageIcons[12] = $g_sThemesDir & "\Icons\Flags\hu.ico"
+		$g_aLanguageIcons[13] = $g_sThemesDir & "\Icons\Flags\id.ico"
+		$g_aLanguageIcons[14] = $g_sThemesDir & "\Icons\Flags\is.ico"
+		$g_aLanguageIcons[15] = $g_sThemesDir & "\Icons\Flags\it.ico"
+		$g_aLanguageIcons[16] = $g_sThemesDir & "\Icons\Flags\iw.ico"
+		$g_aLanguageIcons[17] = $g_sThemesDir & "\Icons\Flags\ja.ico"
+		$g_aLanguageIcons[18] = $g_sThemesDir & "\Icons\Flags\ko.ico"
+		$g_aLanguageIcons[19] = $g_sThemesDir & "\Icons\Flags\nl.ico"
+		$g_aLanguageIcons[20] = $g_sThemesDir & "\Icons\Flags\no.ico"
+		$g_aLanguageIcons[21] = $g_sThemesDir & "\Icons\Flags\pl.ico"
+		$g_aLanguageIcons[22] = $g_sThemesDir & "\Icons\Flags\pt.ico"
+		$g_aLanguageIcons[23] = $g_sThemesDir & "\Icons\Flags\pt-BR.ico"
+		$g_aLanguageIcons[24] = $g_sThemesDir & "\Icons\Flags\ro.ico"
+		$g_aLanguageIcons[25] = $g_sThemesDir & "\Icons\Flags\ru.ico"
+		$g_aLanguageIcons[26] = $g_sThemesDir & "\Icons\Flags\sl.ico"
+		$g_aLanguageIcons[27] = $g_sThemesDir & "\Icons\Flags\sk.ico"
+		$g_aLanguageIcons[28] = $g_sThemesDir & "\Icons\Flags\sv.ico"
+		$g_aLanguageIcons[29] = $g_sThemesDir & "\Icons\Flags\th.ico"
+		$g_aLanguageIcons[30] = $g_sThemesDir & "\Icons\Flags\tr.ico"
+		$g_aLanguageIcons[31] = $g_sThemesDir & "\Icons\Flags\vi.ico"
+		$g_aLanguageIcons[32] = $g_sThemesDir & "\Icons\Flags\zh-CN.ico"
 
 		$g_aMenuIcons[0] = $g_sThemesDir & "\Icons\Menus\Gear.ico"
 		$g_aMenuIcons[1] = $g_sThemesDir & "\Icons\Menus\Logbook.ico"
@@ -636,6 +706,8 @@ Func _SetResources()
 		$g_aMenuIcons[5] = $g_sThemesDir & "\Icons\Menus\Mail.ico"
 		$g_aMenuIcons[6] = $g_sThemesDir & "\Icons\Menus\GitHub.ico"
 		$g_aMenuIcons[7] = $g_sThemesDir & "\Icons\Menus\About.ico"
+
+		$g_sDlgOptionsIcon = $g_sThemesDir & "\Icons\Dialogs\Gear.ico"
 
 	EndIf
 
@@ -651,10 +723,8 @@ EndFunc   ;==>_SetResources
 Func _ResetWorkingDirectories()
 
 	$g_sPathIni = $g_sWorkingDir & "\" & $g_sProgShortName & ".ini"
-	$g_sCacheRoot = $g_sWorkingDir & "\Cache\" & $g_sProgShortName
 	$g_sLoggingRoot = $g_sWorkingDir & "\Logging\" & $g_sProgShortName
 	$g_sLoggingPath = $g_sLoggingRoot & "\" & $g_sProgShortName & ".log"
-	If $g_iEnableCache == 1 Then DirCreate($g_sCacheRoot)
 
 EndFunc   ;==>_ResetWorkingDirectories
 
@@ -701,12 +771,20 @@ EndFunc   ;==>_GenerateIniFile
 Func _LoadConfiguration()
 
 	$g_iCheckForUpdates = Int(IniRead($g_sPathIni, $g_sProgShortName, "CheckForUpdates", 4))
-	$g_iClearCacheOnExit = Int(IniRead($g_sPathIni, $g_sProgShortName, "ClearCacheOnExit", 0))
+	$g_iProcessPriority = Int(IniRead($g_sPathIni, $g_sProgShortName, "ProcessPriority", 3))
+	$g_iSaveRealtime = Int(IniRead($g_sPathIni, $g_sProgShortName, "SaveRealtime", 0))
+	$g_iReduceMemory = Int(IniRead($g_sPathIni, $g_sProgShortName, "ReduceMemory", 1))
+	$g_iReduceEveryMill = Int(IniRead($g_sPathIni, $g_sProgShortName, "ReduceEveryMill", 300))
+	$g_iMaxSysMemoryPerc = Int(IniRead($g_sPathIni, $g_sProgShortName, "MinSysMemoryPerc", 80))
 	$g_iLoggingEnabled = Int(IniRead($g_sPathIni, $g_sProgShortName, "LoggingEnabled", 1))
 	$g_iLoggingStorage = Int(IniRead($g_sPathIni, $g_sProgShortName, "LoggingStorageSize", 5242880))
 	$g_iUptimeMonitor = Int(IniRead($g_sPathIni, "Donate", "Seconds", 0))
 	$g_iDonateTime = Int(IniRead($g_sPathIni, "Donate", "DonateTime", 0))
 
+	If @Compiled Then
+		ProcessSetPriority(@ScriptName, $g_iProcessPriority)
+	EndIf
+	
 EndFunc   ;==>_LoadConfiguration
 
 
@@ -732,6 +810,17 @@ Func _UptimeMonitor()
 	If $g_iUptimeMonitor < 2000000000 Then
 		$g_iUptimeMonitor += 1
 	EndIf
+EndFunc
+
+
+Func _ReduceMemory()
+
+	Local $aMemStats = MemGetStats()
+
+	If $aMemStats[0] > $g_iMaxSysMemoryPerc And $g_iReduceMemory = 1 Then
+		_WinAPI_EmptyWorkingSet()
+	EndIf
+
 EndFunc
 
 
@@ -764,7 +853,6 @@ Func _SetProcessingStates($iState)
 
 	GUICtrlSetState($g_hMenuFile, $iState)
 	GUICtrlSetState($g_hMenuHelp, $iState)
-	GUICtrlSetState($g_hMenuDebug, $iState)
 
 EndFunc   ;==>_SetProcessingStates
 
@@ -773,6 +861,9 @@ Func _ShutdownProgram()
 
 	AdlibUnRegister("_OnIconsHover")
 	AdlibUnRegister("_UptimeMonitor")
+	If @Compiled Then
+		AdlibUnRegister("_ReduceMemory")
+	EndIf
 
 	_SaveConfiguration()
 
@@ -781,7 +872,6 @@ Func _ShutdownProgram()
 		IniWrite($g_sPathIni, "Donate", "DonateTime", $g_iUptimeMonitor)
 		_Donate_ShowDialog()
 	Else
-		If $g_iClearCacheOnExit == 1 Then DirRemove($g_sCacheRoot, 1)
 		WinSetTrans($g_hCoreGui, Default, 255)
 		_TerminateProgram()
 	EndIf
@@ -814,17 +904,22 @@ EndFunc
 Func _ShowPreferencesDlg()
 
 	_Localization_Preferences()	;~ Load Preferences Language Strings
+	_LoadConfiguration()
+	$g_sSelectedLanguage = IniRead($g_sPathIni, $g_sProgShortName, "Language", "en")
 	Local $iLangCount = 1
 
 	$g_iParentState = WinGetState($g_hCoreGui)
 	If $g_iParentState > 0 Then
+		$g_iParent = $g_hCoreGui
 		WinSetTrans($g_hCoreGui, Default, 200)
 		GUISetState(@SW_DISABLE, $g_hCoreGui)
+	Else
+		$g_iParent = 0
 	EndIf
 
-	$g_hOptionsGui = GUICreate($g_aLangPreferences[0], 450, 500, -1, -1, BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST)
+	$g_hOptionsGui = GUICreate($g_aLangPreferences[0], 450, 500, -1, -1, BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST, $g_iParent)
 	GUISetFont(Default, Default, Default, "Verdana", $g_hOptionsGui, 5)
-	If $g_iParentState > 0 Then GUISetIcon($g_sDlgAboutIcon, $g_iDialogIconStart + 2, $g_hAboutGui)
+	If $g_iParentState > 0 Then GUISetIcon($g_sDlgOptionsIcon, $g_iDialogIconStart + 2, $g_hAboutGui)
 	GUISetOnEvent($GUI_EVENT_CLOSE, "__CloseOptionsDlg", $g_hOptionsGui)
 	GUIRegisterMsg($WM_NOTIFY, "__LanguageListEvents")
 
@@ -833,44 +928,70 @@ Func _ShowPreferencesDlg()
 	GUICtrlCreateTabItem("") ; end tabitem definition
 
 	GUICtrlCreateTabItem(StringFormat(" %s ", $g_aLangPreferences[2]))
-	GUICtrlCreateGroup($g_aLangPreferences[4], 25, 50, 400, 100)
+	GUICtrlCreateGroup($g_aLangPreferences[5], 25, 50, 400, 160)
 	GUICtrlSetFont(-1, 10, 700, 2)
-	$g_hOChkClearCacheOnExit = GUICtrlCreateCheckbox($g_aLangPreferences[7], 35, 80, 300, 20)
-	GUICtrlSetState($g_hOChkClearCacheOnExit, $g_iClearCacheOnExit)
-	$g_hOLblCacheSize = GUICtrlCreateLabel(StringFormat($g_aLangPreferences[8], Round(DirGetSize($g_sCacheRoot) / 1024, 2)), 35, 115, 200, 20)
-	GUICtrlSetColor($g_hOLblCacheSize, 0x555555)
-	$g_hOBtnClearCache = GUICtrlCreateButton($g_aLangPreferences[9], 255, 105, 150, 30)
-	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
-	GUICtrlCreateGroup($g_aLangPreferences[5], 25, 160, 400, 160)
-	GUICtrlSetFont(-1, 10, 700, 2)
-	$g_hOChkLogEnabled = GUICtrlCreateCheckbox($g_aLangPreferences[10], 35, 200, 200, 20)
+	$g_hOChkLogEnabled = GUICtrlCreateCheckbox($g_aLangPreferences[9], 35, 90, 200, 20)
 	GUICtrlSetState($g_hOChkLogEnabled, $g_iLoggingEnabled)
-	GUICtrlCreateLabel($g_aLangPreferences[11], 35, 230, 180, 20)
-	$g_hOInLogSize = GUICtrlCreateInput(Round($g_iLoggingStorage / 1024, 2), 215, 228, 100, 20)
+	GUICtrlCreateLabel($g_aLangPreferences[10], 35, 120, 180, 20)
+	$g_hOInLogSize = GUICtrlCreateInput(Round($g_iLoggingStorage / 1024, 2), 215, 118, 100, 20)
 	GUICtrlSetStyle($g_hOInLogSize, BitOr($ES_RIGHT, $ES_NUMBER))
 	GUICtrlSetFont(-1, 9, 400, 0, "Verdana")
-	GUICtrlCreateLabel("KB", 325, 230, 50, 20)
+	GUICtrlCreateLabel("KB", 325, 120, 50, 20)
 	$g_hOInLogSizeTemp = Int(GUICtrlRead($g_hOInLogSize))
-	$g_hOLblLogSize = GUICtrlCreateLabel(StringFormat($g_aLangPreferences[12], __GetLoggingSize()), 35, 270, 200, 20)
+	$g_hOLblLogSize = GUICtrlCreateLabel(StringFormat($g_aLangPreferences[11], __GetLoggingSize()), 35, 160, 200, 20)
 	GUICtrlSetColor($g_hOLblLogSize, 0x555555)
-	$g_hOBtnLogClear = GUICtrlCreateButton($g_aLangPreferences[13], 255, 265, 150, 30)
+	$g_hOBtnLogClear = GUICtrlCreateButton($g_aLangPreferences[12], 255, 155, 150, 30)
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 
-	GUICtrlSetOnEvent($g_hOChkClearCacheOnExit, "__CheckPreferenceChange")
 	GUICtrlSetOnEvent($g_hOChkLogEnabled, "__CheckPreferenceChange")
-	GUICtrlSetOnEvent($g_hOBtnClearCache, "__ClearCacheFolder")
 	GUICtrlSetOnEvent($g_hOBtnLogClear, "__RemoveLoggingFile")
 		;GUICtrlSetState($g_ReBarChkLogEnabled, $g_ReBarLogEnabled)
 	__CheckLoggingStateChanged()
 	GUICtrlCreateTabItem("") ; end tabitem definition
 
 	GUICtrlCreateTabItem(StringFormat(" %s ", $g_aLangPreferences[3]))
-	GUICtrlCreateGroup($g_aLangPreferences[6], 25, 50, 400, 350)
+	GUICtrlCreateGroup($g_aLangPreferences[6], 25, 50, 400, 130)
+	GUICtrlSetFont(-1, 10, 700, 2)
+	GUICtrlCreateLabel($g_aLangPreferences[13], 35, 80, 300, 20)
+	GUICTrlSetColor(-1, 0x555555)
+	$g_hOComboPower = GUICtrlCreateCombo("", 35, 105, 200, 30)
+	GUICtrlSetData($g_hOComboPower, "Low|Below Normal|Normal|Above Normal|High|Realtime", "Normal")
+	GUICtrlSetFont($g_hOComboPower, 10, 400)
+	If @Compiled Then
+		$g_hOIconPower = GUICtrlCreateIcon(@ScriptFullPath, $g_iPowerIconsStart, 350, 80, 48, 48)
+	Else
+		$g_hOIconPower = GUICtrlCreateIcon($g_sThemesDir & "\Icons\Power\Power-0.ico", 0, 350, 80, 48, 48)
+	EndIf
+	$g_hOChkSaveRealtime = GUICtrlCreateCheckbox($g_aLangPreferences[14], 35, 145, 360, 20)
+	GUICtrlSetState($g_hOChkSaveRealtime, $g_iSaveRealtime)
+	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
+
+	_SetProcessInfo()
+	GUICtrlSetOnEvent($g_hOComboPower, "_SetProcessPriority")
+	GUICtrlSetOnEvent($g_hOChkSaveRealtime, "__CheckPreferenceChange")
+
+	GUICtrlCreateGroup($g_aLangPreferences[7], 25, 200, 400, 70)
+	GUICtrlSetFont(-1, 10, 700, 2)
+	$g_hOChkReduceMemory = GUICtrlCreateCheckbox($g_aLangPreferences[15], 35, 235, 360, 20)
+	GUICtrlSetState($g_hOChkReduceMemory, $g_iReduceMemory)
+	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
+
+	If Not @Compiled Then
+		GUICtrlSetState($g_hOComboPower, $GUI_DISABLE)
+		GUICtrlSetState($g_hOChkSaveRealtime, $GUI_DISABLE)
+		GUICtrlSetState($g_hOChkReduceMemory, $GUI_DISABLE)
+	EndIf
+
+	GUICtrlSetOnEvent($g_hOChkReduceMemory, "__CheckPreferenceChange")
+	GUICtrlCreateTabItem("") ; end tabitem definition
+
+	GUICtrlCreateTabItem(StringFormat(" %s ", $g_aLangPreferences[4]))
+	GUICtrlCreateGroup($g_aLangPreferences[8], 25, 50, 400, 350)
 	GUICtrlSetFont(-1, 10, 700, 2)
 
 	Local $aSelLangInfo = __ISO639CodeToIndex($g_sSelectedLanguage)
 	$g_hOIconLanguage = GUICtrlCreateIcon(@ScriptFullPath, $g_iLangIconStart + $aSelLangInfo[1], 40, 90, 32, 32)
-	$g_hOLblLanguage = GUICtrlCreateLabel($aSelLangInfo[0], 80, 98, 300)
+	$g_hOLblLanguage = GUICtrlCreateLabel($aSelLangInfo[0], 80, 98, 300, 30)
 	GUICtrlSetFont($g_hOLblLanguage, 11)
 
 	$g_hOListLanguage = GUICtrlCreateListView("", 40, 135, 365, 200)
@@ -879,8 +1000,8 @@ Func _ShowPreferencesDlg()
 			$WS_EX_CLIENTEDGE, $LVS_EX_FLATSB, $LVS_EX_INFOTIP))
 
 	$g_hOImgLanguage = _GUIImageList_Create(16, 16, 5, 3)
-	For $l = 0 To 29
-		_GUIImageList_AddIcon($g_hOImgLanguage, @ScriptFullPath, 0 - $g_iLangIconStart - $l)
+	For $l = 0 To $CNT_LANGICONS - 1
+		_GUIImageList_AddIcon($g_hOImgLanguage, $g_aLanguageIcons[$l], 0 - $g_iLangIconStart - $l)
 	Next
 	_GUICtrlListView_SetImageList($g_hOListLanguage, $g_hOImgLanguage, 1)
 
@@ -917,41 +1038,28 @@ Func _ShowPreferencesDlg()
 	Local $iSelLangItem = __FindLanguageItem(3300 + $aSelLangInfo[1])
 	_GUICtrlListView_SetItemSelected($g_hOListLanguage, $iSelLangItem, True, True)
 	_GUICtrlListView_EnsureVisible($g_hOListLanguage, $iSelLangItem)
-	GUICtrlCreateLabel(StringFormat($g_aLangPreferences[14], $g_aLangPreferences[15]), 40, 350, 365, 35)
+	GUICtrlCreateLabel(StringFormat($g_aLangPreferences[16], $g_aLangPreferences[17]), 40, 350, 365, 35)
 	GUICtrlSetColor(-1, 0x555555)
 	GUICtrlSetFont(-1, 9)
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 	GUICtrlCreateTabItem("") ; end tabitem definition
 
-	$g_hOLblPrefsUpdated = GUICtrlCreateLabel($g_aLangPreferences[17], 25, 455, 200, 20)
+	$g_hOLblPrefsUpdated = GUICtrlCreateLabel($g_aLangPreferences[19], 25, 455, 200, 20)
 	GUICtrlSetColor($g_hOLblPrefsUpdated, 0x008000)
 	GUICtrlSetState($g_hOLblPrefsUpdated, $GUI_HIDE)
-	$g_hOBtnSave = GUICtrlCreateButton($g_aLangPreferences[15], 210, 450, 100, 30)
+	$g_hOBtnSave = GUICtrlCreateButton($g_aLangPreferences[17], 210, 450, 100, 30)
 	GUICtrlSetFont($g_hOBtnSave, 10)
 	GUICtrlSetState($g_hOBtnSave, $GUI_FOCUS)
 	GUICtrlSetState($g_hOBtnSave, $GUI_DISABLE)
 	GUICtrlSetOnEvent($g_hOBtnSave, "__SavePreferences")
 
-	$g_hOBtnCancel = GUICtrlCreateButton($g_aLangPreferences[16], 320, 450, 100, 30)
+	$g_hOBtnCancel = GUICtrlCreateButton($g_aLangPreferences[18], 320, 450, 100, 30)
 	GUICtrlSetFont($g_hOBtnCancel, 10)
 	GUICtrlSetOnEvent($g_hOBtnCancel, "__CloseOptionsDlg")
 
 	GUISetState(@SW_SHOW, $g_hOptionsGui)
 	AdlibRegister("__CheckLoggingSizeChange", 500)
 
-EndFunc
-
-
-Func __ClearCacheFolder()
-
-	GUICtrlSetState($g_hOBtnClearCache, $GUI_DISABLE)
-	DirRemove($g_sCacheRoot, 1)
-	DirCreate($g_sCacheRoot)
-
-	GUICtrlSetData($g_hOLblCacheSize, StringFormat($g_aLangPreferences[10], Round(DirGetSize($g_sCacheRoot) / 1024, 2)))
-	GUICtrlSetData($g_hOLblPrefsUpdated, $g_aLangPreferences[18])
-	GUICtrlSetState($g_hOLblPrefsUpdated, $GUI_SHOW)
-	GUICtrlSetState($g_hOBtnClearCache, $GUI_ENABLE)
 
 EndFunc
 
@@ -965,8 +1073,8 @@ Func __RemoveLoggingFile()
 		_Logging_Initialize()
 	EndIf
 
-	GUICtrlSetData($g_hOLblLogSize, StringFormat($g_aLangPreferences[12], __GetLoggingSize()))
-	GUICtrlSetData($g_hOLblPrefsUpdated, $g_aLangPreferences[19])
+	GUICtrlSetData($g_hOLblLogSize, StringFormat($g_aLangPreferences[11], __GetLoggingSize()))
+	GUICtrlSetData($g_hOLblPrefsUpdated, $g_aLangPreferences[20])
 	GUICtrlSetState($g_hOLblPrefsUpdated, $GUI_SHOW)
 	GUICtrlSetState($g_hOBtnLogClear, $GUI_ENABLE)
 
@@ -984,10 +1092,72 @@ Func __GetLoggingSize()
 EndFunc
 
 
+Func _SetProcessPriority()
+
+	Switch GuiCtrlRead($g_hOComboPower)
+		Case "Low"
+			$g_iProcessPriority = 0
+		Case "Below Normal"
+			$g_iProcessPriority = 1
+		Case "Normal"
+			$g_iProcessPriority = 2
+		Case "Above Normal"
+			$g_iProcessPriority = 3
+		Case "High"
+			$g_iProcessPriority = 4
+		Case "Realtime"
+			$g_iProcessPriority = 5
+	EndSwitch
+
+	ProcessSetPriority(@ScriptName, $g_iProcessPriority)
+	_SetProcessInfo()
+
+EndFunc
+
+
+Func _SetProcessInfo($ProcessName = @ScriptName)
+
+	Local $iPID = ProcessExists($ProcessName) ;~ Will return the PID or 0 if the process isn't found.
+	Local $iProcessPriority = _ProcessGetPriority($iPID)
+	Local $iTempPriority = Int(IniRead($g_sPathIni, $g_sProgShortName, "ProcessPriority", 2))
+
+	For $p = 0 To 5
+		If $p = $iProcessPriority Then
+			GUICtrlSetImage($g_hOIconPower, @ScriptFullPath, $g_iPowerIconsStart + $p)
+		EndIf
+	Next
+
+	Switch $iProcessPriority
+		Case 0
+			GuiCtrlSetData($g_hOComboPower, "Low")
+		Case 1
+			GuiCtrlSetData($g_hOComboPower, "Below Normal")
+		Case 2
+			GuiCtrlSetData($g_hOComboPower, "Normal")
+		Case 3
+			GuiCtrlSetData($g_hOComboPower, "Above Normal")
+		Case 4
+			GuiCtrlSetData($g_hOComboPower, "High")
+		Case 5
+			GuiCtrlSetData($g_hOComboPower, "Realtime")
+		Case Else
+			GuiCtrlSetData($g_hOComboPower, "Error")
+	EndSwitch
+
+	If $g_iProcessPriority = $iTempPriority Then
+		GUICtrlSetState($g_hOBtnSave, $GUI_DISABLE)
+	Else
+		GUICtrlSetState($g_hOBtnSave, $GUI_ENABLE)
+	EndIf
+
+EndFunc
+
+
 Func __CheckPreferenceChange()
 
-	If __CheckBoxChanged("ClearCacheOnExit", $g_hOChkClearCacheOnExit) = True Or _
-			__CheckBoxChanged("LoggingEnabled", $g_hOChkLogEnabled) = True Then
+	If __CheckBoxChanged("LoggingEnabled", $g_hOChkLogEnabled) = True Or _
+		__CheckBoxChanged("SaveRealtime", $g_hOChkSaveRealtime) = True Or _
+		__CheckBoxChanged("ReduceMemory", $g_hOChkReduceMemory) = True Then
 		GUICtrlSetState($g_hOBtnSave, $GUI_ENABLE)
 	Else
 		GUICtrlSetState($g_hOBtnSave, $GUI_DISABLE)
@@ -1045,11 +1215,11 @@ Func __SavePreferences()
 	Local $iLangChanged = False
 
 	If $g_tSelectedLanguage <> $g_sSelectedLanguage Then
-		Local $iMsgBoxResult = MsgBox($MB_OKCANCEL + $MB_ICONINFORMATION, $g_aLangPreferences[20], $g_aLangPreferences[21], 0, $g_hOptionsGui)
+		Local $iMsgBoxResult = MsgBox($MB_OKCANCEL + $MB_ICONINFORMATION, $g_aLangPreferences[21], $g_aLangPreferences[22], 0, $g_hOptionsGui)
 		Switch $iMsgBoxResult
 			Case 1
 				IniWrite($g_sPathIni, $g_sProgShortName, "Language", $g_tSelectedLanguage)
-				GUICtrlSetData($g_hOLblPrefsUpdated, $g_aLangPreferences[20])
+				GUICtrlSetData($g_hOLblPrefsUpdated, $g_aLangPreferences[19])
 				GUICtrlSetState($g_hOLblPrefsUpdated, $GUI_SHOW)
 				GUICtrlSetState($g_hOBtnSave, $GUI_DISABLE)
 				$iLangChanged = True
@@ -1059,29 +1229,43 @@ Func __SavePreferences()
 		EndSwitch
 	EndIf
 
+	If GUICtrlRead($g_hOChkSaveRealtime) = $GUI_CHECKED Then
+		$g_iSaveRealtime = 1
+	ElseIf GUICtrlRead($g_hOChkSaveRealtime) = $GUI_UNCHECKED Then
+		$g_iSaveRealtime = 0
+	EndIf
+
+	If GUICtrlRead($g_hOChkReduceMemory) = $GUI_CHECKED Then
+		$g_iReduceMemory = 1
+	ElseIf GUICtrlRead($g_hOChkReduceMemory) = $GUI_UNCHECKED Then
+		$g_iReduceMemory = 0
+	EndIf
+
 	If GUICtrlRead($g_hOChkLogEnabled) = $GUI_CHECKED Then
 		$g_iLoggingEnabled = 1
 	ElseIf GUICtrlRead($g_hOChkLogEnabled) = $GUI_UNCHECKED Then
 		$g_iLoggingEnabled = 0
 	EndIf
-
-	If GUICtrlRead($g_hOChkClearCacheOnExit) = $GUI_CHECKED Then
-		$g_iClearCacheOnExit = 1
-	ElseIf GUICtrlRead($g_hOChkClearCacheOnExit) = $GUI_UNCHECKED Then
-		$g_iClearCacheOnExit = 0
-	EndIf
 	$g_iLoggingStorage = Int(GUICtrlRead($g_hOInLogSize)) * 1024
 
-	IniWrite($g_sPathIni, $g_sProgShortName, "ClearCacheOnExit", $g_iClearCacheOnExit)
+	If $g_iSaveRealtime = 0 And $g_iProcessPriority = 5 Then
+		IniWrite($g_sPathIni, $g_sProgShortName, "ProcessPriority", 4)
+	Else
+		IniWrite($g_sPathIni, $g_sProgShortName, "ProcessPriority", $g_iProcessPriority)
+	EndIf
+
+	IniWrite($g_sPathIni, $g_sProgShortName, "SaveRealtime", $g_iSaveRealtime)
+	IniWrite($g_sPathIni, $g_sProgShortName, "ReduceMemory", $g_iReduceMemory)
 	IniWrite($g_sPathIni, $g_sProgShortName, "LoggingEnabled", $g_iLoggingEnabled)
 	IniWrite($g_sPathIni, $g_sProgShortName, "LoggingStorageSize", $g_iLoggingStorage)
 
 	If $iLangChanged = True Then
-		$iMsgBoxResult = MsgBox($MB_OKCANCEL + $MB_ICONINFORMATION, $g_aLangPreferences[22], $g_aLangPreferences[23], 0, $g_hOptionsGui)
+		$iMsgBoxResult = MsgBox($MB_OKCANCEL + $MB_ICONINFORMATION, $g_aLangPreferences[23], $g_aLangPreferences[24], 0, $g_hOptionsGui)
 		Switch $iMsgBoxResult
 			Case 1
 				_ShutdownProgram()
 			Case 2
+				; GUICtrlSetState($g_hOBtnSave, $GUI_ENABLE)
 				$iLangChanged = False
 		EndSwitch
 	Else
@@ -1162,60 +1346,69 @@ Func __ISO639CodeToIndex($i639 = "en")
 		Case "hr"
 			$aLangInfo[0] = "Croatian"
 			$aLangInfo[1] = 11
+		Case "hu"
+			$aLangInfo[0] = "Hungarian"
+			$aLangInfo[1] = 12
 		Case "id"
 			$aLangInfo[0] = "Indonesian"
-			$aLangInfo[1] = 12
+			$aLangInfo[1] = 13
 		Case "is"
 			$aLangInfo[0] = "Icelandic"
-			$aLangInfo[1] = 13
+			$aLangInfo[1] = 14
 		Case "it"
 			$aLangInfo[0] = "Italian"
-			$aLangInfo[1] = 14
+			$aLangInfo[1] = 15
 		Case "iw"
 			$aLangInfo[0] = "Hebrew"
-			$aLangInfo[1] = 15
+			$aLangInfo[1] = 16
 		Case "ja"
 			$aLangInfo[0] = "Japanese"
-			$aLangInfo[1] = 16
+			$aLangInfo[1] = 17
 		Case "ko"
 			$aLangInfo[0] = "Korean"
-			$aLangInfo[1] = 17
+			$aLangInfo[1] = 18
 		Case "nl"
 			$aLangInfo[0] = "Dutch"
-			$aLangInfo[1] = 18
+			$aLangInfo[1] = 19
 		Case "no"
 			$aLangInfo[0] = "Norwegian"
-			$aLangInfo[1] = 19
+			$aLangInfo[1] = 20
 		Case "pl"
 			$aLangInfo[0] = "Polish"
-			$aLangInfo[1] = 20
+			$aLangInfo[1] = 21
 		Case "pt"
 			$aLangInfo[0] = "Portuguese"
-			$aLangInfo[1] = 21
+			$aLangInfo[1] = 22
+		Case "pt-BR"
+			$aLangInfo[0] = "Portuguese (Brazil)"
+			$aLangInfo[1] = 23
 		Case "ro"
 			$aLangInfo[0] = "Romanian"
-			$aLangInfo[1] = 22
+			$aLangInfo[1] = 24
 		Case "ru"
 			$aLangInfo[0] = "Russian"
-			$aLangInfo[1] = 23
+			$aLangInfo[1] = 25
+		Case "sl"
+			$aLangInfo[0] = "Slovenian"
+			$aLangInfo[1] = 26
 		Case "sk"
 			$aLangInfo[0] = "Slovak"
-			$aLangInfo[1] = 24
+			$aLangInfo[1] = 27
 		Case "sv"
 			$aLangInfo[0] = "Swedish"
-			$aLangInfo[1] = 25
+			$aLangInfo[1] = 28
 		Case "th"
 			$aLangInfo[0] = "Thai"
-			$aLangInfo[1] = 26
+			$aLangInfo[1] = 29
 		Case "tr"
 			$aLangInfo[0] = "Turkish"
-			$aLangInfo[1] = 27
+			$aLangInfo[1] = 30
 		Case "vi"
 			$aLangInfo[0] = "Vietnamese"
-			$aLangInfo[1] = 28
+			$aLangInfo[1] = 31
 		Case "zh-CN"
 			$aLangInfo[0] = "Chinese"
-			$aLangInfo[1] = 29
+			$aLangInfo[1] = 32
 	EndSwitch
 
 	Return $aLangInfo
@@ -1242,7 +1435,7 @@ Func __LanguageListEvents($hWnd, $iMsg, $wParam, $lParam)
 					Local $iSelLang = DllStructGetData($tInfo, "Index")
 					$g_tSelectedLanguage = _GUICtrlListView_GetItemText($g_hOListLanguage, $iSelLang, 1)
 					Local $aSelLangInfo = __ISO639CodeToIndex($g_tSelectedLanguage)
-					GUICtrlSetImage($g_hOIconLanguage, @ScriptFullPath, $g_iLangIconStart + $aSelLangInfo[1])
+					GUICtrlSetImage($g_hOIconLanguage, $g_aLanguageIcons[$aSelLangInfo[1]], $g_iLangIconStart + $aSelLangInfo[1])
 					GUICtrlSetData($g_hOLblLanguage, $aSelLangInfo[0])
 
 					If $g_tSelectedLanguage <> $g_sSelectedLanguage Then

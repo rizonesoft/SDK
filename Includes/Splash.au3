@@ -46,6 +46,10 @@ If Not IsDeclared("g_iSplashDelay") Then Global $g_iSplashDelay = 100
 ; ===============================================================================================================================
 Func _Splash_Start($sMessage = "Loading Message")
 
+	If Not FileExists($g_SplashAnimation) Then
+		MsgBox(0, "Error", $g_SplashAnimation)
+	EndIf
+
 	$g_hSplashForm = GUICreate("", 250, 150, -1, -1, BitOR($WS_POPUP, $WS_BORDER))
 	GUISetFont(9, -1, -1, "Tahoma", $g_hSplashForm, 5)
 	GUICtrlCreateIcon($g_SplashAnimation, -1, (250 - 32) / 2, 15, 32, 32)

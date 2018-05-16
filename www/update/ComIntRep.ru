@@ -1,3 +1,3 @@
 [Update]
-LatestBuild=3793
-UpdateURL=https://goo.gl/3Shqgs
+LatestBuild=3925
+UpdateURL=https://rizone.tech/comintrep

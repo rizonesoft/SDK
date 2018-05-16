@@ -38,6 +38,7 @@ Global $g_hDonateButton
 
 If Not IsDeclared("g_hCoreGui") Then Global $g_hCoreGui
 If Not IsDeclared("g_iParentState") Then Global $g_iParentState
+If Not IsDeclared("g_iParent") Then Global $g_iParent
 If Not IsDeclared("g_sProgName") Then Global $g_sProgName
 If Not IsDeclared("g_iAboutIconStart") Then Global $g_iAboutIconStart
 If Not IsDeclared("g_sUrlCompHomePage") Then Global $g_sUrlCompHomePage
@@ -65,6 +66,9 @@ Func _Donate_ShowDialog()
 	$g_iParentState = WinGetState($g_hCoreGui)
 	If $g_iParentState > 0 Then
 		GUISetState(@SW_DISABLE, $g_hCoreGui)
+		$g_iParent = $g_hCoreGui
+	Else
+		$g_iParent = 0
 	EndIf
 
 	$g_hDonateGui = GUICreate("Donate", 400, 280, -1, -1, BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST)

@@ -45,13 +45,14 @@ Global $g_aBuffers[4] = [0, 0, 0, 0]
 
 If Not IsDeclared("g_hCoreGui") Then Global $g_hCoreGui
 If Not IsDeclared("g_iParentState") Then Global $g_iParentState
+If Not IsDeclared("g_iParent") Then Global $g_iParent
 If Not IsDeclared("g_hGuiIcon") Then Global $g_hGuiIcon
 If Not IsDeclared("g_sProgName") Then Global $g_sProgName
 If Not IsDeclared("g_sProgShortName") Then Global $g_sProgShortName
 If Not IsDeclared("g_sCompanyName") Then Global $g_sCompanyName
 If Not IsDeclared("g_iAboutIconStart") Then Global $g_iAboutIconStart
 If Not IsDeclared("g_sUrlCompHomePage") Then Global $g_sUrlCompHomePage
-If Not IsDeclared("g_sUrlContact") Then Global $g_sUrlContact
+If Not IsDeclared("g_sUrlSupport") Then Global $g_sUrlSupport
 If Not IsDeclared("g_sUrlDownloads") Then Global $g_sUrlDownloads
 If Not IsDeclared("g_sUrlFacebook") Then Global $g_sUrlFacebook
 If Not IsDeclared("g_sUrlTwitter") Then Global $g_sUrlTwitter
@@ -67,6 +68,7 @@ If Not IsDeclared("g_sAboutCredits") Then Global $g_sAboutCredits
 If Not IsDeclared("g_iSizeIcon") Then Global $g_iSizeIcon
 If Not IsDeclared("g_sThemesDir") Then Global $g_sThemesDir
 If Not IsDeclared("g_iDialogIconStart") Then Global $g_iDialogIconStart
+If Not IsDeclared("g_hTrItemAbout") Then Global $g_hTrItemAbout
 ; ===============================================================================================================================
 
 ; #CURRENT# =====================================================================================================================
@@ -98,13 +100,18 @@ Func _About_ShowDialog()
 	_Localization_About()
 
 	$g_iParentState = WinGetState($g_hCoreGui)
+
 	If $g_iParentState > 0 Then
 		WinSetTrans($g_hCoreGui, Default, 200)
 		GUISetState(@SW_DISABLE, $g_hCoreGui)
+		$g_iParent = $g_hCoreGui
+	Else
+		$g_iParent = 0
 	EndIf
 
+	TrayItemSetState($g_hTrItemAbout, $GUI_DISABLE)
 	$g_hAboutGui = GUICreate($g_aLangAbout[0], 420, 500, -1, -1, _
-			BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST, $g_hCoreGui)
+			BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST, $g_iParent)
 	GUISetFont(8.5, 400, 0, "Verdana", $g_hAboutGui, 5)
 	If $g_iParentState > 0 Then GUISetIcon($g_sDlgAboutIcon, $g_iDialogIconStart + 3, $g_hAboutGui)
 	GUISetOnEvent($GUI_EVENT_CLOSE, "__About_CloseDialog", $g_hAboutGui)
@@ -137,7 +144,7 @@ Func _About_ShowDialog()
 	$abGNU = GUICtrlCreateLabel("GNU General Public License 3", 110, 138, 265, 15)
 	GUICtrlSetColor($abGNU, 0x666666)
 	GUICtrlCreateLabel($g_aLangAbout[8] & ": ", 5, 156, 100, 15, $SS_RIGHT)
-	$abSupport = GUICtrlCreateLabel(_Link_Split($g_sUrlContact, 2), 110, 156, 265, 15)
+	$abSupport = GUICtrlCreateLabel(_Link_Split($g_sUrlSupport, 2), 110, 156, 265, 15)
 	GUICtrlSetFont($abSupport, 8.5, -1, 4) ;Underlined
 	GUICtrlSetColor($abSupport, 0x0000FF)
 	GUICtrlSetCursor($abSupport, 0)
@@ -201,7 +208,7 @@ Func _About_ShowDialog()
 
 	GUICtrlSetOnEvent($abBtnOK, "__About_CloseDialog")
 	GUICtrlSetOnEvent($abHome, "_About_HomePage")
-	GUICtrlSetOnEvent($abSupport, "_About_Contact")
+	GUICtrlSetOnEvent($abSupport, "_About_Support")
 	GUICtrlSetOnEvent($g_aAboutIcons[0][0], "_About_PayPal")
 	GUICtrlSetOnEvent($g_aAboutIcons[1][0], "_About_SouthAfrica")
 	GUICtrlSetOnEvent($g_aAboutIcons[2][0], "_About_Facebook")
@@ -220,8 +227,8 @@ Func _About_ShowDialog()
 EndFunc   ;==>_About_ShowDialog
 
 
-Func _About_Contact()
-	ShellExecute(_Link_Split($g_sUrlContact))
+Func _About_Support()
+	ShellExecute(_Link_Split($g_sUrlSupport))
 EndFunc   ;==>_About_Contact
 
 
@@ -286,6 +293,7 @@ Func __About_CloseDialog()
 		GUISetState(@SW_ENABLE, $g_hCoreGui)
 	EndIf
 	GUIDelete($g_hAboutGui)
+	TrayItemSetState($g_hTrItemAbout, $GUI_ENABLE)
 
 EndFunc   ;==>__About_CloseDialog
 
@@ -390,7 +398,7 @@ Func __About_SetDriveSpaceStats()
 
 	EndIf
 
-EndFunc   ;==>__About_SetSpacePercentage
+EndFunc   ;==>__About_SetDriveSpaceStats
 
 
 Func __About_SetMemoryStats()
@@ -406,7 +414,7 @@ Func __About_SetMemoryStats()
 
 		If $iRAMFree <> $g_aBuffers[2] Then
 			GUICtrlSetData($g_hRAMLabel, StringUpper(StringFormat($g_aLangAbout[17], _
-				$iRAMFree, Round($aRAMStats[1] / 1024), $iRAMPercFree)))
+					$iRAMFree, Round($aRAMStats[1] / 1024), $iRAMPercFree)))
 			$g_aBuffers[2] = $iRAMFree
 		EndIf
 

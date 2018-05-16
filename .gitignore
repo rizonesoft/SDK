@@ -7,8 +7,11 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.log
+*.tmp
 
 ######################
+/GitHub
 /Translate
 /www
 /Concrete/BiosCodes
@@ -25,6 +28,7 @@ Thumbs.db
 /Concrete/Mozbase
 /Concrete/MP3Repair
 /Concrete/Notepad3
+/Concrete/NP3Admin
 /Concrete/OnePassword
 /Concrete/Ownership
 /Concrete/PixelRepair

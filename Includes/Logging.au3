@@ -59,7 +59,6 @@ If Not IsDeclared("g_hTabLogging") Then Global $g_hTabLogging
 If Not IsDeclared("g_hMenuFileLog") Then Global $g_hMenuFileLog
 If Not IsDeclared("g_hSubHeading") Then Global $g_hSubHeading
 If Not IsDeclared("g_iUpdateSubStatus") Then Global $g_iUpdateSubStatus = True
-If Not IsDeclared("g_iShowsubErrors") Then Global $g_iShowSubErrors = True
 ; ===============================================================================================================================
 
 ; #CURRENT# =====================================================================================================================
@@ -154,29 +153,21 @@ EndFunc   ;==>_Logging_End
 
 Func _Logging_FinalMessage($sMessage = $g_aLangMessages[24])
 
-	Local $sErrorMessage = ""
 	Local $sFinalMessage = ""
 
 	If $g_iLoggingErrors > 0 Then
-		$sErrorMessage = StringFormat($g_aLangMessages[21], $g_iLoggingErrors, _
+		$sFinalMessage = StringFormat($g_aLangMessages[21], $g_iLoggingErrors, _
 						_StringEx_ReturnPlural($g_iLoggingErrors, $g_aLangMessages[22], $g_aLangMessages[23]))
-		_Logging_End(Default, _Logging_SetLevel($sErrorMessage, "ERROR"))
+		_Logging_End(Default, _Logging_SetLevel($sFinalMessage, "ERROR"))
+		GUICtrlSetColor($g_hSubHeading, 0xC80B0B)
 	Else
+		$sFinalMessage = $sMessage
 		_Logging_End(Default, _Logging_SetLevel($sMessage, "FINISHED"))
+		GUICtrlSetColor($g_hSubHeading, 0x008000)
 	EndIf
 
 	If $g_iUpdateSubStatus Then
-
-		If $g_iShowSubErrors Then
-			$sFinalMessage = $sErrorMessage
-			GUICtrlSetColor($g_hSubHeading, 0xC80B0B)
-		Else
-			$sFinalMessage = $sMessage
-			GUICtrlSetColor($g_hSubHeading, 0x008000)
-		EndIf
-
 		GUICtrlSetData($g_hSubHeading, $sFinalMessage)
-
 	EndIf
 
 EndFunc

@@ -1,3 +1,3 @@
 [Update]
 LatestBuild=2852
-UpdateURL=http://www.rizonesoft.com/
+UpdateURL=https://goo.gl/tGtJ6a

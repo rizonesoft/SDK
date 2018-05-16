@@ -37,13 +37,12 @@ Global $g_aDlgUpdateIcons[2] = [@ScriptFullPath, @ScriptFullPath]
 
 If Not IsDeclared("g_hCoreGui") Then Global $g_hCoreGui
 If Not IsDeclared("g_iParentState") Then Global $g_iParentState
+If Not IsDeclared("g_iParent") Then Global $g_iParent
 If Not IsDeclared("g_sThemesDir") Then Global $g_sThemesDir
 If Not IsDeclared("g_sProgShortName") Then Global $g_sProgShortName
 If Not IsDeclared("g_sProgName") Then Global $g_sProgName
 If Not IsDeclared("g_sRemoteUpdateFile") Then Global $g_sRemoteUpdateFile
-If Not IsDeclared("g_sCacheRoot") Then Global $g_sCacheRoot
 If Not IsDeclared("g_hUpdateGUI") Then Global $g_hUpdateGUI
-;~ If Not IsDeclared("g_sUpdateURL") Then Global $g_sUpdateURL
 If Not IsDeclared("g_sPathIni") Then Global $g_sPathIni
 If Not IsDeclared("g_iCheckForUpdates") Then Global $g_iCheckForUpdates = 4
 If Not IsDeclared("g_ChkUpdateNoShow") Then Global $g_ChkUpdateNoShow
@@ -53,6 +52,7 @@ If Not IsDeclared("g_iDialogIconStart") Then Global $g_iDialogIconStart
 If Not IsDeclared("g_hUpdateMenuItem") Then Global $g_hUpdateMenuItem
 If Not IsDeclared("g_sUrlCompHomePage") Then Global $g_sUrlCompHomePage
 If Not IsDeclared("g_sUrlProgPage") Then Global $g_sUrlProgPage
+If Not IsDeclared("g_sUrlProgUpdate") Then Global $g_sUrlProgUpdate
 ; ===============================================================================================================================
 
 ; #CONSTANTS# ===================================================================================================================
@@ -73,7 +73,7 @@ Func _SoftwareUpdateCheck($iMenuSource = False)
 		GUICtrlSetState($g_hUpdateMenuItem, $GUI_DISABLE)
 	EndIf
 
-	Local $sLocalUpdateFile = _WinAPI_GetTempFileName($g_sCacheRoot, "u_")
+	Local $sLocalUpdateFile = _WinAPI_GetTempFileName(@TempDir, "u_")
 	Local $hDownload = InetGet($g_sRemoteUpdateFile, $sLocalUpdateFile, $INET_FORCERELOAD, $INET_DOWNLOADBACKGROUND)
 
 	Do
@@ -95,7 +95,7 @@ Func _SoftwareUpdateCheck($iMenuSource = False)
 		Local $lblUpdate, $chkShowNoMore, $btnUpdate, $btnOk
 
 		$g_iCheckForUpdates = Int(IniRead($g_sPathIni, $g_sProgShortName, "CheckForUpdates", 4))
-		;~ $g_sUpdateURL = IniRead($sLocalUpdateFile, "Update", "UpdateURL", "http://www.rizonesoft.com")
+		$g_sUrlProgUpdate = IniRead($sLocalUpdateFile, "Update", "UpdateURL", _Link_Split($g_sUrlProgPage))
 
 		Local $aUpdatePos[2] = [-1, -1]
 		$g_iParentState = WinGetState($g_hCoreGui)
@@ -108,9 +108,15 @@ Func _SoftwareUpdateCheck($iMenuSource = False)
 
 		If $iLocalBuild < $iRemoteBuild Then
 
-			If $g_iParentState > 0 Then GUISetState(@SW_DISABLE, $g_hCoreGui)
+			If $g_iParentState > 0 Then
+				GUISetState(@SW_DISABLE, $g_hCoreGui)
+				$g_iParent = $g_hCoreGui
+			Else
+				$g_iParent = 0
+			EndIf
+
 			$g_hUpdateGUI = GUICreate($g_aLangUpdate[0], $iUpdateWidth, $iUpdateHeight, $aUpdatePos[0], $aUpdatePos[1], _
-					BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST, $g_hCoreGui)
+					BitOR($WS_CAPTION, $WS_POPUPWINDOW), $WS_EX_TOPMOST, $g_iParent)
 			GUISetFont(9, 400, -1, "Verdana", $g_hUpdateGUI, $CLEARTYPE_QUALITY)
 			If $g_iParentState > 0 Then GUISetIcon($g_aDlgUpdateIcons[0], $g_iDialogIconStart, $g_hUpdateGUI)
 			GUISetOnEvent($GUI_EVENT_CLOSE, "__CloseUpdateDialog", $g_hUpdateGUI)
@@ -121,10 +127,10 @@ Func _SoftwareUpdateCheck($iMenuSource = False)
 			GUICtrlSetFont($lblUpdateMessage, 10)
 			GUICtrlCreateLabel($g_aLangUpdate[7], 10, 89, 115, 18, $SS_RIGHT)
 			GUICtrlCreateLabel($g_aLangUpdate[8], 10, 107, 115, 18, $SS_RIGHT)
-			$lblBuild1 = GUICtrlCreateLabel($iLocalBuild, 130, 87, 50, 18)
+			$lblBuild1 = GUICtrlCreateLabel($iLocalBuild, 130, 87, 80, 18)
 			GUICtrlSetColor($lblBuild1, 0xE81123)
 			GUICtrlSetFont($lblBuild1, 10)
-			$lblBuild2 = GUICtrlCreateLabel($iRemoteBuild, 130, 105, 50, 18)
+			$lblBuild2 = GUICtrlCreateLabel($iRemoteBuild, 130, 105, 80, 18)
 			GUICtrlSetColor($lblBuild2, 0x0000FF)
 			GUICtrlSetCursor($lblBuild2, 0)
 			GUICtrlSetFont($lblBuild2, 10)
@@ -211,7 +217,7 @@ EndFunc   ;==>__CloseUpdateDialog
 
 
 Func __OpenUpdateURL()
-	ShellExecute(_Link_Split($g_sUrlProgPage))
+	ShellExecute(_Link_Split($g_sUrlProgUpdate))
 EndFunc   ;==>__OpenUpdateURL
 
 Func __OpenHomePage()

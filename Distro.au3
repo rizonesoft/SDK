@@ -30,10 +30,10 @@
 ;===============================================================================================================
 #AutoIt3Wrapper_Res_Comment=Distro Building Environment				;~ Comment field
 #AutoIt3Wrapper_Res_Description=Distro Building Environment	      	;~ Description field
-#AutoIt3Wrapper_Res_Fileversion=5.0.2.3417
+#AutoIt3Wrapper_Res_Fileversion=5.0.2.3493
 #AutoIt3Wrapper_Res_FileVersion_AutoIncrement=Y  					;~ (Y/N/P) AutoIncrement FileVersion. Default=N
 #AutoIt3Wrapper_Res_FileVersion_First_Increment=N					;~ (Y/N) AutoIncrement Y=Before; N=After compile. Default=N
-#AutoIt3Wrapper_Res_HiDpi=Y                      					;~ (Y/N) Compile for high DPI. Default=N
+#AutoIt3Wrapper_Res_HiDpi=N                      					;~ (Y/N) Compile for high DPI. Default=N
 #AutoIt3Wrapper_Res_ProductVersion=5             					;~ Product Version
 #AutoIt3Wrapper_Res_Language=2057									;~ Resource Language code . Default 2057=English (United Kingdom)
 #AutoIt3Wrapper_Res_LegalCopyright=© 2018 Rizonesoft				;~ Copyright field
@@ -157,17 +157,15 @@
 #AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Commands\Distribute-5.ico		; 278
 #AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Commands\Distribute-6.ico		; 279
 #AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Commands\Distribute-7.ico		; 280
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Commands\Distribute-8.ico		; 281
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Commands\Distribute-9.ico		; 282
 
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Update.ico				; 283
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Home.ico				; 284
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Mail.ico				; 285
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\GitHub.ico				; 286
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\About.ico				; 287
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Logbook.ico				; 288
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Close.ico				; 289
-#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Solution.ico			; 290
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Update.ico				; 281
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Home.ico				; 282
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Mail.ico				; 283
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\GitHub.ico				; 284
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\About.ico				; 285
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Logbook.ico				; 286
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Close.ico				; 287
+#AutoIt3Wrapper_Res_Icon_Add=SDK\Themes\Icons\Menus\Solution.ico			; 288
 
 
 ;===============================================================================================================
@@ -180,7 +178,7 @@
 ; Au3Stripper Settings
 ;===============================================================================================================
 #AutoIt3Wrapper_Run_Au3Stripper=N								;~ (Y/N) Run Au3Stripper before compilation. default=N
-;#Au3Stripper_Parameters=										;~ Au3Stripper parameters...see SciTE4AutoIt3 Helpfile for options
+;#Au3Stripper_Parameters=MergeOnly								;~ Au3Stripper parameters...see SciTE4AutoIt3 Helpfile for options
 ;#Au3Stripper_Ignore_Variables=
 ;===============================================================================================================
 ; AU3Check settings
@@ -246,6 +244,7 @@ Opt("WinWaitDelay", 250)			;~ 250 milliseconds
 
 
 Func _ReBarStartUp()
+
 EndFunc   ;==>_ReBarStartUp
 
 
@@ -275,10 +274,10 @@ EndFunc   ;==>_ReBarStartUp
 ; Constants
 Global Const $CNT_MENUICONS		= 9
 Global Const $CNT_LOGICONS		= 7
-Global Const $CNT_COMMICONS		= 25
+Global Const $CNT_COMMICONS		= 23
 
 Global Const $CNT_BUILD			= 4
-Global Const $CNT_DISTRIBUTE	= 10
+Global Const $CNT_DISTRIBUTE	= 8
 Global Const $CNT_PREREQUISITES = 5
 Global Const $CNT_PREREQINFO	= 10
 
@@ -304,32 +303,33 @@ Global $g_sUrlGitHubIssues		= "https://goo.gl/AYwYWv|GitHub.com/rizonesoft/SDK/i
 Global $g_sUrlSA				= "https://goo.gl/Fn6UKQ|Wikipedia.org/wiki/South_Africa"				; https://en.wikipedia.org/wiki/South_Africa
 Global $g_sUrlProgPage			= "https://goo.gl/2oGi56|www.rizonesoft.com/downloads/rizonesoft-sdk/"	; https://www.rizonesoft.com/downloads/rizonesoft-sdk/
 
+;~ Path Settings
+Global $g_sWorkingDir		= @ScriptDir & "\SDK"
+Global $g_sRootDir			= @ScriptDir & "\SDK" ;~ Root Directory
+Global $g_sPathIni			= $g_sWorkingDir & "\" & $g_sProgShortName & ".ini" ;~ Full Path to the Configuaration file
+Global $g_sAppDataRoot		= @AppDataDir & "\" & $g_sCompanyName & "\" & $g_sProgShortName
+Global $g_sThemesDir		= @ScriptDir & "\SDK\Themes" ;~ Themes Directory
+Global $g_sProcessSim		= $g_sThemesDir & "\Processing\16\Process.ani"
+Global $g_sConcreteRoot		= @ScriptDir & "\Concrete"
+Global $g_sCertificateRoot	= @ScriptDir & "\Signing"
+Global $g_sWebRoot			= @ScriptDir & "\www"
+Global $g_sUpdateRoot		= $g_sWebRoot & "\update"
 
 ; Resources
 Global $g_iUpdateIconStart				= 209
 Global $g_iDialogIconStart				= 211
 Global $g_iAboutIconStart				= 216
 Global $g_iComIconStart					= 258
-Global $g_iMenuIconsStart				= 283
+Global $g_iMenuIconsStart				= 281
 Global $g_aCoreIcons[3]
 Global $g_iSizeIcon						= 48
 Global $g_aLognIcons[$CNT_LOGICONS]
 Global $g_aMenuIcons[$CNT_MENUICONS]
 Global $g_aCommIcons[$CNT_COMMICONS]
 
-;~ Path Settings
-Global $g_sWorkingDir		= @ScriptDir & "\SDK"
-Global $g_sRootDir			= @ScriptDir & "\SDK" ;~ Root Directory
-Global $g_sPathIni			= $g_sWorkingDir & "\" & $g_sProgShortName & ".ini" ;~ Full Path to the Configuaration file
-Global $g_sAppDataRoot		= @AppDataDir & "\" & $g_sCompanyName & "\" & $g_sProgShortName
-Global $g_sThemesDir		= $g_sRootDir & "\Themes" ;~ Themes Directory
-Global $g_sProcessSim		= $g_sThemesDir & "\Processing\16\Process.ani"
-Global $g_sConcreteRoot		= @ScriptDir & "\Concrete"
-Global $g_sCertificateRoot	= @ScriptDir & "\Signing"
-
 ;~ Language Settings
 Global $g_sLanguageDir		= $g_sRootDir & "\Language\" & $g_sProgShortName
-Global $g_sLanguageFile		= $g_sLanguageDir & "\af.ini"
+Global $g_sLanguageFile		= $g_sLanguageDir & "\en.ini"
 
 ;~ Logging Settings
 Global $g_sLoggingRoot		= $g_sWorkingDir & "\Logging\" & $g_sProgShortName
@@ -343,8 +343,8 @@ Global $g_sCacheRoot		= $g_sWorkingDir & "\Cache\" & $g_sProgShortName
 Global $g_iEnableCache		= 1
 
 ;~ Splash Page Settings
-Global $g_SplashAnimation	= $g_sThemesDir & "\Processing\32\Stroke.ani"
-Global $g_iSplashDelay		= 100
+Global $g_SplashAnimation
+Global $g_iSplashDelay
 
 ;~ Update Notification Settings
 Global $g_sUpdateAnimation	= $g_sThemesDir & "\Processing\" & $g_iSizeIcon & "\Globe.ani"
@@ -460,6 +460,9 @@ Else
 
 	Else
 
+		$g_SplashAnimation	= $g_sThemesDir & "\Processing\32\Stroke.ani"
+		$g_iSplashDelay		= 100
+
 		_Splash_Start($g_aLangMessages[7])
 		_Splash_Update($g_aLangMessages[8], 2)
 		_Localization_Solutions()		;~ Load Solutions Language Strings
@@ -487,8 +490,6 @@ EndIf
 
 
 Func _SetHotKeys()
-
-	HotKeySet("{ESC}", "_MinimizeProgram")
 
 EndFunc
 
@@ -545,7 +546,7 @@ Func _StartCoreGui()
 	GUICtrlSetOnEvent($g_hUpdateMenuItem, "_CheckForUpdates")
 	GUICtrlSetOnEvent($miHelpHome, "_About_HomePage")
 	GUICtrlSetOnEvent($miHelpDownloads, "_About_Downloads")
-	GUICtrlSetOnEvent($miHelpContact, "_About_Contact")
+	GUICtrlSetOnEvent($miHelpContact, "_About_Support")
 	GUICtrlSetOnEvent($miHelpGitHub, "_About_GitHubIssues")
 	GUICtrlSetOnEvent($miHelpDonate, "_About_PayPal")
 	GUICtrlSetOnEvent($miHelpAbout, "_About_ShowDialog")
@@ -578,12 +579,12 @@ Func _StartCoreGui()
 	_WinAPI_SetWindowTheme(GUICtrlGetHandle($g_hListSolutions), "Explorer")
 	GUICtrlSetResizing($g_hListSolutions, BitOR($GUI_DOCKLEFT, $GUI_DOCKRIGHT, $GUI_DOCKBOTTOM, $GUI_DOCKTOP))
 
-	$g_BtnProcessAll = GUICtrlCreateButton($g_aLangCustom[18], 270, 340, 190, 40)
+	$g_BtnProcessAll = GUICtrlCreateButton($g_aLangCustom[16], 270, 340, 190, 40)
 	GUICtrlSetFont($g_BtnProcessAll, 11, 400)
 	GUICtrlSetResizing($g_BtnProcessAll, BitOR($GUI_DOCKRIGHT, $GUI_DOCKBOTTOM, $GUI_DOCKSIZE))
 	GUICtrlSetOnEvent($g_BtnProcessAll, "_RunSelectedOption")
 
-	GUICtrlCreateGroup($g_aLangCustom[16], 470, 10, 300, 120)
+	GUICtrlCreateGroup($g_aLangCustom[14], 470, 10, 300, 120)
 	GUICtrlSetResizing(-1, BitOR($GUI_DOCKRIGHT, $GUI_DOCKTOP, $GUI_DOCKSIZE))
 	GUICtrlSetFont(-1, 10, 700, 2)
 
@@ -616,7 +617,7 @@ Func _StartCoreGui()
 
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 
-	GUICtrlCreateGroup($g_aLangCustom[17], 470, 140, 300, 240)
+	GUICtrlCreateGroup($g_aLangCustom[15], 470, 140, 300, 240)
 	GUICtrlSetResizing(-1, BitOR($GUI_DOCKRIGHT, $GUI_DOCKTOP, $GUI_DOCKBOTTOM, $GUI_DOCKWIDTH))
 	GUICtrlSetFont(-1, 10, 700, 2)
 
@@ -650,8 +651,6 @@ Func _StartCoreGui()
 	GUICtrlSetData($g_aBuild[5][1][1], Chr(32) & $g_aLangCustom[11])
 	GUICtrlSetData($g_aBuild[6][1][1], Chr(32) & $g_aLangCustom[12])
 	GUICtrlSetData($g_aBuild[7][1][1], Chr(32) & $g_aLangCustom[13])
-	GUICtrlSetData($g_aBuild[8][1][1], Chr(32) & $g_aLangCustom[14])
-	GUICtrlSetData($g_aBuild[9][1][1], Chr(32) & $g_aLangCustom[15])
 
 	GUICtrlCreateGroup("", -99, -99, 1, 1) ;close group
 
@@ -698,7 +697,7 @@ Func _StartCoreGui()
 	GUICtrlSetTip($g_IcoRefresh, $g_aLangPrerequisites[1], Chr(32) & $g_aLangPrerequisites[0], $TIP_INFOICON, $TIP_BALLOON)
 	GUICtrlSetOnEvent($g_IcoRefresh, "_CheckPrerequisites")
 
-	$g_hTabLogging = GUICtrlCreateTabItem(Chr(32) & $g_aLangCustom[19] & Chr(32))
+	$g_hTabLogging = GUICtrlCreateTabItem(Chr(32) & $g_aLangCustom[17] & Chr(32))
 	$g_ImgSolutions = _GUIImageList_Create(16, 16, 5, 3, 0, 250)
 	_GUICtrlListView_SetImageList($g_hListSolutions, $g_ImgSolutions, 1)
 
@@ -964,8 +963,6 @@ Func _SetResources()
 		$g_aCommIcons[20] = $g_sThemesDir & "\Icons\Commands\Distribute-5.ico"
 		$g_aCommIcons[21] = $g_sThemesDir & "\Icons\Commands\Distribute-6.ico"
 		$g_aCommIcons[22] = $g_sThemesDir & "\Icons\Commands\Distribute-7.ico"
-		$g_aCommIcons[23] = $g_sThemesDir & "\Icons\Commands\Distribute-8.ico"
-		$g_aCommIcons[24] = $g_sThemesDir & "\Icons\Commands\Distribute-9.ico"
 
 	EndIf
 
@@ -1264,16 +1261,12 @@ Func _SetModules($iSel)
 						_SetModuleStates($aModules[$iMr][1], 3, 1)
 					Case "SignInstall"
 						_SetModuleStates($aModules[$iMr][1], 4, 1)
-					Case "Tidy"
-						_SetModuleStates($aModules[$iMr][1], 5, 1)
 					Case "Sourcecode"
-						_SetModuleStates($aModules[$iMr][1], 6, 1)
-					Case "GitHub"
-						_SetModuleStates($aModules[$iMr][1], 7, 1)
+						_SetModuleStates($aModules[$iMr][1], 5, 1)
 					Case "SourcePackage"
-						_SetModuleStates($aModules[$iMr][1], 8, 1)
+						_SetModuleStates($aModules[$iMr][1], 6, 1)
 					Case "UpdateFile"
-						_SetModuleStates($aModules[$iMr][1], 9, 1)
+						_SetModuleStates($aModules[$iMr][1], 7, 1)
 					Case Else
 						_SetAllOptionStates($GUI_ENABLE)
 				EndSwitch
@@ -1505,7 +1498,7 @@ Func _CheckPrerequisites()
 	_SetPrerequisiteStates(3, 1, 128 / ($g_aInnoSetup[0] + 1))
 	_SetPrerequisiteStates(4, 1, 128 / ($g_aSigntool[0] + 1))
 	_SetPrerequisiteStates(5, 1, 128 / ($g_aAutoIt3[0] + 1))
-	_SetPrerequisiteStates(8, 1, 128 / ($g_a7Zip[0] + 1))
+	_SetPrerequisiteStates(7, 1, 128 / ($g_a7Zip[0] + 1))
 
 	$g_cAutoItWrapper = $g_aScite4AutoIt[8] & "AutoIt3Wrapper\AutoIt3Wrapper.au3"
 	$g_cAut2Exe = $g_aAutoIt3[8] & "Aut2Exe\Aut2exe.exe"
@@ -1820,11 +1813,11 @@ Func _ProcessSelectedSolution($iAction)
 						Case 8
 							_SignExecutables($sSolutionIniPath, 4, 1, True)
 						Case 9
-							_CleanSourceCode($sSolutionIniPath, 5, 1)
+							_DistributSourceCode($sSolutionIniPath, 5, 1)
 						Case 10
-							_DistributSourceCode($sSolutionIniPath, 6, 1)
+							; _DistributSourceCode($sSolutionIniPath, 5, 1)
 						Case 11
-							_CopySourceToGitDirectory($sSolutionIniPath, 7, 1)
+							_CreateUpdateFiles($sSolutionIniPath, 7, 1)
 						Case 99
 
 							; ConsoleWrite(_ProcessCheckedCount() & @CRLF)
@@ -1838,9 +1831,9 @@ Func _ProcessSelectedSolution($iAction)
 								If GUICtrlRead($g_aBuild[2][1][1]) = $GUI_CHECKED Then _CreateZipPackage($sSolutionIniPath, 2, 1)
 								If GUICtrlRead($g_aBuild[3][1][1]) = $GUI_CHECKED Then _CreateInstall($sSolutionIniPath, 3, 1)
 								If GUICtrlRead($g_aBuild[4][1][1]) = $GUI_CHECKED Then _SignExecutables($sSolutionIniPath, 4, 1, True)
-								If GUICtrlRead($g_aBuild[5][1][1]) = $GUI_CHECKED Then _CleanSourceCode($sSolutionIniPath, 5, 1)
-								If GUICtrlRead($g_aBuild[6][1][1]) = $GUI_CHECKED Then _DistributSourceCode($sSolutionIniPath, 6, 1)
-								If GUICtrlRead($g_aBuild[7][1][1]) = $GUI_CHECKED Then _CopySourceToGitDirectory($sSolutionIniPath, 7, 1)
+								If GUICtrlRead($g_aBuild[5][1][1]) = $GUI_CHECKED Then _DistributSourceCode($sSolutionIniPath, 5, 1)
+
+
 
 								; Reset Build Icons
 								For $iBr = 0 To $CNT_BUILD - 1
@@ -2353,7 +2346,7 @@ Func _CreateDistribution($sSolutionIniPath, $iRow, $iCol)
 	Local $aFiles = IniReadSection($sSolutionIniPath, "Distribute")
 	If Not @error Then
 		For $xF = 1 To $aFiles[0][0]
-			$sOutputFile = $sOutputPath & "\" & $aFiles[$xF][1]
+			$sOutputFile = $sOutputPath & "\" & StringReplace($aFiles[$xF][1], "~", "")
 			If StringInStr($aFiles[$xF][0], "Directory") Then
 				_DistributeDirectory($sOutputFile)
 			ElseIf StringInStr($aFiles[$xF][0], "File") Then
@@ -2363,6 +2356,10 @@ Func _CreateDistribution($sSolutionIniPath, $iRow, $iCol)
 			_UpdateSoloProcess($iRow, $iCol, $iFilePerc)
 		Next
 	EndIf
+
+	; Distribute Language Directory
+;~ 	If Not DirCopy($sInputPath & "\Language", $sOutputPath & "\Language", $FC_OVERWRITE) Then
+;~ 	EndIf
 
 ;~ 	Local $aDocFiles = IniReadSection($sDistroIniPath, "DocumentFiles")
 ;~ 	If Not @error Then
@@ -2425,7 +2422,7 @@ Func _DistributeFile($sFilePath, $sDestPath)
 		Return SetError(1, 0, 0)
 	EndIf
 
-	_Logging_EditWrite(StringFormat($g_aLangMessages2[50], StringReplace($sDestPath, @ScriptDir, "")))
+	_Logging_EditWrite(StringFormat($g_aLangMessages2[51], StringReplace($sDestPath, @ScriptDir, "")))
 	Return 1
 
 EndFunc   ;==>_DistributeFile
@@ -2471,7 +2468,7 @@ Func _ReturnDistributionState($sSolutionIniPath)
 	Local $aFiles = IniReadSection($sSolutionIniPath, "Distribute")
 	If Not @error Then
 		For $x = 1 To $aFiles[0][0]
-			$sFilePath = $sDistributionPath & "\" & $aFiles[$x][1]
+			$sFilePath = $sDistributionPath & "\" & StringReplace($aFiles[$x][1], "~", "")
 			If Not FileExists($sFilePath) Then
 				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages2[52], "ERROR"))
 				_Logging_EditWrite("^ '" & $sFilePath & "'")
@@ -2521,24 +2518,25 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 	Local $sCompanyName = $g_aEnvironment[2][1]
 	Local $sProgName = $g_aEnvironment[4][1]
 	Local $sProgShortName = $g_aEnvironment[5][1]
-	Local $sProgVersion = $g_aEnvironment[12][1]
+	Local $sProgVersion = $g_aEnvironment[9][1]
+	Local $sProgBuild = $g_aEnvironment[12][1]
 	Local $sOutputFile = $g_aEnvironment[16][1]
 	Local $sOutput64Bit = $g_aEnvironment[17][1]
 	Local $sDistoPath = $g_aEnvironment[23][1]
 	Local $sPackPathName = $g_aEnvironment[24][1]
 	Local $sPackPath = $g_aEnvironment[25][1]
-	Local $sProgBaseName = $sProgShortName & "_" & $sProgVersion
+	Local $sProgBaseName = $sProgShortName & "_" & $sProgBuild
 	Local $sOutputBaseName = $sProgBaseName & "_Setup.exe"
 	Local $sScriptBaseName = $sProgBaseName & "_Setup.iss"
 	Local $sOutputFullPath = $sDistoPath & "\" & $sOutputBaseName
 	Local $sScriptFullPath = $sDistoPath & "\" & $sScriptBaseName
 	Local $sIniBaseDir = IniRead($sSolutionIniPath, "Features", "IniBaseDir", "")
 	Local $sIniFilBaseName = _FileEx_CleanDirectoryName($sIniBaseDir & "\" & $sProgShortName & ".ini")
-	Local $sCompanyURL = IniRead($sSolutionIniPath, "Links", "CompanyURL", "https://www.rizonesoft.com")
-	Local $sDownloadsURL = IniRead($sSolutionIniPath, "Links", "DownloadsURL", "https://www.rizonesoft.com/downloads/")
-	Local $sSupportURL = IniRead($sSolutionIniPath, "Links", "SupportURL", "https://www.rizonesoft.com/forums/")
-	Local $sContactURL = IniRead($sSolutionIniPath, "Links", "ContactURL", "https://www.rizonesoft.com/contact")
+	Local $sVersionURL = "https://www.rizonesoft.com/update/" & $sProgShortName & ".rus"
 	Local $sUpdateURL = IniRead($sSolutionIniPath, "Links", "UpdateURL", "https://www.rizonesoft.com")
+	Local $sCompanyURL = IniRead($sSolutionIniPath, "Links", "CompanyURL", "https://www.rizonesoft.com")
+	Local $sSupportURL = IniRead($sSolutionIniPath, "Links", "SupportURL", "https://www.rizonesoft.com/support/")
+	Local $sContactURL = IniRead($sSolutionIniPath, "Links", "ContactURL", "https://www.rizonesoft.com/contact")
 
 	Local $i64BitInstall = False
 	If StringStripWS($sOutput64Bit, 8) <> "" Then
@@ -2624,7 +2622,7 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 	Else
 		FileWrite($hFileOpen, "ArchitecturesAllowed=x86" & @CRLF)
 	EndIf
-	FileWrite($hFileOpen, "CloseApplications=true" & @CRLF)
+	FileWrite($hFileOpen, "CloseApplications=force" & @CRLF)
 	FileWrite($hFileOpen, "SetupMutex=" & Chr(34) & StringLower($sProgShortName) & "_setup_mutex" & Chr(34) & @CRLF)
 	FileWrite($hFileOpen, "" & @CRLF)
 
@@ -2649,7 +2647,7 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 	FileWrite($hFileOpen, "en.tsk_Other                 =Other tasks:" & @CRLF)
 	FileWrite($hFileOpen, "en.tsk_ResetSettings         =Reset {#app_name}'s settings" & @CRLF)
 	FileWrite($hFileOpen, "en.tsk_StartMenuIcon         =Create a Start Menu shortcut" & @CRLF)
-	FileWrite($hFileOpen, "en.tsk_LaunchWelcomePage     =Visit " & $sCompanyName & " for more downloads" & @CRLF)
+	FileWrite($hFileOpen, "en.tsk_LaunchWelcomePage     =Important Release Information!" & @CRLF)
 	FileWrite($hFileOpen, "" & @CRLF)
 
 	FileWrite($hFileOpen, "[Tasks]" & @CRLF)
@@ -2672,16 +2670,18 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 
 	FileWrite($hFileOpen, "Source: {#distrodir}\" & $sIniFilBaseName & "; DestDir: {userappdata}\" & $sCompanyName & "\" & $sProgShortName & "; Flags: onlyifdoesntexist uninsneveruninstall" & @CRLF)
 
-	Local $sSourceName = "", $sDesDirName = ""
+	Local $sSourceName = "", $sDesDirName = "", $sCleanFileName = ""
 	Local $aFiles = IniReadSection($sSolutionIniPath, "Distribute")
 	If Not @error Then
 		For $xF = 1 To $aFiles[0][0]
 			If StringInStr($aFiles[$xF][0], "File") Then
 				If StringCompare($aFiles[$xF][1], $sOutputFile) <> 0 And _
 						StringCompare($aFiles[$xF][1], $sOutput64Bit) <> 0 And _
-						StringCompare($aFiles[$xF][1], $sIniFilBaseName) <> 0 Then
+						Not StringInStr($aFiles[$xF][1], $sIniFilBaseName) Then
+						;~ StringCompare($aFiles[$xF][1], $sIniFilBaseName) <> 0 Then
 
-					$sSourceName = _FileEx_CleanDirectoryName($aFiles[$xF][1])
+					$sCleanFileName = StringReplace($aFiles[$xF][1], "~", "")
+					$sSourceName = _FileEx_CleanDirectoryName($sCleanFileName)
 					$sDesDirName = _GetDestDirFromString($sSourceName)
 					FileWrite($hFileOpen, "Source: {#distrodir}\" & $sSourceName & "; DestDir: {app}" & $sDesDirName & "; Flags: ignoreversion" & @CRLF)
 
@@ -2716,7 +2716,6 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 
 	FileWrite($hFileOpen, "[Run]" & @CRLF)
 	FileWrite($hFileOpen, "Filename: {app}\" & $sOutputFile & "; Description: {cm:LaunchProgram,{#app_name}}; WorkingDir: {app}; Flags: nowait postinstall shellexec skipifsilent unchecked" & @CRLF)
-	FileWrite($hFileOpen, "Filename: " & Chr(34) & $sDownloadsURL & Chr(34) & "; Description: {cm:tsk_LaunchWelcomePage}; Flags: nowait postinstall shellexec skipifsilent" & @CRLF)
 	FileWrite($hFileOpen, "" & @CRLF)
 
 	FileWrite($hFileOpen, "[InstallDelete]" & @CRLF)
@@ -2730,6 +2729,7 @@ Func _GenerateInstallationScript($sSolutionIniPath)
 	FileWrite($hFileOpen, "Type: files;      Name: {app}\" & $sIniFilBaseName & @CRLF)
 	FileWrite($hFileOpen, "Type: dirifempty; Name: {app}" & @CRLF)
 	FileWrite($hFileOpen, "" & @CRLF)
+
 	FileWrite($hFileOpen, "[Code]" & @CRLF)
 	FileWrite($hFileOpen, "function IsUpgrade(): Boolean;" & @CRLF)
 	FileWrite($hFileOpen, @TAB & "var" & @CRLF)
@@ -3015,6 +3015,52 @@ Func _CleanGitDirectory($sGitFullPath)
 		Next
 
     EndIf
+
+EndFunc
+
+
+Func _CreateUpdateFiles($sSolutionIniPath, $iRow, $iCol)
+
+	Local $sProgShortName = $g_aEnvironment[5][1]
+	Local $sProgVersion = $g_aEnvironment[9][1]
+	Local $sProgBuild = $g_aEnvironment[12][1]
+	Local $sUpdateURL = IniRead($sSolutionIniPath, "Links", "UpdateURL", "https://rizone.tech/2Eoo9O1")
+	Local $sUpdateFile = $g_sUpdateRoot & "\" & $sProgShortName & ".ru"
+	Local $sUpdateSetupFile = $g_sUpdateRoot & "\" & $sProgShortName & ".rus"
+	Local $iIniError = 1, $iFileWriteError = 1
+
+	_Logging_Start("Creating update files.")
+	_StartSoloProcess($iRow, $iCol)
+
+	$iIniError = IniWrite($sUpdateFile, "Update", "LatestBuild", $sProgBuild)
+	_UpdateSoloProcess($iRow, $iCol, 30)
+	$iIniError = IniWrite($sUpdateFile, "Update", "UpdateURL", $sUpdateURL)
+	_UpdateSoloProcess($iRow, $iCol, 60)
+
+	If $iIniError = 0 Then
+		_Logging_EditWrite(_Logging_SetLevel(StringFormat("Could not write to '%s'", $sUpdateFile), "ERROR"))
+	Else
+		_Logging_EditWrite(StringFormat("Successfully created '%s'", $sUpdateFile))
+	EndIf
+
+	; Open the file for writing (append to the end of a file) and store the handle to a variable.
+	Local $hSUFileOpen = FileOpen($sUpdateSetupFile, $FO_OVERWRITE)
+	If $hSUFileOpen = -1 Then
+		_Logging_EditWrite(_Logging_SetLevel("Could not open Setup update file.", "ERROR"))
+		Return False
+	EndIf
+
+	If FileWrite($hSUFileOpen, $sProgVersion) = 0 Then
+		_Logging_EditWrite(_Logging_SetLevel(StringFormat("Could not write to '%s'", $sUpdateSetupFile), "ERROR"))
+	Else
+		_Logging_EditWrite(StringFormat("Successfully created '%s'", $sUpdateSetupFile))
+	EndIf
+
+	_UpdateSoloProcess($iRow, $iCol, 90)
+	FileClose($hSUFileOpen)
+
+	_Logging_FinalMessage("")
+	_UpdateSoloProcess($iRow, $iCol, 100)
 
 EndFunc
 

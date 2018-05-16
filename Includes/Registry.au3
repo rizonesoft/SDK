@@ -94,11 +94,9 @@ Func _Registry_Write($hKey, $hValueName = "REG_NONE", $hRegType = "REG_SZ", $hVa
 			_Logging_EditWrite(_Logging_SetLevel(StringFormat($g_aLangMessages[32], $hKey & " --> " & $hValueName & " --> " & $hRegType & " --> " & $hValue), "ERROR"))
 		EndIf
 		__Registry_ReturnError($nError, "write")
-	Else
-		Return True
 	EndIf
 
-	Return False
+	Return SetError($nError, 0, $nError)
 
 EndFunc   ;==>_Registry_Write
 
@@ -137,20 +135,20 @@ Func __Registry_ReturnError($nError, $sIO = "write")
 	If $sIO == "write" Then
 		Switch $nError
 			Case 1
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[33], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[33])
 			Case 2
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[34], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[34])
 			Case -1
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[35], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[35])
 			Case -2
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[36], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[36])
 		EndSwitch
 	ElseIf $sIO == "delete" Then
 		Switch $nError
 			Case -1
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[37], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[37])
 			Case -2
-				_Logging_EditWrite(_Logging_SetLevel($g_aLangMessages[38], "ERROR"))
+				_Logging_EditWrite("^ " & $g_aLangMessages[38])
 		EndSwitch
 	EndIf
 
